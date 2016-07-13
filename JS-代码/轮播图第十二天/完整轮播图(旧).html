@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border: 0;
+        }
+
+        .all {
+            width: 500px;
+            height: 200px;
+            padding: 7px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .screen {
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .screen li {
+            width: 500px;
+            height: 200px;
+            overflow: hidden;
+            float: left;
+        }
+
+        .screen ul {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 3000px;
+        }
+
+        .all ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        .all ol li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .all ol li.current {
+            background: yellow;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="all" id='box'>
+    <div class="screen">
+        <ul>
+            <li><img src="images/1.jpg" width="500" height="200"/></li>
+            <li><img src="images/2.jpg" width="500" height="200"/></li>
+            <li><img src="images/3.jpg" width="500" height="200"/></li>
+            <li><img src="images/4.jpg" width="500" height="200"/></li>
+            <li><img src="images/5.jpg" width="500" height="200"/></li>
+        </ul>1
+        <ol>
+        </ol>
+    </div>
+    <div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+</div></div>
+<script>
+    var box = document.getElementById("box");
+    var screen = box.children[0];
+    var ul = screen.children[0];
+    var lisUl = ul.children;
+    var ol = screen.children[1];
+    var arr = box.children[1];
+    var arrRight = arr.children[1];
+    var arrLeft = arr.children[0];
+    var imgWidth = screen.offsetWidth;
+    var timer = null;
+
+    for (var i = 0; i < lisUl.length; i++) {
+        var li = document.createElement("li");
+        li.innerHTML = i + 1;
+        ol.appendChild(li);
+    }
+
+
+    var lisOl = ol.children;
+    for (var j = 0; j < lisOl.length; j++) {
+      lisOl[j].index = j;
+        lisOl[j].onmouseover = function(){
+            if(ul.offsetLeft == (-ul.offsetWidth+imgWidth)){
+                ul.style.left = 0;
+            }
+            for (var k = 0; k < lisOl.length; k++) {
+                lisOl[k].className = "";
+            }
+            this.className = "current";
+            var target = -this.index * imgWidth;
+            animate(ul,target);
+            page = aquare = this.index;
+            console.log(page);
+        };
+    }
+  lisOl[0].className = "current";
+    var firstPic = lisUl[0].cloneNode(true);
+    ul.appendChild(firstPic);
+
+
+
+
+
+    var page = 0;
+    var square = 0;
+    arrRight.onclick = function () {
+        if (page == lisUl.length - 1) {
+            ul.style.left = 0;
+            page = 0;
+        }
+        page++;
+        var target = -page * imgWidth;
+        animate(ul, target);
+        if (square < lisOl.length - 1) {
+            square++;
+        } else {
+            square = 0;
+        }
+        for (var i = 0; i < lisOl.length; i++) {
+            lisOl[i].className = "";
+        }
+        lisOl[square].className = "current";
+    };
+
+
+
+
+
+    arrLeft.onclick = function () {
+        if (page == 0) {
+            page = lisUl.length - 1;
+            ul.style.left = -page * imgWidth + "px";
+        }
+        page--;
+        var target = -page * imgWidth;
+        animate(ul, target);
+        if (square > 0) {
+            square--;
+        } else {
+            square = lisOl.length - 1;
+        }
+        for (var i = 0; i < lisOl.length; i++) {
+            lisOl[i].className = "";
+        }
+        lisOl[square].className = "current";
+
+    }
+
+
+
+    box.onmouseover = function () {
+        arr.style.display = "block";
+        clearInterval(timer);
+    };
+    box.onmouseout = function () {
+        arr.style.display = "none";
+        timer = setInterval(playNext, 2000);
+    };
+    timer = setInterval(playNext, 2000);
+    function playNext() {
+        if (page == lisUl.length - 1) {
+            ul.style.left = 0;
+            page = 0;
+        }
+        page++;
+        var target = -page * imgWidth;
+        animate(ul, target);
+        if (square < lisOl.length - 1) {
+            square++;
+        } else {
+            square = 0;
+        }
+        for (var i = 0; i < lisOl.length; i++) {
+            lisOl[i].className = "";
+        }
+        lisOl[square].className = "current";
+    }
+
+    function animate(tag, target) {
+        clearInterval(tag.timer);
+        tag.timer = setInterval(function () {
+            var leader = tag.offsetLeft;
+            var step = 9;
+            step = leader > target ? -step : step;
+            leader = leader + step;
+            if (Math.abs(leader - target) < Math.abs(step)) {
+                tag.style.left = target + "px";
+                clearInterval(tag.timer);
+            } else {
+                tag.style.left = leader + "px";
+            }
+        }, 17);
+    }
+</script>
+</body>
+</html>
+
+
+<!--<body>-->
+<!--<div class="all" id='box'>-->
+    <!--<div class="screen">-->
+        <!--<ul>-->
+            <!--<li><img src="images/1.jpg" width="500" height="200"/></li>-->
+            <!--<li><img src="images/2.jpg" width="500" height="200"/></li>-->
+            <!--<li><img src="images/3.jpg" width="500" height="200"/></li>-->
+            <!--<li><img src="images/4.jpg" width="500" height="200"/></li>-->
+            <!--<li><img src="images/5.jpg" width="500" height="200"/></li>-->
+        <!--</ul>-->
+        <!--<ol>-->
+        <!--</ol>-->
+    <!--</div>-->
+    <!--<div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>-->
+<!--</div>-->
+<!--<script>-->
+    <!--//-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; 1 获取页面元素 -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <!--var box = document.getElementById("box");-->
+    <!--var screen = box.children[0];-->
+    <!--var ul = screen.children[0];-->
+    <!--var lisUl = ul.children;-->
+    <!--var ol = screen.children[1];-->
+    <!--var arr = box.children[1];-->
+    <!--var arrRight = arr.children[1];-->
+    <!--var arrLeft = arr.children[0];-->
+    <!--var imgWidth = screen.offsetWidth;-->
+    <!--var timer = null;-->
+    <!--//-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; 2 动态创建部分 -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <!--//根据图片的张数去动态创建ol中的li（小方块）-->
+    <!--for (var i = 0; i < lisUl.length; i++) {-->
+        <!--var li = document.createElement("li");-->
+        <!--li.innerHTML = i + 1;-->
+        <!--ol.appendChild(li);-->
+    <!--}-->
+    <!--//给ol中的所有小方块去添加移入变色事件-->
+    <!--var lisOl = ol.children;-->
+    <!--for (var j = 0; j < lisOl.length; j++) {-->
+        <!--//将索引值设置为ol中每一个li的属性-->
+        <!--lisOl[j].index = j;-->
+        <!--lisOl[j].onmouseover = function () {-->
+            <!--//&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;防止假的第一张图显示时，方块1被移入导致回跳-->
+            <!--if(ul.offsetLeft==(-ul.offsetWidth+imgWidth)){-->
+                <!--ul.style.left = 0;-->
+            <!--}-->
+            <!--//排他-->
+            <!--for (var k = 0; k < lisOl.length; k++) {-->
+                <!--lisOl[k].className = "";-->
+            <!--}-->
+            <!--//再去添加我这个小方块的类名-->
+            <!--this.className = "current";-->
+            <!--//让这个ul根据我选中的小方块上的数去移动-->
+            <!--var target = -this.index * imgWidth;-->
+            <!--animate(ul, target);-->
+            <!--//将移入的按钮的索引传递给page-->
+            <!--page = square = this.index;-->
+            <!--console.log(page);-->
+        <!--};-->
+    <!--}-->
+    <!--//默认让第一个小方块被选中-->
+    <!--lisOl[0].className = "current";-->
+    <!--//为了做出无缝滚动效果，我们需要克隆第一张图片（ul中的），放到最后面-->
+    <!--var firstPic = lisUl[0].cloneNode(true);-->
+    <!--ul.appendChild(firstPic);-->
+    <!--//-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; 3 右移按钮 -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <!--//管理图片的变量-->
+    <!--var page = 0;-->
+    <!--//管理按钮的-->
+    <!--var square = 0;-->
+    <!--arrRight.onclick = function () {-->
+        <!--if (page == lisUl.length - 1) {-->
+            <!--//将所有图片归为原位-->
+            <!--ul.style.left = 0;-->
+            <!--page = 0;-->
+        <!--}-->
+        <!--page++;-->
+        <!--var target = -page * imgWidth;-->
+        <!--animate(ul, target);-->
+
+        <!--//如果按钮square小于最大值，我们让他去++-->
+        <!--if (square < lisOl.length - 1) {-->
+            <!--square++;-->
+        <!--} else {-->
+            <!--square = 0;-->
+        <!--}-->
+        <!--//排他-->
+        <!--for (var i = 0; i < lisOl.length; i++) {-->
+            <!--lisOl[i].className = "";-->
+        <!--}-->
+        <!--lisOl[square].className = "current";-->
+        <!--//可以使用封装好的函数-->
+        <!--//playNext();-->
+    <!--};-->
+    <!--//-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; 4 左移按钮 -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+    <!--arrLeft.onclick = function () {-->
+        <!--//如果当前是第一张，我们要把它抽回去-->
+        <!--if (page == 0) {-->
+            <!--page = lisUl.length - 1;-->
+            <!--ul.style.left = -page * imgWidth + "px";-->
+        <!--}-->
+        <!--page&#45;&#45;;-->
+        <!--var target = -page * imgWidth;-->
+        <!--animate(ul, target);-->
+
+        <!--//如果按钮square小于最大值，我们让他去++-->
+        <!--if (square > 0) {-->
+            <!--square&#45;&#45;;-->
+        <!--} else {-->
+            <!--square = lisOl.length - 1;-->
+        <!--}-->
+        <!--//排他-->
+        <!--for (var i = 0; i < lisOl.length; i++) {-->
+            <!--lisOl[i].className = "";-->
+        <!--}-->
+        <!--lisOl[square].className = "current";-->
+
+    <!--}-->
+    <!--//-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; 5 自动滚动 -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <!--box.onmouseover = function () {-->
+        <!--arr.style.display = "block";-->
+        <!--//清除定时器，停止自动播放-->
+        <!--clearInterval(timer);-->
+    <!--};-->
+    <!--box.onmouseout = function () {-->
+        <!--arr.style.display = "none";-->
+        <!--timer = setInterval(playNext, 2000);-->
+    <!--};-->
+    <!--timer = setInterval(playNext, 2000);-->
+    <!--//图片往右播放的函数-->
+    <!--function playNext() {-->
+        <!--if (page == lisUl.length - 1) {-->
+            <!--//将所有图片归为原位-->
+            <!--ul.style.left = 0;-->
+            <!--page = 0;-->
+        <!--}-->
+        <!--page++;-->
+        <!--var target = -page * imgWidth;-->
+        <!--animate(ul, target);-->
+
+        <!--//如果按钮square小于最大值，我们让他去++-->
+        <!--if (square < lisOl.length - 1) {-->
+            <!--square++;-->
+        <!--} else {-->
+            <!--square = 0;-->
+        <!--}-->
+        <!--//排他-->
+        <!--for (var i = 0; i < lisOl.length; i++) {-->
+            <!--lisOl[i].className = "";-->
+        <!--}-->
+        <!--lisOl[square].className = "current";-->
+    <!--}-->
+    <!--//运动函数-->
+    <!--function animate(tag, target) {-->
+        <!--clearInterval(tag.timer);-->
+        <!--tag.timer = setInterval(function () {-->
+            <!--//对象当前位置=对象当前位置+要移动的长度-->
+            <!--//leader = leader + step-->
+            <!--var leader = tag.offsetLeft;-->
+            <!--var step = 9;-->
+            <!--//对step的正负进行判断。如果leader小于target，就是正的，如果大于target，step为负值-->
+            <!--step = leader > target ? -step : step;-->
+            <!--leader = leader + step;-->
+            <!--//当leader和target的距离小于一步时，我们不能让他正常走，可以直接将tag的位置设置为target，然后清除定时器-->
+            <!--if (Math.abs(leader - target) < Math.abs(step)) {-->
+                <!--tag.style.left = target + "px";-->
+                <!--clearInterval(tag.timer);-->
+            <!--} else {-->
+                <!--//最好最后一步-->
+                <!--tag.style.left = leader + "px";-->
+            <!--}-->
+        <!--}, 30);-->
+    <!--}-->
+
+<!--</script>-->
+<!--</body>-->

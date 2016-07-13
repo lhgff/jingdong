@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <button id = "one">开灯</button>
+</head>
+<body>
+<script>
+    var one = document.getElementById("one");
+    var deng = false;
+    one.onclick = function () {
+        if(deng){
+            document.body.style.backgroundColor = "#ffc1b4";
+            one.innerHTML = "开红灯";
+            deng  = false;
+        }else{
+            document.body.style.backgroundColor = "red";
+            one.innerHTML = "关红灯";
+            deng = true;
+        }
+    };
+</script>
+</body>
+</html>
+
+<!--<body>-->
+<!--<button id="btn">关灯</button>-->
+
+<!--<script>-->
+    <!--//点击按钮，改变body的背景色-->
+    <!--var btn = document.getElementById("btn");-->
+    <!--//设置一个变量，记录当前开关的状态-->
+    <!--var deng = false;-->
+
+    <!--//给btn添加点击事件-->
+    <!--btn.onclick = function () {-->
+        <!--if(deng){-->
+            <!--//当deng为true的时候能进入到if中-->
+            <!--document.body.style.backgroundColor = "white";-->
+            <!--//改变btn的文字-->
+            <!--btn.innerHTML = "关灯";-->
+            <!--//点击按钮后需要去更改deng的状态-->
+            <!--//表示下一次要关-->
+            <!--deng  = false;-->
+        <!--}else{-->
+            <!--//给body改变背景色-->
+            <!--document.body.style.backgroundColor = "black";-->
+            <!--//改变btn的文字-->
+            <!--btn.innerHTML = "开灯";-->
+            <!--//当我们点击了按钮后，更改deng的值，为了改变下一次操作的状态-->
+            <!--deng = true;-->
+        <!--}-->
+    <!--};-->
+<!--</script>-->
+<!--</body>-->

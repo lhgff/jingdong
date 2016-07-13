@@ -1,0 +1,449 @@
+/*css初始化*/
+html,body,ul,li,ol,dd,dt,p,h1,h2,h3,h4,h5,h6,font,fieldset,legend,img{
+    margin: 0;
+    padding: 0;
+    /*将标签原有的默认内外边距去掉*/
+}
+fieldset,img,input,button{
+    border:none; /*去掉边框*/
+    padding:0;
+    margin: 0;
+    outline-style: none; /*去掉环绕边框*/
+}
+ul,ol{
+    list-style: none; /*去掉原样式中的小黑点*/
+}
+input{
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "simsun",宋体; /*适配字体*/
+}
+select,input{
+    vertical-align: middle; /*输入字体居中显示*/
+}
+select,input,textarea{
+    font-size:12px;
+    margin: 0;
+}
+textarea{
+    resize: none; /*防止拖动*/
+}
+img{
+    border: 0;
+    vertical-align: middle; /*去掉图片底部默认的3像素空白缝隙*/
+}
+table{
+    border-collapse: collapse; /*合并外边距*/
+}
+body{
+    font:12px/150% Arial,Verdana,"\sb8b\4f53"; /*unitedcode的写法，宋体的写法*/
+    color:#666; /*150%基本当前字体尺寸的百分比行间距*/
+    background: #fff;
+}
+.clearfix:before,.clearfix:after{
+    /*清除浮动，最好最标准的写法*/
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+    zoom: 1; /*IE/7/6*/  /*兼容IE6下的写法*/
+}
+a{
+    color:#666;
+    text-decoration: none;;
+}
+a:hover{
+    color: #C81623;
+}
+h1,h2,h3,h4,h5,h6{
+    text-decoration: none;
+    font-weight: normal; /*不加粗*/
+    font-size:100%;
+}
+s,i,em{        /*一般起装饰作用*/
+    font-style: normal; /*将字体变成正常字体*/
+    text-decoration: none; /*去掉中划线*/
+}
+.col-red{
+    color:#C81623 !important; /*主色调*/
+}
+/*公共类*/
+.w{
+    /*版心，提取*/
+    width: 1210px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.al{
+    text-align: left; /*向左对齐*/
+}
+.ac{
+    text-align: center; /*中间水平对齐*/
+}
+.ar{
+    text-align: right; /*向右对齐*/
+}
+.hide{
+    display: none; /*隐藏*/
+}
+/*shortcut开始*/
+.shortcut {        /*宽是通栏，所以可以不用设置*/
+    height: 30px;
+    line-height: 30px;
+    background-color: #F1F1F1;
+}
+.shortcut-left {
+    float: left;
+    position: relative;  /*相对定位*/
+    padding: 0 25px 0 10px;
+}
+.shortcut-left:hover {
+    background-color: #fff;
+}
+.shortcut-left i,
+.fore i     /*并集选择器*/
+{
+    width: 14px;
+    height: 7px;
+    /*background-color: red;*/
+    /*display: inline-block;  /!*转换成行内块元素*!/*/
+    position: absolute;
+    /*left: 64px;*/
+    right: 6px;
+    top: 11px;
+    overflow: hidden;  /*溢出隐藏*/
+}
+.shortcut-left s,
+.fore i  s
+{
+    font: 400 14px/30px  consolas;
+    position: absolute;
+    left: 0;
+    top: -15px;
+}
+.shortcut-right {
+    float: right;
+    /*position: relative;*/
+}
+.shortcut-right ul li {
+    float: left;
+    padding: 0 11px 0 10px;
+}
+.shortcut-right .line {
+    width: 1px;
+    height: 12px;
+    background-color: #DDDDDD;
+    padding: 0;
+    margin-top: 9px;
+}
+.shortcut-right .fore {  /*后代选择器*/
+    position: relative;
+    padding: 0 25px 0 10px;
+}
+.shortcut-right .jd-tel {
+    position: relative;
+    padding-left: 27px;
+}
+.jd-tel:hover .tel {
+    background-position: 0 -25px;
+}
+.tel {
+    width: 15px;
+    height: 20px;
+    background-color: red;
+    position: absolute;
+    left: 7px;
+    top: 5px;
+    background: url(../images/sprite.png) no-repeat 0 0;
+}
+.fore:hover {
+    background-color: #fff;
+}
+/*shortcut结束*/
+/*topbanner开始*/
+.topbanner{
+    background-color: #FF2F7A;
+}
+.topbanner-tp{
+    position:relative;
+}
+.closebanner{
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    background:url(../images/close.png) no-repeat left top;
+}
+.closebanner:hover{
+    background-position: left bottom;
+}
+/*topbanner结束*/
+
+/*logo部分开始*/
+.logo{
+    width: 362px;
+    height: 60px;
+    padding: 20px 0;
+    /*background-color: red;*/
+    float: left;
+}
+.logo a {
+    width: 270px;
+    height: 60px;
+    display: block;  /*将行内元素转换成块级元素，这样宽高才会起作用*/
+    background: url(../images/logo.png) no-repeat;
+    text-indent: -20000em;
+}
+.search {
+    width: 540px;
+    height: 36px;
+    /*background-color: blue;*/
+    float: left;
+    margin-top: 25px;
+}
+.search input {
+    width: 450px;
+    height: 32px;
+    border: 3px solid #B61D1D;
+    float: left;
+    color: #66A3D3;
+    padding-left: 4px;
+    /*background-color: red;*/
+}
+.search button {
+    width: 80px;
+    height: 36px;
+    background-color: #B61D1D;     /*背景颜色*/
+    float: left;        /*左浮动*/
+    color: #fff;
+    font-size: 16px;       /*字体大小*/
+    font-family: "microsoft yahei";     /*文本字体"微软雅黑"*/
+    cursor: pointer;
+}
+
+
+
+
+.car {
+    width: 96px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #DFDFDF;
+    /*background-color: pink;*/
+    float: right;
+    margin: 25px 65px 0 0;  /*trbl*/
+    padding-left: 43px;
+    position: relative;
+}
+.icon1 {   /*定位了的元素可以自动的拥有宽高的属性*/
+    width: 18px;
+    height: 16px;
+    position: absolute;
+    left: 17px;
+    top: 9px;
+    /*background-color: red;*/
+    background: url(../images/sprite.png) no-repeat 0 -90px;
+}
+.icon2 {
+    font: 400  14px/34px "宋体";      /*font 连写*/
+    position: absolute;
+    right: 11px;
+    top: 0;
+}
+.icon3 {
+    width: 16px;
+    height: 14px;
+    line-height: 14px;
+    text-align: center;
+    background-color: #C81623;
+    position: absolute;
+    right: 19px;
+    top: -4px;
+    color: #fff;
+
+}
+.hotwords {
+    /*width: 420px;*/
+    height: 30px;
+    /*background-color: green;*/
+    float: left;
+    margin-top: 9px;
+}
+.hotwords a {
+    margin-right: 8px;
+}
+/*logo部分结束*/
+.nav {
+    height: 44px;
+    border-bottom: 2px solid #B1191A;
+}
+.nav-dropdown {
+    width: 210px;
+    height: 44px;
+    background-color: #B1191A;
+    position: relative;  /*需要让原来的元素占据原来的位置，而且还得有层级*/
+    z-index: 100;
+    float: left;
+}
+.nav-dropdown-all {
+    height: 44px;
+    width: 210px;        /*宽是可以继承的，所以这个宽度就省略*/
+    background-color: #B1191A;
+}
+.nav-dropdown-all a {
+    font: 400 16px/44px "microsoft yahei";
+    color: #fff;
+    padding-left: 10px;
+    display: block;
+    /*width: 210px;*/
+    height: 44px;
+}
+.nav-dropdown-detail {
+    height: 464px;
+    background-color: #C81623;
+    margin-top: 2px;
+    border: 1px solid #B1191A;
+}
+.ndd-items{    /*宽度是可以继承父盒子的*/
+    height: 31px;
+    line-height: 31px;
+    padding-left: 9px;       /*只要padding-left的值不超过父盒子的宽度，其他的不用设置*/
+    font: 400 14px/31px "microsoft yahei";
+    color: #fff;
+}
+.ndd-items h2{
+    float: left;
+}
+.ndd-items h2 a {
+    color: #fff;
+} 
+.ndd-items span{
+    float: right;
+    font-family: consolas;
+    padding-right: 13px;
+}
+.ndd-items:hover{
+    background: #fff;
+}
+.ndd-items:hover a{
+    color:#B1191A;
+}
+
+
+
+
+/*dropdown右边的导航项*/
+.nav-items{
+    float: left;
+}
+.nav-items ul li{
+    float: left;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    font-family: "Microsoft Yahei";
+}
+.nav-items  li a {
+    display: block;
+    height: 44px;
+    padding: 0 20px;
+}
+.nav-items li.current {  /*标签指定式选择器*/
+    position: relative;
+}
+.nav-items li i {
+    width: 36px;
+    height: 18px;
+    position: absolute;
+    top: 0;
+    right: -16px;
+    background: url(../images/qing.jpeg) no-repeat;
+}
+
+
+
+/*footer部分开始*/
+.footer-top-slogan {
+    height: 54px;
+    /*line-height: 94px;*/
+    padding: 20px 0;
+    background-color: #F5F5F5;
+    /*background-color: red;*/
+}
+.footer-top-slogan span {
+    position: absolute;
+    left: 50%;
+}
+.slogan1 {
+    margin-left: -600px;
+}
+.slogan2 {
+    margin-left: -290px;
+}
+.slogan3 {
+    margin-left: 25px;
+}
+.slogan4 {
+    margin-left: 340px;
+}
+
+.footer-top-product dl {
+    margin-top: 25px;
+    float: left;
+    width: 200px;
+}
+.footer-top-product dl dt,.coverage h2{
+    font-size: 16px;
+    font-family: "microsoft yahei";
+    height: 30px;
+}
+.footer-top-product dl dd {
+    height: 20px;
+}
+.coverage {
+    width: 189px;
+    height: 165px;
+    background: url(../images/china.png) no-repeat left bottom;
+    float: right;
+    margin-top: 16px;
+    padding-left: 18px;
+}
+.coverage h2{
+    margin-top: 9px;
+}
+.coverage p {
+    line-height: 22px;
+}
+.footer-bottom{
+    border-top: 2px solid #c585f5;
+    /*margin-top: 25px;*/
+    margin: 0 25px 0 30px;
+    text-align:center;
+}
+.foonter-bottom-links{
+    margin-top: 24px;
+}
+.foonter-bottom-links a{
+    margin: 10px;
+}
+.footer-bottom-copyright{
+    margin-top: 8px;
+    line-height: 21px;
+}
+.footer-bottom-message{
+    margin-top: 7px;
+}
+.footer-bottom-message a{
+    margin: 0 6px;
+
+}
+/*footer结束*/

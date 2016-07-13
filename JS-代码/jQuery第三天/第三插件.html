@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background: pink;
+        }
+    </style>
+    <script src="jquery-1.12.3.js"></script>
+    <script src="jquery.myColor.js"></script>
+    <script>
+        //使用第三方的库，必须把第三方的库放置在 jquery的后面
+        $(function(){
+            //点击按钮让div有动画
+            $("#btn").click(function(){
+                $("div").height("400px").css("background","red");
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="动画" id="btn"/>
+<div>
+    动画
+</div>
+</body>
+</html>

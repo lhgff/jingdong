@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 944px;
+            margin: 50px auto 0;
+        }
+    </style>
+    <script src="jquery-1.12.3.min.js"></script>
+    <script>
+        //入口函数
+        $(function(){
+            // 关灯效果
+            // 对 js 单击事件 onclick 的封装
+            //1.拿到 关灯 这个按钮。给按钮注册一个点击事件。
+            $("#j_closeLight").click(function(){
+                // document.body
+                // 把jQuery对象转换成DOM对象
+                //2.事件里面。让body背景颜色，被黑
+                $("body")[0].style.background = "black";
+            });
+            // 开灯效果
+            /*$("#j_openLight")[0].onclick = function () {
+             }*/
+            $("#j_openLight").click(function(){
+                $("body")[0].style.background = "white"
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="开灯按钮" id="j_openLight"/>
+<input type="button" value="关灯按钮" id="j_closeLight"/>
+
+<div>
+    <img src="images/coder.jpg" alt=""/>
+</div>
+</body>
+</html>

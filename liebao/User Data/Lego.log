@@ -1,0 +1,22 @@
+[2016/02/05 14:59:04 | 6252(Chrome_FileThread)] cfg_version = 2013.11.28.1
+[2016/02/05 14:59:06 | 7128(CrBrowserMain)] Start Get Config File From Server
+[2016/02/05 14:59:07 | 6252(Chrome_FileThread)] Start Extract File
+[2016/02/05 14:59:08 | 3744(Chrome_IOThread)] send_url=http://api.liebao.cn/extension/query.php?id[]=cbeinhnicfmocmeoidoelkeclfmjffhe|0.0.0.0&id[]=dehbijahfabddfbolechpnlgoblcgpie|0.0.0.0&id[]=diekbadcibelejibcgkijefnccjpadjp|0.0.0.0&id[]=eklhgbkeiamnfmofpdmndkemmhpclpmo|0.0.0.0&id[]=fmbcnblloeackkohfegeldnibpheeemf|0.0.0.0&id[]=ombhgaiafibpphidclebhekcepalbfpk|0.0.0.0&prodversion=5.3.108.10480&pid=p_dbxxl&spid=dbxxl&uuid=d195c79d1478a501f9e69f2b29d9dd2d&did=9njhvqyp5a7d4chy8bipexu45cw8
+[2016/02/05 14:59:11 | 7128(CrBrowserMain)] lego id=cbeinhnicfmocmeoidoelkeclfmjffhe,type=1
+[2016/02/05 14:59:11 | 7128(CrBrowserMain)] lego id=dehbijahfabddfbolechpnlgoblcgpie,type=1
+[2016/02/05 14:59:11 | 7128(CrBrowserMain)] lego id=diekbadcibelejibcgkijefnccjpadjp,type=1
+[2016/02/05 14:59:11 | 7128(CrBrowserMain)] lego id=eklhgbkeiamnfmofpdmndkemmhpclpmo,type=1
+[2016/02/05 14:59:11 | 7128(CrBrowserMain)] lego id=fmbcnblloeackkohfegeldnibpheeemf,type=1
+[2016/02/05 14:59:11 | 7128(CrBrowserMain)] lego id=ombhgaiafibpphidclebhekcepalbfpk,type=1
+[2016/02/05 14:59:29 | 7128(CrBrowserMain)] installed id=fmbcnblloeackkohfegeldnibpheeemf
+[2016/02/05 14:59:34 | 7128(CrBrowserMain)] installed id=diekbadcibelejibcgkijefnccjpadjp
+[2016/02/05 14:59:39 | 7128(CrBrowserMain)] installed id=cbeinhnicfmocmeoidoelkeclfmjffhe
+[2016/02/05 14:59:44 | 7128(CrBrowserMain)] installed id=dehbijahfabddfbolechpnlgoblcgpie
+[2016/02/05 15:00:00 | 7128(CrBrowserMain)] installed id=ombhgaiafibpphidclebhekcepalbfpk
+[2016/02/05 15:00:01 | 7128(CrBrowserMain)] installed id=eklhgbkeiamnfmofpdmndkemmhpclpmo
+[2016/02/06 10:07:14 | 4780(Chrome_FileThread)] cfg_version = 2015.0630.6400.2
+[2016/02/06 10:07:14 | 5524(CrBrowserMain)] QueryConfigUrlFromServerComplete error bRet = 0 isNeedDownLoad = 0
+[2016/02/06 10:17:17 | 7480(Chrome_IOThread)] send_url=http://api.liebao.cn/extension/query.php?id[]=cbeinhnicfmocmeoidoelkeclfmjffhe|0.1.3.81&id[]=dehbijahfabddfbolechpnlgoblcgpie|0.1.1.78&id[]=diekbadcibelejibcgkijefnccjpadjp|1.1.1.2&id[]=eklhgbkeiamnfmofpdmndkemmhpclpmo|1.4.11&id[]=fmbcnblloeackkohfegeldnibpheeemf|2.0.0.2&id[]=ombhgaiafibpphidclebhekcepalbfpk|1.1.4.9&prodversion=5.3.108.10480&pid=p_dbxxl&spid=dbxxl&uuid=d195c79d1478a501f9e69f2b29d9dd2d&did=9njhvqyp5a7d4chy8bipexu45cw8
+[2016/02/06 10:17:17 | 5524(CrBrowserMain)] install download errtype=2,errcode=0
+[2016/04/02 01:08:54 | 5812(Chrome_FileThread)] cfg_version = 2015.0630.6400.2
+[2016/04/02 01:08:56 | 6516(CrBrowserMain)] QueryConfigUrlFromServerComplete error bRet = 0 isNeedDownLoad = 0

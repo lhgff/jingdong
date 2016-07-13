@@ -1,0 +1,24 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_title": "猎豹游戏",
+      "name": "猎豹游戏"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "游戏助手",
+   "devtools_page": "devtools.html",
+   "externally_connectable": {
+      "matches": [ "http://www.liebao.cn/lego/game/", "http://www.liebao.cn/lego/game/?*", "http://store.liebao.cn/game/LBGameCenter/", "http://store.liebao.cn/game/LBGameCenter/?*" ]
+   },
+   "icons": {
+      "16": "icon16.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA3Pj8T1w9UIJxja1V+JQAvvxqI47UDrJ21fqzZrAyHM2e8sjAFNzBSakAv6E7P10UnBB466/lJ2DlWHLl4AxhBgfGsSq6BBhrPbyX3VnkHDmZvcGqlj6PIunQpPYdQBYbDDECs4P1WZqERqKgEf+mGkcXjsgWjMZkVaB3kOUixAKBS3rfFrW8uKupo939GKASW5b8bb5LLhfmCvu8p2udhtEbZZzeN/l/w0FJKxMz7vkttHANoXfDRZzx043GNEaYnc0J68LZ4wMHORSO67k8Mea9j98/DjNJ7h6M0IQ2EiIn+fVo2/FxvXVFtggzYz7JC/w+Drub7wGqlXDpi8IPaQIDAQAB",
+   "manifest_version": 2,
+   "name": "猎豹游戏",
+   "permissions": [ "tabs", "management", "webRequest", "webRequestBlocking", "bookmarks", "browsingData", "clipboardRead", "clipboardWrite", "storage", "unlimitedStorage", "topSites", "proxy", "privacy", "power", "webNavigation", "contextMenus", "cookies", "contentSettings", "history", "geolocation", "idle", "chrome://favicon/", "http://*/*", "https://*/*", "\u003Call_urls>", "infobars" ],
+   "version": "0.1.3.81"
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //冒泡排序，从小到大    [65,97,76,13,27,49,58]
+        var arr = [65, 97, 76, 13, 27, 49, 58];
+        //一共比arr.length - 1趟   每趟比了arr.length-1-i次
+
+        //用一个变量去计算比较的趟数
+        var count = 0;
+
+        //外层循环用于控制趟数
+        for (var i = 0; i < arr.length - 1; i++) {
+            //在每一趟比较之前，先假设这一趟已经比较完毕
+            var isSorted = true;
+            count++;
+
+            //每一趟里面都要比arr.length-1-i次
+            for (var j = 0; j < arr.length - 1 - i; j++) {
+                //比大小：arr[j]跟arr[j+1]比，如果说arr[j]大，进行换位
+                //如果下面的if在某一趟比较时没有进入，说明每一个当前项都没有后一项大，说明比完了
+                if (arr[j] > arr[j + 1]) {
+                    //如果进入if，说明没比完，我们将isSorted的值更改为false
+                    isSorted = false;
+                    //交换两个位置的值
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+            //如果isSorted这个值是true，说明比完了，我们就不用继续往后比较了，直接跳出
+            if (isSorted) {
+                break;
+            }
+
+        }
+        console.log(count);
+        console.log(arr);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

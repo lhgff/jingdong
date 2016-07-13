@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 300px;
+            height: 280px;
+        }
+
+        li {
+            width: 300px;
+            height: 20px;
+        }
+        .current{
+            background-color: #cccccc !important;
+            height: 40px;
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<script>
+    //制作隔行变色效果
+    //获取页面元素
+    var lis = document.getElementsByTagName("li");
+    //添加背景色
+    for (var i = 0; i < lis.length; i++) {
+        if (i % 2 == 0) {
+            lis[i].style.backgroundColor = "red";
+        } else {
+            lis[i].style.backgroundColor = "blue";
+        }
+        lis[i].onmouseover = function () {
+            this.className = "current";
+        };
+
+        lis[i].onmouseout = function () {
+            //由于移出的时候，无法判断当前的li以前是什么颜色，我们使用类名更改
+            //this.style.backgroundColor = "red";
+            //取消设置的类名
+            this.className = "";
+        }
+
+
+    }
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .one{
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            position: relative;
+            background-color: #75d6dd;
+            transform-style: preserve-3d;
+            transition:all 3s;
+        }
+        .one::before{
+            content: '';
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('images/bg.png');
+            background-position: top right;
+            border-radius:50%;
+            box-shadow:0px 0px 1px #ccc;
+        }
+        .one::after{
+            content: '';
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top:0;
+            left: 0;
+            background-image:url('images/bg.png');
+            background-position: top left;
+            border-radius:50px;
+            box-shadow: 0px 0px 1px #ccc;
+            transform: rotateY(180deg);
+        }
+        .one:hover{
+            transform:rotateX(360deg);
+        }
+    </style>
+</head>
+<body>
+<div class="one"></div>
+</body>
+</html>

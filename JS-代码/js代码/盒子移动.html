@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <button id="btn">按钮</button>
+  <script>
+      var timer = setInterval(function () {
+          console.log("我又来啦");
+      },1000);
+
+      var btn = document.getElementById("btn");
+      btn.onclick = function () {
+                  clearInterval(timer);
+              }
+
+
+//      <button id="btn">按钮</button>
+//              <script>
+//      var timerId = setTimeout(function () {
+//          alert("呵呵，我出来啦");
+//      }, 1000);
+//
+//      var btn = document.getElementById("btn");
+//      //在点击btn的时候让定时器停止
+//      btn.onclick = function () {
+//          //清除定时器
+//          clearTimeout(timerId);
+//      };
+
+  </script>
+</body>
+</html>

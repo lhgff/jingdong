@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //李四的年终工作评价，如果定位A，则工资涨500，如果定为B级，则工资涨300，如果定为C，工资不变，如果定为D级，工资减200，如果定为E级工资减500,。
+        //   设定李四的工资为10000，输入李四的评级，然后显示李四的来年工资。
+
+          //   switch{
+          //     case:
+          //       break;
+
+          //         default:
+          //        break
+          // }
+
+
+        var a = prompt("输入你的工资评定");
+        var b = 10000;
+        var c = true;
+        switch (a){
+            case "A":
+            b += 500;
+            break;
+            case "B":
+            b += 300;
+            break;
+            case "C":
+            b += 0;
+            break;
+            case "D":
+            b -= 200;
+            break;
+            case "E":
+            b -= 500;
+            break;
+            default:
+            c = false;
+            alert("你输入的错误");
+            break;
+        }
+//        alert("你的来年工资为"+b);
+        if(c){
+            alert("你的来年工资为"+b);
+        }
+
+
+        //  if else-if
+
+          var a = prompt("输入你的工资评定");
+          var b = 10000;
+          if(a == "A"){
+              b += 500;
+          }else if(a =="B"){
+              b += 300;
+          }else if(a=="C"){
+              b += 0;
+        }else if(a=="D"){
+             b -= 200;
+        }else if(a=="E"){
+             b -= 500;
+        }else{
+            alert("你输入的不正确");
+        }
+        alert("你的来年工资为"+b);
+
+        //  switch-case和if else-if 的互换
+
+        //           成绩>=90:A
+        //          90>=成绩>=80:B
+        //          80>=成绩>=70: C
+        //          70>=成绩>=60:D
+        //            成绩<=60:E
+
+        //  switch-case和if else-if 的互换
+
+        var a = parseInt(prompt("输入你的成绩"));
+        a = parseInt(a/10);
+        switch(a){
+            case 10:
+                alert("A");
+            break;
+            case 9:
+                alert("A");
+            break;
+            case 8:
+                alert("B");
+            break;
+            case 7:
+                alert("C");
+            break;
+            case 6:
+                alert("D");
+            break;
+            default:
+                alert("E");
+            break;
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

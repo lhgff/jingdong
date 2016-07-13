@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        tbody td {
+            width: 165px;
+            height: 19px;
+        }
+    </style>
+
+</head>
+<body>
+<a id="add" href="javascript:void(0)">添加</a>
+<div id="box"></div>
+<script>
+    function crt(name){
+        return document.createElement(name);
+    }
+    var heads = ["姓名","科目","成绩","操作"];
+    var datas = [
+        {"name": "张三1", "subject": "语文1", "score": 99.8},
+        {"name": "张三2", "subject": "语文2", "score": 80.8},
+        {"name": "张三3", "subject": "语文3", "score": 70.8},
+        {"name": "张三4", "subject": "语文4", "score": 100},
+        {"name": "张三5", "subject": "语文5", "score": 60},
+        {"name": "张三6", "subject": "语文6", "score": 70},
+        {"name": "张三7", "subject": "语文7", "score": 89.8}
+    ];
+    var box = document.getElementById("box");
+    var table = crt("table");
+    table.border = "1px";
+    table.style.borderCollapse = "collapse";
+    table.style.width = "600px";
+    box.appendChild(table);
+    var thead = crt("thead");
+    table.style.backgroundColor = "#cccccc";
+    table.appendChild(thead);
+    for (var i= 0;  i< heads.length; i++) {
+       var thead = crt("thead");
+        thead.innerHTML = heads[i];
+        thead.appendChild(thead);
+    }
+    var tbody = crt("tbody");
+    thead.appendChild(tbody);
+    tbody.style.textAlign = "center";
+    for (var i = 0; i < datas.length; i++) {
+      var tr = crt("tr");
+        for(var key in datas[i]){
+          var td = crt("td");
+            td.innerHTML = datas[i][key];
+            tr.appendChild(td);
+        }
+        td = crt("td");
+        var link = crt("a");
+        link.href = "javacript:void(0)";
+        link.innerHTML = "删除";
+        link.onclick = function(){
+            var trs = tbody.children;
+            for (var i = 0; i < trs.length; i++) {
+              if(trs[i]===this.parentNode.parentNode){
+                    datas.splice(i,1);
+                    break;
+                }
+            }
+            console.log(datas);
+            tbody.removeChild(this.parentNode.parentNode);
+        };
+        td.appendChild(link);
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+    }
+    var add = document.getElementById("add");
+    add.onclick = function(){
+        var tr = crt("tr");
+        td.innerHTML = "<input type = 'text' stylr = 'width: 80px'>";
+        tr.appendChild(td);
+    }
+</script>
+</body>
+</html>

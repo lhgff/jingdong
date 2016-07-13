@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // 练习3：使用构造函数加原型的方式写类，再创建对象
+        function Person(name){
+            this.name = name;
+        }
+    Person.prototype.run = function(){
+        console.log('跑');
+    };
+    var fei = new Person('he');
+    fei.run();
+    var ff = new Person('hehe');
+    ff.run();
+</script>
+</body>
+</html>

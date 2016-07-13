@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>XMLHttpRequest</title>
+	<style>
+		p {
+			font-size: 30px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<p>学习XMLHttpRequest</p>
+	<p class="result"></p>
+	<script type="text/javascript">
+		// 1.实例化XMLHttpRequest对象
+		var xhr=new XMLHttpRequest;
+		// 2.设置请求行 open还有另外一个参数，是否异步，当为true的时候,为异步，当为flase的时候为同步
+		xhr.open("get","02_Asynchronous.php",true);
+		// 3.设置请求头
+		// xhr.setRequestHeader()
+		// 4.设置请求正文  如果有后台需要的数据可以在此填写，如果没有可以写为null
+		xhr.send(null);
+		// console.log(xhr.responseText);
+		// 5.监听并处理响应数据
+		xhr.onreadystatechange=function(){
+			if (xhr.readyState==4) {
+
+		 		console.log(xhr.responseText);
+			}
+		 }
+		 console.log("立即执行")
+	</script>
+</body>
+</html>

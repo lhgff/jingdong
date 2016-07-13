@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .liItem{
+            background: #db10ff;
+            font-size: 15px;
+            color: #0099cc;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        //给所有li元素添加类    注意：此处不能带点（.）
+
+        $(function(){
+            //给第三个li元素删除liItem 这个类
+            $("li").addClass("liItem");
+            //判断有没有指定的类：basClass
+            var hasAAAclass = $("li").eq(1).hasClass("aaa");
+            console.log(hasAAAclass);
+        })
+    </script>
+</head>
+<body>
+<ul>
+    <li>li标签里的文字</li>
+    <li>li标签里的文字</li>
+    <li>li标签里的文字</li>
+    <li>li标签里的文字</li>
+    <li>li标签里的文字</li>
+    <li>li标签里的文字</li>
+    <li>li标签里的文字</li>
+    <li>li标签里的文字</li>
+    <li>li标签里的文字</li>
+</ul>
+</body>
+</html>

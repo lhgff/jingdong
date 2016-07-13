@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        body {
+            background: #000;
+        }
+        .one {
+            margin: 100px auto 0;
+            width: 630px;
+            height: 394px;
+            padding: 10px 0 0 10px;
+            background: #000;
+            overflow: hidden;
+            border: 1px solid #fff;
+        }
+        .one li {
+            float: left;
+            margin: 0 10px 10px 0;
+
+        }
+        .one img {
+            display: block;
+            border: 0;
+        }
+    </style>
+    <!--<script src="jquery-1.12.3.js"></script>-->
+
+    <script src="jquery-1.11.1.min.js"></script>
+
+    <script>
+//        $(function(){
+//            $(".one li").mouseenter(function(){
+//                $(this).css("opacity",1)
+//                $(this).siblings("li").css("opacity",0.4);
+//            })
+//            $(".one").mouseleave(function(){
+//                $(this).find("li").css("opacity",1);
+////                  $(this).children("ul").children("li").css("opacity",1);
+//            })
+//        })
+
+
+$(document).ready(function () {
+    var lis = $(".one").find("li");
+    lis.mouseenter(function () {
+        $(this).css("opacity", 1).siblings("li").css("opacity", 0.4);
+    });
+    $(".one").mouseleave(function () {
+        $("li").css("opacity", 1);
+    });
+});
+    </script>
+</head>
+<body>
+<div class="one">
+    <ul>
+        <li><a href="#"><img src="images/01.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/02.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/03.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/04.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/05.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="images/06.jpg" alt=""/></a></li>
+    </ul>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+<!--<script>-->
+    <!--$(function(){-->
+        <!--//1.给li标签绑定 mouseenter-->
+        <!--$(".one li").mouseenter(function(){-->
+            <!--//2.在事件里面，让当前的 图片亮起来，其他的兄弟图片，变暗-->
+            <!--$(this).css("opacity",1)-->
+            <!--$(this).siblings("li").css("opacity",0.4);-->
+        <!--})-->
+        <!--// 给div绑定一个鼠标离开事件-->
+        <!--$(".one").mouseleave(function(){-->
+            <!--//从当前元素里面，去查找指定的元素，让指定的元素，变亮。-->
+            <!--$(this).find("li").css("opacity",1);-->
+<!--//                  $(this).children("ul").children("li").css("opacity",1);-->
+        <!--})-->
+    <!--})-->
+<!--</script>-->
+
+
+
+
+
+<!--<script>-->
+    <!--$(document).ready(function () {-->
+        <!--// 获取到所有的li元素，并绑定鼠标移上来的事件-->
+        <!--//$(".wrap li")-->
+        <!--//$(".wrap > ul > li")-->
+        <!--//$(".wrap").children("ul").children("li")-->
+        <!--// find() 作用：帮我们查找指定元素下面的所有后代元素-->
+        <!--// 此处，就是查找.wrap这个元素下面的所有li元素-->
+        <!--var lis = $(".wrap").find("li");-->
+        <!--// lis是 jQuery对象，所以，我们能调用jQuery的mouseenter事件-->
+        <!--lis.mouseenter(function () {-->
+            <!--// 让当前元素变亮，然后，让所有的兄弟元素变暗-->
+            <!--$(this).css("opacity", 1).siblings("li").css("opacity", 0.4);-->
+        <!--});-->
+
+        <!--// 离开ul元素的时候，让所有li都变亮（设置：不透明度这个样式属性）-->
+        <!--$(".wrap").mouseleave(function () {-->
+            <!--$("li").css("opacity", 1);-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->

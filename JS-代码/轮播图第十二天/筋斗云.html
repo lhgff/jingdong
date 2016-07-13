@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            background-color: #dddddd;
+        }
+        .nav{
+            width: 800px;
+            height: 42px;
+            margin: 100px auto;
+            background: url(images/rss.png) right center no-repeat;
+            background-color: #ffffff;
+            border-radius: 10px;
+            position: relative;
+        }
+        .nav li{
+            width: 83px;
+            height: 42px;
+            text-align: center;
+            line-height: 42px;
+            float: left;
+            cursor: pointer;
+        }
+        .nav span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 83px;
+            height: 42px;
+            background: url(images/cloud.gif) no-repeat;
+        }
+        ul{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <span id="cloud"></span>
+    <ul id="navBar">
+        <li>北京校区</li>
+        <li>上海校区</li>
+        <li>广州校区</li>
+        <li>深圳校区</li>
+        <li>武汉校区</li>
+        <li>关于我们</li>
+        <li>联系我们</li>
+        <li>招贤纳士</li>
+    </ul>
+</div>
+<script>
+//    var cloud = document.getElementById("cloud");
+//    var ul = document.getElementById("navBar");
+//    var lis = ul.children;
+//    var imgWidth = lis[0].offsetWidth;
+//    var lastPos = 0;
+    var cloud = document.getElementById("cloud");
+    var navBar = document.getElementById("navBar");
+    var lis = navBar.children;
+    var lastPosition = 0;
+
+
+//    for (var i = 0; i < lis.length; i++) {
+//      lis[i].index = i;
+//        lis[i].onmouseover = function(){
+//            var target = this.index * imgWidth;
+//            animate(cloud,target);
+//        };
+//        lis[i].onmouseout = function(){
+//            animate(cloud,lastPos);
+//        };
+//        lis[i].onclick = function(){
+//            lastPos = this.offsetLeft;
+//        };
+//    }
+
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].onmouseover = function () {
+          var target = this.offsetLeft;
+          animate(cloud,target);
+      }
+        lis[i].onmouseout = function () {
+            animate(cloud,lastPosition);
+        }
+        lis[i].onclick = function(){
+            lastPosition = this.offsetLeft;
+        }
+    }
+
+    function animate(obj, target) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            //step = (target - leader) / 10
+            //leader = leader + step
+            var leader = obj.offsetLeft;
+            var step = (target - leader) / 10;
+            /*if (step > 0) {
+             step = Math.ceil(step);
+             }
+             if (step < 0) {
+             step = Math.floor(step);
+             }*/
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            leader = leader + step;
+            console.log("target: " + target + "leader: " + leader + "step: " + step);
+            if (leader != target) {
+                obj.style.left = leader + "px";
+            } else {
+                clearInterval(obj.timer);
+            }
+        }, 10)
+    }
+
+
+//    function animate(tag, target) {
+//        clearInterval(tag.timer);
+//        tag.timer = setInterval(function () {
+//            var leader = tag.offsetLeft;
+//            var step = ( target - leader ) / 10
+//            //if (step > 0) {
+//            //    step = Math.ceil(step);
+//            //} else {
+//            //    step = Math.floor(step);
+//            //}
+//            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+//            leader = leader + step
+//            console.log("leader:" + leader + " step:" + step);
+//            tag.style.left = leader + "px";
+//            if (leader == target) {
+//                clearInterval(tag.timer);
+//            }
+//        }, 20)
+//    }
+</script>
+</body>
+</html>
+
+<!--注释-->
+<!--<body>-->
+<!--<div class="nav">-->
+    <!--<span id="cloud"></span>-->
+    <!--<ul id="navBar">-->
+        <!--<li>北京校区</li>-->
+        <!--<li>上海校区</li>-->
+        <!--<li>广州校区</li>-->
+        <!--<li>深圳校区</li>-->
+        <!--<li>武汉校区</li>-->
+        <!--<li>关于我们</li>-->
+        <!--<li>联系我们</li>-->
+        <!--<li>招贤纳士</li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--//获取页面元素-->
+    <!--var cloud = document.getElementById("cloud");-->
+    <!--var ul = document.getElementById("navBar");-->
+    <!--var lis = ul.children;-->
+    <!--var imgWidth = lis[0].offsetWidth;-->
+    <!--var lastPos = 0;-->
+    <!--//给每一个li添加事件-->
+    <!--for (var i = 0; i < lis.length; i++) {-->
+        <!--lis[i].index = i;-->
+        <!--lis[i].onmouseover = function () {-->
+            <!--//移入当前这个li时，让云彩移动过来-->
+            <!--var target = this.index * imgWidth;-->
+            <!--animate(cloud, target);-->
+        <!--};-->
+        <!--//当鼠标移出，让cloud归位-->
+        <!--lis[i].onmouseout = function () {-->
+            <!--animate(cloud,lastPos);-->
+        <!--};-->
+        <!--//当我点击某一个li时，让lastPos更新-->
+        <!--lis[i].onclick = function () {-->
+            <!--lastPos = this.offsetLeft;-->
+        <!--};-->
+    <!--}-->
+    <!--function animate(tag, target) {-->
+        <!--clearInterval(tag.timer);-->
+        <!--tag.timer = setInterval(function () {-->
+            <!--var leader = tag.offsetLeft;-->
+            <!--//缓动动画公式就是动态的改变了每一次走的步长-->
+            <!--var step = ( target - leader ) / 10-->
+            <!--//需要根据steo的正负，来判断取整方式-->
+            <!--//if (step > 0) {-->
+            <!--//    step = Math.ceil(step);-->
+            <!--//} else {-->
+            <!--//    step = Math.floor(step);-->
+            <!--//}-->
+            <!--step = step > 0 ? Math.ceil(step) : Math.floor(step);-->
+            <!--leader = leader + step-->
+            <!--console.log("leader:" + leader + " step:" + step);-->
+            <!--tag.style.left = leader + "px";-->
+            <!--if (leader == target) {-->
+                <!--clearInterval(tag.timer);-->
+            <!--}-->
+        <!--}, 20)-->
+    <!--}-->
+<!--</script>-->
+<!--</body>-->
+
+
+<!--没注释-->
+<!--<body>-->
+<!--<div class="nav">-->
+    <!--<span id="cloud"></span>-->
+    <!--<ul id="navBar">-->
+        <!--<li>北京校区</li>-->
+        <!--<li>上海校区</li>-->
+        <!--<li>广州校区</li>-->
+        <!--<li>深圳校区</li>-->
+        <!--<li>武汉校区</li>-->
+        <!--<li>关于我们</li>-->
+        <!--<li>联系我们</li>-->
+        <!--<li>招贤纳士</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<script>-->
+    <!--//找人-->
+    <!--var cloud = document.getElementById("cloud");-->
+    <!--var navBar = document.getElementById("navBar");-->
+    <!--var lis = navBar.children;-->
+    <!--var lastPosition = 0;-->
+    <!--//给每一个li绑定鼠标经过事件 鼠标经过调用动画函数让云彩飞过来-->
+    <!--for (var i = 0; i < lis.length; i++) {-->
+        <!--lis[i].onmouseover = function () {-->
+            <!--//目标就是当前li的offsetLeft-->
+            <!--var target = this.offsetLeft;-->
+            <!--animate(cloud, target);-->
+        <!--}-->
+        <!--lis[i].onmouseout = function () {-->
+            <!--animate(cloud, lastPosition);-->
+        <!--}-->
+        <!--lis[i].onclick = function () {-->
+            <!--lastPosition = this.offsetLeft;-->
+        <!--}-->
+    <!--}-->
+
+
+    <!--function animate(obj, target) {-->
+        <!--clearInterval(obj.timer);-->
+        <!--obj.timer = setInterval(function () {-->
+            <!--//step = (target - leader) / 10-->
+            <!--//leader = leader + step-->
+            <!--var leader = obj.offsetLeft;-->
+            <!--var step = (target - leader) / 10;-->
+            <!--/*if (step > 0) {-->
+             <!--step = Math.ceil(step);-->
+             <!--}-->
+             <!--if (step < 0) {-->
+             <!--step = Math.floor(step);-->
+             <!--}*/-->
+            <!--step = step > 0 ? Math.ceil(step) : Math.floor(step);-->
+            <!--leader = leader + step;-->
+            <!--console.log("target: " + target + "leader: " + leader + "step: " + step);-->
+            <!--if (leader != target) {-->
+                <!--obj.style.left = leader + "px";-->
+            <!--} else {-->
+                <!--clearInterval(obj.timer);-->
+            <!--}-->
+        <!--}, 10)-->
+    <!--}-->
+<!--</script>-->
+<!--</body>-->

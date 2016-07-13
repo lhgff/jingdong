@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .one{
+            width: 330px;
+            height: 60px;
+            margin: 100px auto 0;
+            padding-left: 10px;
+            background-image: url(images/bg.jpg);
+        }
+        .one li{
+            background-image: url(images/libg.jpg);
+        }
+        .one > ul > li {
+            float: left;
+            margin-right: 10px;
+            position: relative;
+        }
+        .one a{
+            display: block;
+            height: 30px;
+            width: 100px;
+            text-decoration: none;
+            color: #000;
+            line-height: 30px;
+            text-align: center;
+        }
+        .one li ul{
+            position: absolute;
+            top: 30px;
+            display: none;
+        }
+    </style>
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+//        children("指定儿子");当前元素里面的亲 儿子
+//        hide()：隐藏
+        $(function(){
+            //1.给li标绑定 鼠标移入事件
+            $(".one>ul>li").mouseenter(function(){
+                //2.在事件里面，让当前li标签下面的ul标签显示。
+                $(this).children("ul").show();
+            })
+            //功能二，隐藏 ul标签
+            $(".one>ul>li").mouseleave(function(){
+                $(this).children("ul").hide();
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="one">
+    <ul>
+        <li>
+            <a href="javascript:void(0);">一级菜单</a>
+            <ul class="ul">
+                <li><a href="javascript:void(0);">菜单1</a></li>
+                <li><a href="javascript:void(0);">菜单2</a></li>
+                <li><a href="javascript:void(0);">菜单3</a></li>
+                <li><a href="javascript:void(0);">菜单4</a></li>
+                <li><a href="javascript:void(0);">菜单5</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="javascript:void(0);">二级菜单</a>
+            <ul class="ul">
+                <li><a href="javascript:void(0);">菜单1</a></li>
+                <li><a href="javascript:void(0);">菜单2</a></li>
+                <li><a href="javascript:void(0);">菜单3</a></li>
+                <li><a href="javascript:void(0);">菜单4</a></li>
+                <li><a href="javascript:void(0);">菜单5</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="javascript:void(0);">三级菜单</a>
+            <ul class="ul">
+                <li><a href="javascript:void(0);">菜单1</a></li>
+                <li><a href="javascript:void(0);">菜单2</a></li>
+                <li><a href="javascript:void(0);">菜单3</a></li>
+                <li><a href="javascript:void(0);">菜单4</a></li>
+                <li><a href="javascript:void(0);">菜单5</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="javascript:void(0);">四级菜单</a>
+            <ul class="ul">
+                <li><a href="javascript:void(0);">菜单1</a></li>
+                <li><a href="javascript:void(0);">菜单2</a></li>
+                <li><a href="javascript:void(0);">菜单3</a></li>
+                <li><a href="javascript:void(0);">菜单4</a></li>
+                <li><a href="javascript:void(0);">菜单5</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="javascript:void(0);">五级菜单</a>
+            <ul class="ul">
+                <li><a href="javascript:void(0);">菜单1</a></li>
+                <li><a href="javascript:void(0);">菜单2</a></li>
+                <li><a href="javascript:void(0);">菜单3</a></li>
+                <li><a href="javascript:void(0);">菜单4</a></li>
+                <li><a href="javascript:void(0);">菜单5</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="javascript:void(0);">六级菜单</a>
+            <ul class="ul">
+                <li><a href="javascript:void(0);">菜单1</a></li>
+                <li><a href="javascript:void(0);">菜单2</a></li>
+                <li><a href="javascript:void(0);">菜单3</a></li>
+                <li><a href="javascript:void(0);">菜单4</a></li>
+                <li><a href="javascript:void(0);">菜单5</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--<script>-->
+    <!--$(document).ready(function () {-->
+        <!--// 实现下拉菜单效果-->
+        <!--// 获取到所有的一级菜单元素 并绑定鼠标移上来的事件-->
+        <!--$(".wrap > ul > li").mouseenter(function () {-->
+            <!--// 让当前一级菜单对应的二级菜单展示出来-->
+            <!--// $(this) 把DOM对象this，转换成了jQuery对象，-->
+            <!--// 所以，我就可以调用jQUery的方法-->
+            <!--// .children()方法作用：选择到指定元素的子元素-->
+            <!--// $(this).children("ul") 获取到的是当前元素下面的所有ul元素-->
+            <!--$(this).children("ul").show(); // 一直往后点 调用方法叫做 链式编程-->
+        <!--});-->
+        <!--// 获取到所有的一级菜单元素 并绑定鼠标离开的事件-->
+        <!--$(".wrap > ul > li").mouseleave(function () {-->
+            <!--// 让当前一级菜单对应的二级菜单隐藏掉-->
+            <!--//$(this).children("ul").hide(); // hide() 方法是让选择的元素隐藏掉-->
+            <!--$(this).children("ul").css("display", "none");-->
+        <!--});-->
+        <!--/*// mouseover mouseout // 原理：冒泡-->
+         <!--// 这两个事件会触发多次，也就是有多少个子元素就会触发多少次，本身也会触发一次-->
+         <!--// mouseenter 鼠标进入-->
+         <!--// mouseleave 鼠标离开-->
+         <!--// 这两个事件只会触发一次*/-->
+    <!--});-->
+<!--</script>-->

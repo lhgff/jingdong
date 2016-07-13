@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: #9badff;
+        }
+        label{
+            width: 40px;
+            display: inline-block;
+        }
+        span{
+            color: #db10ff;
+        }
+        .container{
+            margin: 100px auto;
+            width: 400px;
+            padding: 50px;
+            line-height: 40px;
+            border: 1px solid #928aff;
+            background: #29cc36;
+        }
+        span{
+            margin-left: 30px;
+            font-size: 12px;
+        }
+        .wrong{
+            color: red;
+        }
+        .right{
+            color: green;
+        }
+        .strengthLv0{
+            height: 6px;
+            width: 120px;
+            border: 1px solid #29cc36;
+            padding: 2px;
+        }
+        .strengthLv1 {
+            background: red;
+            height: 6px;
+            width: 40px;
+            border: 1px solid #ccc;
+            padding: 2px;
+        }
+        .strengthLv2{
+            background: orange;
+            height: 6px;
+            width: 80px;
+            border: 1px solid #ccc;
+            padding: 2px;
+        }
+        .strengthLv3 {
+            background: green;
+            height: 6px;
+            width: 120px;
+            border: 1px solid #ccc;
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <label>密码</label>
+    <input type="text" id="inp1" maxlength="16">
+    <!--<input type="password" id="inp1" maxlength="16"/>-->
+    <div class="pass-wrap">
+        <em>密码强度：</em>
+
+        <em id="strength"></em>
+
+        <div id="strengthLevel" class="strengthLv0"></div>
+    </div>
+</div>
+
+<script>
+    var ipt = document.getElementById("inp1");
+    //提示文字
+    var strength = document.getElementById("strength");
+    //提示等级
+    var strengthLevel = document.getElementById("strengthLevel");
+
+    var level = 0;
+
+    var arr = ["", "弱", "中", "强"]
+    ipt.onkeyup = function () {
+        if (/\d/.test(ipt.value)) {
+            level++;
+        }
+        if (/[a-z]/.test(ipt.value)) {
+            level++;
+        }
+        if (/[^a-z0-9]/.test(ipt.value)) {
+            level++;
+        }
+        if (ipt.value.length < 6) {
+            level = 0;
+        }
+        strength.innerHTML = arr[level];
+        strengthLevel.className = "strengthLv" + level;
+        level = 0;
+    };
+
+</script>
+</body>
+</html>
+
+
+<!--<body>-->
+<!--<div class="container">-->
+    <!--<label>密码</label>-->
+    <!--<input type="text" id="inp1" maxlength="16">-->
+    <!--&lt;!&ndash;<input type="password" id="inp1" maxlength="16"/>&ndash;&gt;-->
+    <!--<div class="pass-wrap">-->
+        <!--<em>密码强度：</em>-->
+        <!--<em id="strength"></em>-->
+        <!--<div id="strengthLevel" class="strengthLv0"></div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<script>-->
+    <!--//找人-->
+    <!--var ipt = document.getElementById("inp1");-->
+    <!--//提示文字-->
+    <!--var strength = document.getElementById("strength");-->
+    <!--//提示等级-->
+    <!--var strengthLevel = document.getElementById("strengthLevel");-->
+    <!--var level = 0;-->
+    <!--var arr = ["", "弱", "中", "强"]-->
+    <!--//在用户输入文本时捕捉用户的输入内容-->
+    <!--ipt.onkeyup = function () {-->
+        <!--//检测输入-->
+        <!--if (/\d/.test(ipt.value)) {-->
+            <!--//让强度等级+1-->
+            <!--level++;-->
+        <!--}-->
+        <!--if (/[a-z]/.test(ipt.value)) {-->
+            <!--level++;-->
+        <!--}-->
+        <!--if (/[^a-z0-9]/.test(ipt.value)) {-->
+            <!--level++;-->
+        <!--}-->
+        <!--//输入的密码至少六位-->
+        <!--if (ipt.value.length < 6) {-->
+            <!--//小于6位，不进行验证-->
+            <!--level = 0;-->
+        <!--}-->
+        <!--//设置页面效果-->
+        <!--strength.innerHTML = arr[level];-->
+        <!--strengthLevel.className = "strengthLv" + level;-->
+        <!--//在每次设置完之后要清除掉level的值-->
+        <!--level = 0;-->
+    <!--};-->
+<!--</script>-->
+<!--</body>-->

@@ -1,0 +1,21 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "icon48.png",
+      "default_popup": "popup.html",
+      "default_title": ""
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "天气提醒",
+   "icons": {
+      "48": "icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAum+z/6xM0V/OOUmfa903Mdpfw4kyYOfJ58kn3hZvO6v/iifhG9EOG6mN8O2rLJpGnkAky2H8g2hYc2jFy0cPMWEkHAniXblGigwOW1hCpgZW55268etLDuAK4B7stsbozROKqrP58QsCYRdRwPrsrLt6V9qlBPpfxwKsw9SSeCBhOEwCiC26RlgM3DgQt460V5Cxf7iOGfguMyCFd9naInWlR/H1tTDLnghA8m7V4sDUtYGnZeYbdqLrxHRggfV4XlYD/Gtt4pVEwxjqCNn4QOIdF+3W2OzGnedVyyobALaAqiBu8So3iLn4I2qAsvfJqDXAtvW/d7bzg6w/u22pMQIDAQAB",
+   "manifest_version": 2,
+   "name": "weather_box",
+   "permissions": [ "*://*/*", "tabs", "background" ],
+   "version": "1.4.11"
+}

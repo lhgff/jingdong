@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .one{
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            position: relative;
+        }
+        .one::before{
+            content: '';
+            background-image: url('images/musicb.jpg');
+            width: 300px;
+            height: 300px;
+            position:absolute;
+            top:0;
+            left: 0;
+            border-radius: 50%;
+        }
+        .one::after{
+            content: '';
+            background-image: url('images/musict.jpg');
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius:50%;
+            transform-origin: center bottom;
+            transition: all 3s;
+        }
+        .one:hover::after{
+            transform: rotatex(180deg);
+        }
+    </style>
+</head>
+<body>
+<div class="one"></div>
+</body>
+</html>

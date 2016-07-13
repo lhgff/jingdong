@@ -1,0 +1,21 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": "img/icon48.png",
+      "default_popup": "popup.html",
+      "default_title": ""
+   },
+   "description": "liebao_sync_collection",
+   "icons": {
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqeDIrTeGtKw94OlDMAVFw53Q3JtSL//iLRHal1Bi8dwDvWHkSnHWN3n3OfpRQGn4ZI+T8jhWNhlOv1Gx/92Wshn8Uf6K3wybvB39InLrE+QT4dQpw1PW3H5OK/UXcbstgIiDGorKJKyStAyaaI7bDiz+p85cqY1NDx9aNtTG/L57W28SZ0b2/Jc9Zja3e5xZM9BHEI3uOScOfkagPtywWrXkJFIkfVyALuEDLMAiUuWea+HX/XKL8iJypQg/RB238XfKXmKayjKcAVyDp0qe98b6Q2y9pk4JRgBmbwHOKL5F9SZDSFiluoYdog4WRKEfcLO64AIsLHQkIX6Y7tVH4wIDAQAB",
+   "manifest_version": 2,
+   "name": "liebao_sync_collection",
+   "permissions": [ "*://*/*", "tabs", "history", "bookmarks", "management", "webNavigation" ],
+   "version": "2.0.0.2",
+   "web_accessible_resources": [ "img/tips.png" ]
+}

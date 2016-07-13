@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .myDiv{
+            font-size:60px;
+            background-color:#0094ff;
+            height:100px;
+            width:100px;
+            display:block;
+            position:relative;
+
+        }
+
+    </style>
+    <!--
+     animtion(参数1，参数2，参数3)
+
+参数1：{参与动画的属性:参数动画的值}
+参数2：动画执行事件
+参数3：回调函数。
+
+    stop(参数1，参数2)
+    参数1：默认 flase， （true）用于 清除队列里后面的动画。
+    参数2：默认 flase   （true） 快速完成当前的动画。
+
+
+    需求1：使用 animate 方法，给div 设置 高度与宽度。
+    需求2：当动画执行过程中，使用 stop 这个方法，体验它如何实现停止动画。
+
+
+    -->
+
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+
+            $("#btnAnimate").click(function(){
+
+                $("div").animate({"top":"400px"},3000)
+                        .animate({"left":"400px"},3000)
+                        .animate({"height":"200px","width":"300px"},3000);
+
+            })
+
+            $("#btnStop").click(function(){
+                $("div").stop(true,true);
+            })
+
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="自定义动画" id="btnAnimate"/>
+<input type="button" value="stop" id="btnStop"/>
+
+<div class="myDiv"></div>
+</body>
+</html>

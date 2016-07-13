@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        select {
+            width: 150px;
+            background-color: #cc403c;
+        }
+    </style>
+    <script src="common.js"></script>
+</head>
+<body>
+<select id="all" size="10" multiple="multiple">
+    <option>苹果</option>
+    <option>香蕉</option>
+    <option>西瓜</option>
+    <option>牛油果</option>
+    <option>西红柿</option>
+</select>
+
+<input type="button" value=">>" id="allRight">
+<input type="button" value="<<" id="allLeft">
+<input type="button" value=">" id="right">
+<input type="button" value="<" id="left">
+
+<select id="select" size="10" multiple="multiple"></select>
+
+<script>
+    var all = myId("all");
+    var select = myId("select");
+    var right = myId("right");
+    var left = myId("left");
+    var opts = all.children;
+    var rightOpts = select.children;
+
+    right.onclick = function () {
+        for (var i = 0; i < opts.length; i++) {
+            if (opts[i].selected == true) {
+                select.appendChild(opts[i]);
+                i--;
+            }
+        }
+    };
+
+    left.onclick = function () {
+        for (var i = 0; i < rightOpts.length; i++) {
+            if (rightOpts[i].selected == true) {
+                all.appendChild(rightOpts[i]);
+                i--;
+            }
+        }
+    };
+
+    //--------------------全部移动部分----------------
+    var allRight = myId("allRight");
+    var allLeft = myId("allLeft");
+    allRight.onclick = function () {
+        for (var i = 0; i < opts.length; i++) {
+            select.appendChild(opts[i]);
+            i--;
+        }
+    };
+    allLeft.onclick = function () {
+        for (var i = 0; i < rightOpts.length; i++) {
+            all.appendChild(rightOpts[i]);
+            i--;
+        }
+    };
+
+</script>
+</body>
+</html>
+
+
+<!--<body>-->
+<!--&lt;!&ndash;左边的下拉菜单&ndash;&gt;-->
+<!--<select id="all" size="10" multiple="multiple">-->
+    <!--<option>苹果</option>-->
+    <!--<option>香蕉</option>-->
+    <!--<option>西瓜</option>-->
+    <!--<option>牛油果</option>-->
+    <!--<option>西红柿</option>-->
+<!--</select>-->
+<!--&lt;!&ndash;四个选择按钮位置&ndash;&gt;-->
+<!--<input type="button" value=">>" id="allRight">-->
+<!--<input type="button" value="<<" id="allLeft">-->
+<!--<input type="button" value=">" id="right">-->
+<!--<input type="button" value="<" id="left">-->
+<!--&lt;!&ndash;右边的下拉菜单&ndash;&gt;-->
+<!--<select id="select" size="10" multiple="multiple"></select>-->
+<!--<script>-->
+    <!--//1获取两个下拉菜单-->
+    <!--var all = myId("all");-->
+    <!--var select = myId("select");-->
+    <!--//2获取移动的按钮-->
+    <!--var right = myId("right");-->
+    <!--var left = myId("left");-->
+    <!--//3获取all中的所有子元素节点-->
+    <!--var opts = all.children;-->
+    <!--//获取右面的所有option-->
+    <!--var rightOpts = select.children;-->
+    <!--//4点击右按钮的事件-->
+    <!--right.onclick = function () {-->
+        <!--//5遍历opts-->
+        <!--for (var i = 0; i < opts.length; i++) {-->
+            <!--//6opts中哪一个option被选中了，如果选中了，移动到select中-->
+            <!--if (opts[i].selected == true) {-->
+                <!--//7将这一项移动到右边:给右面的下拉菜单添加子元素节点-->
+                <!--select.appendChild(opts[i]);-->
+                <!--//8如果当前标签被选中了，每次移动走一个标签，opts的长度会减少-->
+                <!--//length的减少影响了循环的最大次数-->
+                <!--//console.log(opts.length);-->
+                <!--//9length如果减少，我们的总次数也减少，无法正确的遍历所有option-->
+                <!--//为了避免，我们让当前次不计数,保证总的次数不变-->
+                <!--i&#45;&#45;;-->
+            <!--}-->
+        <!--}-->
+    <!--};-->
+    <!--left.onclick = function () {-->
+        <!--//遍历 右面-->
+        <!--for (var i = 0; i < rightOpts.length; i++) {-->
+            <!--//判断有没有被选中的项-->
+            <!--if (rightOpts[i].selected == true) {-->
+                <!--//将这一项移动到左边-->
+                <!--all.appendChild(rightOpts[i]);-->
+                <!--i&#45;&#45;;-->
+            <!--}-->
+        <!--}-->
+    <!--};-->
+    <!--//&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;全部移动部分&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <!--//获取两个全移动按钮-->
+    <!--var allRight = myId("allRight");-->
+    <!--var allLeft = myId("allLeft");-->
+
+    <!--//点击全部右移-->
+    <!--allRight.onclick = function () {-->
+        <!--//遍历左边的所有option-->
+        <!--for (var i = 0; i < opts.length; i++) {-->
+            <!--select.appendChild(opts[i]);-->
+            <!--//为了预防length减少的问题，让i&#45;&#45;-->
+            <!--i&#45;&#45;;-->
+        <!--}-->
+    <!--};-->
+    <!--//点击全部左移-->
+    <!--allLeft.onclick = function () {-->
+        <!--//遍历右边的所有option-->
+        <!--for (var i = 0; i < rightOpts.length; i++) {-->
+            <!--all.appendChild(rightOpts[i]);-->
+            <!--//为了预防length减少的问题，让i&#45;&#45;-->
+            <!--i&#45;&#45;;-->
+        <!--}-->
+    <!--};-->
+    <!-- -->
+<!--</script>-->
+<!--</body>-->
+
+
+               <!--二-->
+
+<!--<body>-->
+<!--&lt;!&ndash;左边的下拉菜单&ndash;&gt;-->
+<!--<select id="all" size="10" multiple="multiple">-->
+    <!--<option>苹果</option>-->
+    <!--<option>香蕉</option>-->
+    <!--<option>西瓜</option>-->
+    <!--<option>牛油果</option>-->
+    <!--<option>西红柿</option>-->
+<!--</select>-->
+<!--&lt;!&ndash;四个选择按钮位置&ndash;&gt;-->
+<!--<input type="button" value=">>" id="allRight">-->
+<!--<input type="button" value="<<" id="allLeft">-->
+<!--<input type="button" value=">" id="right">-->
+<!--<input type="button" value="<" id="left">-->
+
+<!--&lt;!&ndash;右边的下拉菜单&ndash;&gt;-->
+<!--<select id="select" size="10" multiple="multiple"></select>-->
+<!--<script>-->
+    <!--//1 获取页面元素-->
+    <!--var right = my$("right");-->
+    <!--var left = my$("left");-->
+    <!--var all = my$("all");-->
+    <!--var opts = all.children;-->
+    <!--var select = my$("select");-->
+    <!--var allRight = my$("allRight");-->
+    <!--var allLeft = my$("allLeft");-->
+    <!--//点击右按钮-->
+    <!--//    right.onclick = function () {-->
+    <!--//        //遍历all中所有的opt-->
+    <!--//        for (var i = 0; i < opts.length; i++) {-->
+    <!--//            if (opts[i].selected === true) {-->
+    <!--//                //添加到右面-->
+    <!--//                select.appendChild(opts[i]);-->
+    <!--//            }-->
+    <!--//        }-->
+    <!--//    };-->
+    <!--right.onclick = function () {-->
+        <!--//遍历all中所有的opt-->
+        <!--moveSelect(all, select);-->
+    <!--};-->
+    <!--left.onclick = function () {-->
+<!--//        var son = select.children;-->
+<!--//        for (var i = 0; i < son.length; i++) {-->
+<!--//            if (son[i].selected) {-->
+<!--//                all.appendChild(son[i]);-->
+<!--//-->
+<!--//            }-->
+<!--//        }-->
+        <!--moveSelect(select, all);-->
+    <!--};-->
+    <!--//-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;全移动部分&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+    <!--allRight.onclick = function () {-->
+        <!--for (var i = 0; i < opts.length; i++) {-->
+            <!--select.appendChild(opts[i]);-->
+            <!--i&#45;&#45;;-->
+        <!--}-->
+    <!--};-->
+
+    <!--allLeft.onclick = function () {-->
+        <!--for (var j = 0; j < select.length; j++) {-->
+            <!--all.appendChild(select[j]);-->
+            <!--j&#45;&#45;;-->
+        <!--}-->
+    <!--};-->
+    <!--/**-->
+     <!--*-->
+     <!--* @param current 当前的元素在哪个区域-->
+     <!--* @param tar     要移动到哪个区域-->
+     <!--*/-->
+    <!--function moveSelect(current, tar) {-->
+        <!--var son = current.children;-->
+        <!--for (var i = 0; i < son.length; i++) {-->
+            <!--if (son[i].selected) {-->
+                <!--tar.appendChild(son[i]);-->
+                <!--i&#45;&#45;;-->
+            <!--}-->
+        <!--}-->
+    <!--}-->
+    <!--function my$(id) {-->
+        <!--return document.getElementById(id);-->
+    <!--}-->
+<!--</script>-->
+<!--</body>-->

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <script>
+      // 练习2：写一个工厂函数，通过这个函数可以获取某种对象
+      function getPerson(name){
+      var o =new Object();
+      o.name = name || '呵呵';
+      o.run = function(){
+      console.log('he');
+      };
+      return o;
+      }
+      var fei = getPerson();
+      fei.run();
+      var ff = getPerson('hehe');
+      ff.run();
+
+  </script>
+</body>
+</html>

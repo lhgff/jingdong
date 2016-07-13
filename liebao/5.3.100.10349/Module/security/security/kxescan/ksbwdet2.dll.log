@@ -1,0 +1,18 @@
+import  : 16-05-10 01:07:17 |5028| KSbwdtCfgEx::[InitDeBugCfg] Config Success, Use LogRank By Config
+import  : 16-05-10 01:07:17 |5028| KSbwdtCfgEx::[InitMFFT] MFFT :3841680
+import  : 16-05-10 01:07:17 |5028| KSBWLogUploadImpl::[CreateSendLogThread] No log need upload, so needn't create thread.
+error   : 16-05-10 01:07:17 |5028| KSBWLogUploadImpl::[Init] Init Sucess
+warning : 16-05-10 01:07:17 |5028| [KSBWLogDBOperator::InitLogDB] Result:0
+warning : 16-05-10 01:07:17 |5028| [KSBWLogDBOperator::Init], Result:0
+error   : 16-05-10 01:07:17 |5028| KSBWLogicDataMgt::[ExecuteSQL] sql:alter table tb_sign_cfg add column lastblacktime integer, Error:duplicate column name: lastblacktime
+error   : 16-05-10 01:07:17 |5028| KSBWLogicDataMgt::[ExecuteSQL] sql:alter table tb_channel_info add column canUpload integer, Error:duplicate column name: canUpload
+warning : 16-05-10 01:07:17 |5028| KSBWLogicDataMgt::[InitDB] Result:1, ErrorCode:0
+import  : 16-05-10 01:07:17 |5028| KSBWDetectManagerImpl::[Init] Inner Component Init Succeed.
+import  : 16-05-10 01:07:17 |5028| [KSBWGlobalCallback::SetCallback] type:1, callback:67840600
+import  : 16-05-10 01:07:17 |5028| [KSBWGlobalCallback::SetCallback] type:2, callback:67840568
+import  : 16-05-10 01:07:17 |5028| KSBWDetectManagerImpl::[LoadSignFile] Load C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\Module\security\security\kxescan\unknown.fsg, Result:0
+import  : 16-05-10 01:07:17 |5028| KSLocalBWDetectorImpl2::[AppendSignFile] SelfSign Loaded, Ignore :C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\Module\security\security\kxescan\data.fsg
+import  : 16-05-10 01:07:17 |5028| KSBWDetectManagerImpl::[LoadSignFile] LoadSignFile Result:0
+import  : 16-05-10 01:07:17 | 832| KSbwdtCfgEx::[UpdateConfigByServer] Result:1
+import  : 16-05-10 01:07:17 |7820| [KSBWFastSignFalser::PrepareFalseSignDatas]  Parse False Config File Result:0, NewVersion:140613010, LastVersion:151109001
+import  : 16-05-10 01:07:17 |7820| KSBWfsgManager::[_DoFalseFSG ] Old Version:151109001, New Version: 140613010

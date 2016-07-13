@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        li:hover{
+            background: mediumvioletred;
+        }
+    </style>
+    <!--<script src="jquery-1.12.3.js"></script>-->
+
+    <script src="jquery-1.11.1.min.js"></script>
+    <script>
+        //给li标签绑定，鼠标进入事件。
+//        $(function(){
+//            $("li").mouseenter(function(){
+//                $(this).css("background","yellow");
+//                $(this).siblings().css("background","white")
+//            })
+//        })
+
+        $(function () {
+            $("li").mouseenter(function () {
+                $(this)
+                        .css("background", "pink")
+                        .siblings("li")
+                        .css("background", "white");
+            });
+            $("ul").mouseleave(function () {
+                $(this).children("li").css("background", "white");
+            });
+        });
+
+    </script>
+</head>
+<body>
+<ul>
+    <li>隔行变色，索引为号：0</li>
+    <li>隔行变色，索引为号：1</li>
+    <li>隔行变色，索引为号：2</li>
+    <li>隔行变色，索引为号：3</li>
+    <li>隔行变色，索引为号：4</li>
+    <li>隔行变色，索引为号：5</li>
+    <li>隔行变色，索引为号：6</li>
+    <li>隔行变色，索引为号：7</li>
+    <li>隔行变色，索引为号：8</li>
+    <li>隔行变色，索引为号：9</li>
+</ul>
+</body>
+</html>
+
+
+
+<!--<script>-->
+    <!--$(function () {-->
+        <!--// 获取到所有的li元素，并且绑定鼠标移上来的事件-->
+        <!--$("li").mouseenter(function () {-->
+            <!--// 让当前这个元素变成粉色背景，让其他的兄弟元素去掉粉色背景-->
+            <!--// 获取到所有的兄弟元素： siblings()-->
+            <!--$(this)-->
+                    <!--.css("background", "pink")-->
+                    <!--.siblings("li")-->
+                    <!--.css("background", "white");-->
+        <!--});-->
+        <!--// 获取到ul，并且绑定鼠标离开事件-->
+        <!--$("ul").mouseleave(function () {-->
+            <!--// 获取到所有的li，并且设置白色背景-->
+            <!--//$("li")-->
+            <!--// this ,给谁绑定的事件，this就会指向谁-->
+            <!--$(this).children("li").css("background", "white");-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->

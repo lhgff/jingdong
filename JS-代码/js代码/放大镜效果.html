@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 350px;
+            height: 350px;
+            margin: 1000px;
+            border: 1px solid #396eff;
+            position: relative;
+        }
+        .big{
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 360px;
+            border: 1px solid #e974ff;
+            overflow: hidden;
+            display: none;
+        }
+        .mask{
+            width: 175px;
+            height: 175px;
+            background: rgba(255,255,0,0.4);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+        .small{
+            position: relative;
+        }
+        .aaa{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <div class="small">
+        <img src="small.webp" width="350" class="aaa" alt=""/>
+        <div class="mask"></div>
+    </div>
+    <div class="big">
+        <img src="big.jpg" width="800" alt=""/>
+    </div>
+</div>
+<script src="..common.js"></script>
+
+<script>
+    var box = document.getElementById("box");
+    var smallBox = box.children[0];
+    var mask = smallBox.children[1];
+    var bigBox = box.children[1];
+    var bigImg = bigBox.children[0];
+    smallBox.onmouseover = function () {
+        mask.style.display = "block";
+        bigBox.style.display = "block";
+    };
+    smallBox.onmouseout = function () {
+        mask.style.display = "none";
+        bigBox.style.display = "none";
+    };
+    smallBox.onmousemove = function (e) {
+        //--------------------------------
+        var e = getEvent(e);
+        var x = getPageX(e);
+        var y = getPageY(e);
+        var w = mask.offsetWidth / 2;
+        var h = mask.offsetHeight / 2;
+        var finalX = x - 100 - w;
+        var finalY = y - 100 - h;
+        //------------------------------------
+        finalX = finalX < 0 ? 0 : finalX;
+//        if(finalX < 0 ){
+//            finalX = 0;
+//        }
+        finalY = finalY < 0 ? 0 : finalY;
+        //------------------------------------
+        finalX = finalX > this.offsetWidth - mask.offsetWidth ? this.offsetWidth - mask.offsetWidth : finalX;
+        finalY = finalY > this.offsetHeight - mask.offsetHeight ? this.offsetHeight - mask.offsetHeight : finalY;
+        mask.style.left = finalX + "px";
+        mask.style.top = finalY + "px";
+        var bili = bigImg.offsetHeight / smallBox.offsetHeight;
+        console.log(bili);
+        bigImg.style.marginLeft = - finalX*bili +"px";
+        bigImg.style.marginTop = - finalY*bili +"px";
+    }
+</script>
+</body>
+</html>

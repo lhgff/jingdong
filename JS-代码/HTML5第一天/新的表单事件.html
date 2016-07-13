@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>新的表单属性</title>
+    <style type="text/css" media="screen">
+        form{
+            width:500px;
+            margin:100px auto;
+        }
+        label{
+            display:block;
+        }
+        input{
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+
+<form >
+    <fieldset>
+        <legend>新的表单属性</legend>
+
+        <label>文本：<input type="email" name="text" value=""  "></label>
+    </fieldset>
+</form>
+<script type="text/javascript">
+    var oText=document.getElementsByName("text");
+    // 		oText[0].oninput=function () {
+    // 			var length=oText[0].value.length;
+    // console.log(length);
+    // 				}
+    oText[0].oninvalid=function () {
+        console.log("您输入错误");
+    }
+</script>
+</body>
+</html>

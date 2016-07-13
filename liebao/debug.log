@@ -1,0 +1,4 @@
+[0510/010257:ERROR:breakpad_win_crash_service.cpp(399)] could not get DIR_CRASH_DUMPS
+[0510/010814:ERROR:breakpad_win_crash_service.cpp(399)] could not get DIR_CRASH_DUMPS
+[0510/010814:ERROR:breakpad_win_crash_service.cpp(177)] could not start dumper,pid=6520, cmd="C:\Users\Administrator\AppData\Local\liebao\liebao.exe" --ico2
+[0510/010910:ERROR:window_impl.cc(55)] Failed to unregister class Chrome_WidgetWin_101. Error = 1412

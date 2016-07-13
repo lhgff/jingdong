@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background: #29cc36;
+        }
+        label{
+            width: 40px;
+            display: inline-block;
+        }
+        span{
+            color: #ff98e2;
+        }
+        .container{
+            margin: 100px auto;
+            width: 400px;
+            padding: 50px;
+            line-height: 40px;
+            border: 1px solid #0099cc;
+            background: #db10ff;
+        }
+        span{
+            margin-left: 30px;
+            font-size: 12px;
+        }
+        .wrong{
+            color: #0099cc;
+        }
+        .right{
+            color: #9badff;
+        }
+        .defau{
+            width: 200px;
+            height: 20px;
+        }
+        .del{
+            background-position: 0 -20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <label>座机</label>
+    <input type="text" id="one"/>
+    <span></span>
+    <br/>
+</div>
+
+<script>
+    var one = document.getElementById("one");
+    one.onblur = function(){
+        if(/^\d{3,4}-\d{7,8}$/.test(one.value)){
+            alert("对了");
+        }else{
+            alert("错了");
+        }
+    };
+</script>
+</body>
+</html>
+
+
+<!--<body>-->
+<!--<div class="container">-->
+    <!--<label>座机</label><input type="text" id="ipt"><span></span><br/>-->
+<!--</div>-->
+<!--<script>-->
+    <!--var ipt = document.getElementById("ipt");-->
+    <!--//010-12345678-->
+    <!--//0313-1234567-->
+    <!--//0313-12345678-->
+    <!--//前面是3-4位，加一个- 后面是7-8位-->
+    <!--ipt.onblur = function () {-->
+        <!--if (/^\d{3,4}-\d{7,8}$/.test(ipt.value)) {-->
+            <!--alert("对了");-->
+        <!--} else {-->
+            <!--alert("错了");-->
+        <!--}-->
+    <!--};-->
+<!--</script>-->
+<!--</body>-->

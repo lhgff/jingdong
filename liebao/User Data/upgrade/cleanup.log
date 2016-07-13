@@ -1,0 +1,11 @@
+[2016-05-10 01:03:22:023]   +DoCleanup
+[2016-05-10 01:03:22:026]     +cleanup-tasks-dir
+[2016-05-10 01:03:22:026]       [INFO]   tasks_dir = C:\Users\Administrator\AppData\Local\liebao\User Data\upgrade\tasks
+[2016-05-10 01:03:22:073]     -cleanup-tasks-dir 0.047000
+[2016-05-10 01:03:22:073]     +clean up logs
+[2016-05-10 01:03:22:082]       [INFO]   root_dir = C:\Users\Administrator\AppData\Local\liebao\User Data\upgrade
+[2016-05-10 01:03:22:085]     -clean up logs 0.012000
+[2016-05-10 01:03:22:085]     +cleanup-unused-version
+[2016-05-10 01:03:22:085]       [INFO]   liebao_install_path = C:\Users\Administrator\AppData\Local\liebao\
+[2016-05-10 01:03:22:090]     -cleanup-unused-version 0.005000
+[2016-05-10 01:03:22:090]   -DoCleanup 0.067000

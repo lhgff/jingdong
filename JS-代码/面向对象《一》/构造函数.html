@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function dog(name,age){
+        this.nome = name || '呵呵';
+        this.age = age || 1;
+        this.eat = function(){
+            console.log('吃肉');
+        }
+    }
+    var obj = new dog('阿拉斯加犬');
+    obj.eat();
+    console.log(obj.nome);
+    console.log(obj.age);
+
+</script>
+</body>
+</html>

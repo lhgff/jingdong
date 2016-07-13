@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 颜色</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #F7F7F7;
+        }
+        .xuanting {
+            width: 320px;
+            height: 320px;
+            margin: 100px auto;
+            border: 1px solid #CCC;
+            position: relative;
+        }
+        .xuanting::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0);
+            /*transition: all 0.5s;*/
+        }
+        .xuanting:hover::after {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+<div class="xuanting">
+    <img src="./images/pic.jpg" alt="">
+</div>
+</body>
+</html>

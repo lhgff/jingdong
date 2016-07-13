@@ -1,0 +1,8 @@
+[2016-05-10 01:03:21:525]   +ContinueInprogress
+[2016-05-10 01:03:21:526]     +LoadInprogressFile
+[2016-05-10 01:03:21:526]       [INFO]   path = C:\Users\Administrator\AppData\Local\liebao\User Data\upgrade\inprogress
+[2016-05-10 01:03:21:527]     -LoadInprogressFile 0.001000
+[2016-05-10 01:03:21:528]   -ContinueInprogress 0.003000
+[2016-05-10 01:03:22:023]   +LoadInprogressFile
+[2016-05-10 01:03:22:025]     [INFO]   path = C:\Users\Administrator\AppData\Local\liebao\User Data\upgrade\inprogress
+[2016-05-10 01:03:22:026]   -LoadInprogressFile 0.003000

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>XMLHttpRequest</title>
+	<style>
+		p {
+			font-size: 30px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<!-- Content-Type","application/x-www-form-urlencoded -->
+	<p>学习XMLHttpRequest</p>
+	<p class="result"></p>
+	
+	<script type="text/javascript">
+
+		// 1.可以实现前端与后端数据交互的一个对象 XMLHttpRequest 是浏览器的内建对象，需要实例化
+		var xhr=new XMLHttpRequest;
+		console.log(xhr);
+		
+		console.log(xhr.readyState);
+		// 2.请求时浏览器发起的 请求行  请求方式  请求地址
+		// 设置请求行
+		xhr.open("post","01_XMLHttpRequest.php");
+		console.log(xhr.readyState);
+		// 设置请求头
+// xhr.set Request Header(header, value)  固定写法  在post的是必须写 ,get请求可以不设置请求头
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		console.log(xhr.readyState);
+		// 请求正文
+		xhr.send("username=itcast");
+		console.log(xhr.readyState);
+		// 监听并处理响应数据
+		// onreadystatechange当readystate变化的时候触发
+		// xhr.onreadystatechange=function(){
+		// 	if (xhr.readyState==4) {
+		// 		console.log(xhr.readyState);
+		
+  //                           console.log(xhr.responseText);
+		// 	}
+			
+		// }
+		console.log(xhr.responseText);
+	</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+   "7vMTfjMZKeiFAx/TNYlLa0Pm1z4Sp63QIQK6JD394Lc=": {
+      "dynamic_spki_hashes_expiry": 0.0,
+      "expiry": 1462813736.735001,
+      "mode": "default",
+      "pkp_include_subdomains": false,
+      "pkp_observed": 0.0,
+      "sts_include_subdomains": false,
+      "sts_observed": 1462813736.735001
+   }
+}

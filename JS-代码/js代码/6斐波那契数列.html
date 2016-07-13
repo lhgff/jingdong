@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //兔子的规律为数列，1，1，2，3，5，8，13，21
+        //每个月的数量是前两个月的数量和 ， 前两个月没法算
+
+        //作为最开始的两个月的兔子数量
+        var n1 = 1;
+        var n2 = 1;
+        var sum = 0;
+
+        //求第三个月的数量
+        //sum = n1 + n2;
+        //改变n1和n2的值,目的是为求下一个月做准备
+        //n1 = n2;
+        //n2 = sum;
+
+        for (var i = 2; i < 12; i++) {
+            sum = n1 + n2;
+            //改变n1和n2的值
+            n1 = n2;
+            n2 = sum;
+        }
+        console.log(sum);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

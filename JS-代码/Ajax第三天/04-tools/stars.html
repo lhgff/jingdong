@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+	<style>
+		table {
+			width: 600px;
+			border-collapse: collapse;
+		}
+		td {
+			height: 40px;
+			text-align: center;
+			border: 1px solid #CCC;
+		}
+	</style>
+</head>
+<body>
+	<table>
+	
+	</table>
+	<div class="btn"><input type="button" value="获取数据"></div>
+	<!-- 引入ajax工具函数 -->
+	<script src="ajax.js"></script>
+	<script>
+		var btn = document.querySelector('[type=button]');
+
+		// 前端写的请求代码
+		btn.onclick = function () {
+
+			$.ajax({
+				type: 'post',
+				url: 'stars.php',
+				data: {name: 'itcast', age: 10},
+				success: function (data) {
+					console.log(data);
+
+					var html = '';
+					for(var i=0; i<data.length; i++) {
+						html += '<tr>';
+						html += '<td>' + data[i].name + '</td>';
+						html += '<td>' + data[i].photo + '</td>';
+						html += '<td>' + data[i].ablum + '</td>';
+						html += '<td>' + data[i].age + '</td>';
+						html += '<td>' + data[i].sex + '</td>';
+						html += '</tr>';
+					}
+
+					document.querySelector('table').innerHTML = html;
+				}
+			});
+		}
+	</script>
+</body>
+</html>

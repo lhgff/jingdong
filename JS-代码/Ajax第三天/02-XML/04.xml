@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<!-- 这是注释 -->
+	<name type='stars'>itcast</name>
+	<age>&lt;10&gt;</age>
+
+</root>

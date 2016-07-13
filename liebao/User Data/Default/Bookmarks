@@ -1,0 +1,100 @@
+{
+   "checksum": "560b620312a3e642657ef7fafcf2de32",
+   "ksync_version": 1,
+   "node_count": 8,
+   "roots": {
+      "bookmark_bar": {
+         "added_mode": 0,
+         "children": [ {
+            "added_mode": 0,
+            "date_added": "12998046526685244",
+            "name": "百度",
+            "show_mode": 3,
+            "type": "preset_url",
+            "url": "http://www.baidu.com/index.php?tn=98012088_3_dg&ch=1"
+         }, {
+            "added_mode": 0,
+            "date_added": "13014296308925659",
+            "name": "毒霸网址大全",
+            "show_mode": 3,
+            "type": "preset_url",
+            "url": "https://www.duba.com/?f=liebaosc"
+         }, {
+            "added_mode": 0,
+            "date_added": "13036405448268799",
+            "name": "热门小游戏",
+            "show_mode": 3,
+            "type": "preset_url",
+            "url": "http://www.9724.com/?f=liebaosc"
+         }, {
+            "added_mode": 0,
+            "date_added": "13012479095657060",
+            "name": "猎豹游戏中心",
+            "show_mode": 3,
+            "type": "preset_url",
+            "url": "http://wan.liebao.cn/?frm=lb-scj&referer=lbgg"
+         }, {
+            "added_mode": 0,
+            "date_added": "13042190583022244",
+            "name": "小游戏",
+            "show_mode": 3,
+            "type": "preset_url",
+            "url": "http://store.liebao.cn/game/LBGameCenter/?game=flappy2048&from=lbsc&args"
+         }, {
+            "added_mode": 0,
+            "date_added": "13021983304817381",
+            "name": "亚马逊",
+            "show_mode": 3,
+            "type": "preset_url",
+            "url": "http://www.amazon.cn/?_encoding=UTF8&camp=536&creative=3200&linkCode=ur2&tag=favorites-23"
+         }, {
+            "added_mode": 0,
+            "date_added": "13036405415568666",
+            "name": "热门影视",
+            "show_mode": 3,
+            "type": "preset_url",
+            "url": "http://v.duba.com/?f=liebaosc"
+         }, {
+            "added_mode": 0,
+            "date_added": "13024663945688194",
+            "name": "爱淘宝",
+            "show_mode": 3,
+            "type": "preset_url",
+            "url": "http://ai.taobao.com/?pid=mm_43253208_4230725_14286835&unid="
+         } ],
+         "date_added": "12998046517389703",
+         "date_modified": "13042190668128260",
+         "name": "书签栏",
+         "show_mode": 3,
+         "type": "folder"
+      },
+      "deleted": {
+         "added_mode": 0,
+         "children": [  ],
+         "date_added": "13103360644553234",
+         "date_modified": "0",
+         "name": "回收站",
+         "show_mode": 3,
+         "type": "folder"
+      },
+      "other": {
+         "added_mode": 0,
+         "children": [  ],
+         "date_added": "12998046517389703",
+         "date_modified": "0",
+         "name": "其他书签",
+         "show_mode": 3,
+         "type": "folder"
+      },
+      "synced": {
+         "added_mode": 0,
+         "children": [  ],
+         "date_added": "13012479045563178",
+         "date_modified": "0",
+         "name": "移动设备书签",
+         "show_mode": 3,
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

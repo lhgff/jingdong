@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮雕文字</title>
+    <style>
+        body {
+            background-color: gray;
+            font: bold 6em "microsoft yahei";
+        }
+
+        div {
+            margin: 30px;
+            color: #808080;
+            text-align: center;
+        }
+        .to{
+            text-shadow:-1px -1px #fff,1px 1px 1px #000;
+        }
+
+        .ao{
+            text-shadow:1px 1px  1px #fff,-1px -1px 1px #000;
+        }
+
+    </style>
+</head>
+<body>
+<div class="to">我是凸起的文字</div>
+<div class="ao">我是凹下的文字</div>
+</body>
+</html>

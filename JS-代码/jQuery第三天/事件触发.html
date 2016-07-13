@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--
+    trigger（）。会触发浏览器的默认行为。
+    triggerHandler（），它不会触发浏览器的默认行为。
+    -->
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: #0099cc;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            $("#btn1").click(function(){
+                //都会触发浏览器的默认行为
+                $("#text").trigger("focus");
+                //triggerHandler 会触发事件 ，但是不会触发浏览器的默认行为
+                $("#text").triggerHandler("focus");
+            })
+            $("#text").focus(function(){
+                $("span").show();
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="按钮" id="btn1"/>
+<input type="text" value="" id="text"/>
+<span style="display: none">显示</span>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;     /*默认样式*/
+            width: 200px;
+            height: 160px;
+        }
+        li{
+            width: 200px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<ul id ="ul" >
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<ul>
+    <li>这里边的文字</li>
+    <li>这里边的文字</li>
+    <li>这里边的文字</li>
+    <li>这里边的文字</li>
+    <li>这里边的文字</li>
+    <li>这里边的文字</li>
+    <li>这里边的文字</li>
+    <li>这里边的文字</li>
+    <li>这里边的文字</li>
+</ul>
+
+<script>
+   //获取页面元素
+   var ul = document.getElementById("ul")
+    var one = ul.getElementsByTagName("li");
+    //one[0].style.backgroundColor="red";
+   //遍历数组
+    for (var i = 0; i < one.length; i++) {
+       //判断如果i为偶数，one[i]偶数行的背景颜色为红色
+        if(i%2==0){
+            one[i].style.backgroundColor="red";
+        }else{
+            //i为奇数
+            one[i].style.backgroundColor="blue";
+        }
+    }
+</script>
+</body>
+</html>

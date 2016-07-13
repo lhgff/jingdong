@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<button id="btn">按钮</button>
+<div id="box"></div>
+<script>
+    var box = document.getElementById("box");
+    var btn = document.getElementById("btn");
+
+//    btn.onclick = function () {
+//        animate(box, "height", 400);
+//    }
+    //var timer = null;
+    btn.onclick = function () {
+        animate(box, "left", 400);
+    }
+    function animate(obj, attr, target) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            //step = (target - leader) / 10
+            //leader = leader + step
+            var leader = parseInt(getStyle(obj, attr)) || 0;
+            var step = (target - leader) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            leader = leader + step;
+            console.log("target: " + target + "leader: " + leader + "step: " + step);
+            obj.style[attr] = leader + "px";
+            if (leader == target) {
+                clearInterval(obj.timer);
+            }
+        }, 15)
+    }
+
+    function getStyle(obj, attr) {
+        if (obj.currentStyle) {
+            return obj.currentStyle[attr];
+        } else {
+            return window.getComputedStyle(obj, null)[attr];
+        }
+    }
+</script>
+</body>
+</html>

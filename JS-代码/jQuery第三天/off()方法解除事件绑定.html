@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: #0099cc;
+            margin-top: 10px;
+        }
+        .spanItem{
+            height: 150px;
+            width: 150px;
+            background-color: transparent;
+            display: block;
+        }
+    </style>
+    <!--off()解绑-->
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            //写一个给父元素绑定事件与简单绑定时间。
+            $("div").on("click","span",function(){
+                alert("一个span");
+            })
+            //保留简单事件
+            $("div").click(function(){
+                alert("一个div");
+            })
+            //写一个绑定事
+            $("div").off("click","**");
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="解除绑定事件" id="mybtn"/>
+<div>
+    div元素 <br/> <span class="spanItem">页面中的span</span>
+</div>
+<a href="http://baidu.com">百度</a>
+</body>
+</html>

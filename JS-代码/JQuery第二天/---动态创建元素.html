@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+    需求：点击一个按钮。，给页面上添加一个 a标（添加到div）
+    -->
+    <style>
+        .MyDiv{
+            font-size:15px;
+            background-color:#0094ff;
+            height:200px;
+            width:200px;
+            margin-top:2px;
+        }
+    </style>
+    <!--
+    append(参数)
+    作用：给指定的元素里面，追加元素。
+
+    before（前面）与after（后面）
+    作用：是为当前元素，添加一个兄弟元素。
+
+    需求1：点击 “创建元素”,按钮，往div里面，追加一个元素。
+    需求2：点击 “插入兄弟元素”按钮，给div添加一个“兄弟”元素（元素随意）
+
+    -->
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $("#btnAppend").click(function(){
+                var $a=$("<a href='http://baidu.com'>百度11</a>");
+//                     $a.appendTo($("div")); //追加元素，添加元素里面，最后一个位置。
+                // 把动态创建的元素，追加到前面
+                $a.prependTo($("div"));
+            })
+            // 给 div 添加一个兄弟div
+            $("#btnBefore").click(function(){
+                var $div=$("<div> 我是动态的div</div>");
+                $("div").after($div);
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="创建元素" id="btnAppend"/>
+<input type="button" value="插入兄弟元素" id="btnBefore"/>
+<div class="MyDiv">
+
+    <span>我是span标签</span>
+
+</div>
+
+</body>
+</html>

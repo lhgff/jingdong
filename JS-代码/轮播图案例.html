@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+
+    function animate(tag, target) {
+        clearInterval(tag.timer);
+        tag.timer = setInterval(function () {
+            var leader = tag.offsetLeft;
+            var step = 9;
+            step = leader > target ? -step : step;
+            leader = leader + step;
+            if (Math.abs(leader - target) < Math.abs(step)) {
+                tag.style.left = target + "px";
+                clearInterval(tag.timer);
+            } else {
+                tag.style.left = leader + "px";
+            }
+        }, 17);
+    }
+
+
+
+
+    function animate(tag,target){
+        clearInterval(tag,timer);
+        tag.timer = setInterval(function(){
+            var leader = tag.offsetLeft;
+            var step =10;
+            step = leader > target ? -step : step;
+            leader = leader + step;
+            if(leader != target){
+                tag.style.left = leader +"px";
+            }else{
+                tag.style.left = leader + "px";
+                clearInterval(tag.timer);
+            }
+        },30)
+    }
+
+
+</script>
+</body>
+</html>

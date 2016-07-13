@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+
+<script>
+    var box = document.getElementById("box");
+    var timer = null;
+
+    box.onclick = function () {
+        clearInterval(timer);
+        timer = setInterval(function () {
+            var leader = box.offsetLeft;
+            //var step = 10;
+
+            //缓动动画公式就是动态的改变了每一次走的步长
+            var step = ( 400 - leader ) / 10
+            step = Math.ceil(step);
+            leader = leader +  step
+            console.log("leader:"+leader+" step:"+step);
+            box.style.left = leader +"px";
+            if(leader == 400){
+                clearInterval(timer);
+            }
+        },20)
+    };
+
+</script>
+</body>
+</html>

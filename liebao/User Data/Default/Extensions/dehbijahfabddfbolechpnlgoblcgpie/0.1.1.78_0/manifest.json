@@ -1,0 +1,20 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "猎豹翻译",
+      "name": "猎豹翻译"
+   },
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "猎豹翻译",
+   "devtools_page": "devtools.html",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2jFBA1gyAemm3QvaYt9wCCf7j79wYQjoeueirzgIDwg/xQuUbTsxfyUNMZ2cE6wVAYDN9OCorvpgUw5ZXWBDAhfjiewOYxZGWlpa35FuDF3CMPWZ+QO0womlsZXtMWxUTkLFOED5YOtZ1z4uCvhecOt2Z0RMN9OorM/CB7V14wwIDAQAB",
+   "manifest_version": 2,
+   "name": "猎豹翻译",
+   "permissions": [ "tabs", "management", "webRequest", "webRequestBlocking", "bookmarks", "browsingData", "clipboardRead", "clipboardWrite", "storage", "unlimitedStorage", "topSites", "proxy", "privacy", "power", "webNavigation", "contextMenus", "cookies", "contentSettings", "history", "geolocation", "idle", "chrome://favicon/", "http://*/*", "https://*/*", "\u003Call_urls>" ],
+   "version": "0.1.1.78",
+   "web_accessible_resources": [ "images/tip.png", "images/sound.png", "images/sound_on.png" ]
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        ul {
+            list-style: none
+        }
+
+        .box {
+            width: 600px;
+            margin: 100px auto;
+            border: 1px solid #42a2d0;
+            padding: 20px;
+        }
+
+        textarea {
+            width: 450px;
+            height: 160px;
+            outline: none;
+            resize: none;
+        }
+
+        ul {
+            width: 450px;
+            padding-left: 80px;
+        }
+
+        ul li {
+            line-height: 25px;
+            border-bottom: 1px dashed #cc20a8;
+        }
+
+        input {
+            float: right;
+        }
+    </style>
+
+</head>
+<body>
+<div class="box" id="weibo">
+    <span>微博发布</span>
+    <textarea name="" id="txt" cols="20" rows="10"></textarea>
+    <button id="btn">发布</button>
+    <ul id="ul">
+
+    </ul>
+</div>
+<script>
+    var textarea = document.getElementById("txt");
+    var btn = document.getElementById("btn");
+    var ul = document.getElementById("ul");
+    btn.onclick = function () {
+        if (textarea.value == "") {
+            alert("哥们你什么也没写");
+        } else {
+            var li = document.createElement("li");
+            li.innerHTML = textarea.value + "<input type='button' value='删除'>";
+            var child = ul.children;
+            if (child.length != 0) {
+                ul.insertBefore(li, child[0]);
+            } else {
+                ul.appendChild(li);
+            }
+        }
+        var del = ul.getElementsByTagName("input");
+        for (var i = 0; i < del.length; i++) {
+            del[i].onclick = function () {
+                ul.removeChild(this.parentNode);
+            };
+        }
+    };
+</script>
+</body>
+</html>
+
+
+<!--<body>-->
+<!--<div class="box" id="weibo">-->
+    <!--<span>微博发布</span>-->
+    <!--<textarea name="" id="txt" cols="20" rows="10"></textarea>-->
+    <!--<button id="btn">发布</button>-->
+    <!--<ul id="ul">-->
+
+    <!--</ul>-->
+<!--</div>-->
+<!--<script>-->
+    <!--//第一步获取页面元素-->
+    <!--var text = document.getElementById("txt");-->
+    <!--var btn = document.getElementById("btn");-->
+    <!--var ul = document.getElementById("ul");-->
+    <!--//给btn添加点击事件-->
+    <!--btn.onclick = function () {-->
+        <!--//判断是否填写了内容，如果没写，不能发布-->
+        <!--//console.log(text.value);-->
+        <!--if (text.value == "") {-->
+            <!--alert("哥们你什么也没写");-->
+        <!--} else {-->
+            <!--//根据text内容去创建一个li-->
+            <!--var li = document.createElement("li");-->
+            <!--//在我们给新li添加文本时，可以再里面创建一个input-->
+            <!--li.innerHTML = text.value + "<input type='button' value='删除'>";-->
+            <!--//将li放到ul中-->
+            <!--//需要去判断ul中是否有微博了，如果有了，我们需要将新发布的微博放到最前面-->
+            <!--var child = ul.children;-->
+            <!--if (child.length != 0) {-->
+                <!--//将创建的li放到ul中第一个子元素的前面-->
+                <!--ul.insertBefore(li, child[0]);-->
+            <!--} else {-->
+                <!--ul.appendChild(li);-->
+            <!--}-->
+        <!--}-->
+        <!--//给删除按钮添加点击事件-->
+        <!--var del = ul.getElementsByTagName("input");-->
+        <!--for (var i = 0; i < del.length; i++) {-->
+            <!--del[i].onclick = function () {-->
+                <!--//从ul中删除一个li，这个li和当前删除按钮的关系：li是del[i]的父节点-->
+                <!--ul.removeChild(this.parentNode);-->
+            <!--};-->
+        <!--}-->
+    <!--};-->
+<!--</script>-->
+<!--</body>-->
+
+

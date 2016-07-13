@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css"> -->
+    <style>
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+    .container {
+        height: 200px;
+        background-color: #f40;
+        margin: 0 auto;
+        width: 100%;
+    }
+    /* 在CSS里面怎么进行屏幕大小的判断呢 */
+    /* css3有一个媒体查询  @media (查询的条件) 注意只可以写屏幕宽度高度的查询条件  */
+    /* 注意 如果使用最小宽度去判断的话要从小到大去
+    如果使用最大宽度去判断就要从大到小去写*/
+    /* 最小宽度如果大于768px 认为的小屏幕*/
+    
+    @media (min-width: 768px) {
+        .container {
+            width: 750px;
+        }
+    }
+    /* 最小宽度如果大于 992px 认为的中屏幕*/
+    
+    @media (min-width: 992px) {
+        .container {
+            width: 970px;
+        }
+    }
+    /* 最小宽度如果大于1200px 认为的大屏幕*/
+    
+    @media (min-width: 1200px) {
+        .container {
+            width: 1170px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+</body>
+
+</html>

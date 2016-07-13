@@ -1,0 +1,758 @@
+/*
+* @Author: zhengwei
+* @Date:   2016-06-30 10:15:46
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-07-03 23:14:07
+*/
+
+body {
+    /* 字体中间有空格的话就要带引号 */
+    font-family: "Microsoft YaHei";
+}
+
+
+/* 定义一个字体 */
+
+@font-face {
+    /* 要定义的字体的名字 */
+    font-family: 'itcast';
+    /* 跟着字体文件对应的路径还有字体的声明 */
+    src: url(../fonts/MiFie-Web-Font.eot) format("embedded-opentype"), url(../fonts/MiFie-Web-Font.ttf) format("truetype"), url(../fonts/MiFie-Web-Font.svg) format("svg"), url(../fonts/MiFie-Web-Font.woff) format("woff");
+}
+
+
+/**
+ * 1.尽可能的多使用直接子代选择器 避免误杀到别的元素 提升CSS查找性能
+ * 2.尽可能多使用ID去限定选择器 选择器更精确 优先级更高
+ */
+
+[class^="icon-"] {
+    font-family: 'itcast';
+    font-style: normal;
+}
+
+.icon-mobilephone::before {
+    content: "\e908";
+    font-size: 13px;
+}
+
+.icon-telephone::before {
+    content: "\e909";
+    font-size: 13px;
+}
+
+.icon-icon::before {
+    content: "\e920";
+    font-size: 50px;
+    color: #e92322;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.icon-logo::before {
+    content: "\e93e";
+    font-size: 32px;
+    color: #333;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+#header {
+    > .topbar {
+        font-size: 10px;
+        line-height: 40px;
+        border-bottom: 1px solid #c0c0c0;
+        >div {
+            height: 40px;
+            >a {
+                color: #666;
+            }
+            .mobile-link {
+                img {
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -60px;
+                    top: 27px;
+                    z-index: 1001;
+                }
+            }
+            .mobile-link:hover img {
+                display: block !important;
+            }
+        }
+        >div+div {
+            border-left: 1px solid #c0c0c0;
+        }
+    }
+}
+
+
+/* 头部区域 */
+
+#header > .topbar {
+    font-size: 10px;
+    line-height: 40px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#header > .topbar > .container > div {
+    height: 40px;
+}
+
+#header > .topbar > .container > div + div {
+    border-left: 1px solid #c0c0c0;
+}
+
+#header > .topbar > .container > div > a {
+    color: #666;
+}
+
+#header > .topbar > .container > div > .mobile-link img {
+    position: absolute;
+    left: 50%;
+    margin-left: -60px;
+    top: 27px;
+    z-index: 1001;
+}
+
+#header > .topbar > .container > div > .mobile-link:hover img {
+    display: block !important;
+}
+
+
+/* 轮播图区域 */
+@media (min-width: 768px) {
+    #silde >.carousel >.carousel-inner >.item{
+        height: 410px;
+        background-position: center center;
+    }
+}
+/* #silde >.carousel >.carousel-inner >.item.img1 {
+    background: url(../img/slide_01_2000x410.jpg) center center;
+    height: 410px;
+}
+
+#silde >.carousel >.carousel-inner >.item.img2 {
+    background: url(../img/slide_02_2000x410.jpg) center center;
+    height: 410px;
+}
+
+#silde >.carousel >.carousel-inner >.item.img3 {
+    background: url(../img/slide_03_2000x410.jpg) center center;
+    height: 410px;
+} */
+/* 
+@media (max-width: 768px) {
+    #silde >.carousel >.carousel-inner >.item.img1 {
+        background: url(../img/slide_01_640x340.jpg) no-repeat center center;
+        height: 340px;
+        background-size: cover;
+    }
+    #silde >.carousel >.carousel-inner >.item.img2 {
+        background: url(../img/slide_02_640x340.jpg) no-repeat center center;
+        height: 340px;
+        background-size: cover;
+    }
+    #silde >.carousel >.carousel-inner >.item.img3 {
+        background: url(../img/slide_03_640x340.jpg) no-repeat center center;
+        height: 340px;
+        background-size: cover;
+    }
+}
+ */
+
+/* 特色介绍 */
+
+.icon-uniE907:before {
+    content: "\e907";
+    font-size: 30px;
+}
+
+#featrue {
+    padding: 40px 0px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#featrue >.container > div {
+    margin-bottom: 20px;
+}
+
+#featrue >.container > div> .media>a {
+    text-decoration: none;
+    color: #666;
+}
+
+#featrue >.container > div> .media>a:hover {
+    color: #e92322;
+}
+
+
+/* 立即预约 */
+
+.icon-uniE906:before {
+    content: "\e906";
+}
+
+.icon-uniE905:before {
+    content: "\e905";
+}
+
+#booking {
+    padding: 20px 0px;
+    border-bottom: 1px solid #c0c0c0;
+}
+
+#booking > .container > p {
+    margin-bottom: 0;
+}
+
+#booking > .container >.pull-left >span {
+    color: #e92322;
+}
+
+#booking > .container >.pull-left >a {
+    color: #e92322;
+    text-decoration: none;
+    border-bottom: 1px dashed #e92322;
+}
+
+
+/* 产品推荐 */
+
+#products {
+    padding: 40px 0px;
+    background-color: #f0f0f0;
+}
+
+#products>.container> .ul-waper{
+    overflow-x: scroll;
+}
+#products>.container> .ul-waper>.nav-tabs{
+    width: 688px;
+}
+#products>.container> .ul-waper>.nav-tabs >li {}
+
+#products>.container> .ul-waper>.nav-tabs >li > a {
+    border: 0;
+    color: #666;
+    font-size: 16px;
+}
+
+#products>.container> .ul-waper>.nav-tabs >li.active > a {
+    background-color: transparent;
+    border-bottom: 3px solid #e92322;
+}
+
+#products>.container> .ul-waper>.nav-tabs >li > a:hover {
+    background-color: transparent;
+}
+
+
+/* 面板外部样式 */
+
+#products .panel.active {
+    color: #fff;
+    background-color: #e92322;
+}
+
+#products .panel>.panel-heading {
+    float: right;
+    height: 160px;
+    width: 120px;
+    border-bottom: 0;
+    border-left: 1px dashed #c0c0c0;
+    position: relative;
+    background-color: transparent;
+    padding: 40px 0;
+}
+
+#products .panel.active>.panel-heading {
+    color: #fff;
+}
+
+#products .panel >.panel-heading > p {
+    margin-bottom: 0;
+}
+
+#products .panel >.panel-heading > p >strong {
+    font-size: 30px;
+}
+
+#products .panel >.panel-heading > .zhong {
+    border: 1px solid #e92322;
+    color: #e92322;
+}
+
+#products .panel >.panel-heading > .riben {
+    border: 1px solid #0f0;
+    color: #0f0;
+    margin-left: 10px;
+}
+
+#products .panel >.panel-heading::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    top: -8px;
+    left: -8px;
+}
+
+#products .panel >.panel-heading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    left: -8px;
+    bottom: -8px;
+}
+
+.tab-pane {
+    padding: 20px 0;
+}
+
+#products .panel >.panel-body {
+    height: 160px;
+    margin-right: 120px;
+}
+
+#products .panel.active >.panel-body::before {
+    content: "\e915";
+    font-family: 'itcast';
+    font-size: 30px;
+    color: #fff;
+    position: absolute;
+    left: 16px;
+    top: -7px;
+}
+
+#products .panel >.panel-body > .row > div {
+    margin-bottom: 10px;
+}
+
+#products .panel >.panel-body > .row > div > p {
+    margin-bottom: 0;
+}
+
+
+/* 新闻版块 */
+
+.icon-news01:before {
+    content: "\e90e";
+    font-size: 28px;
+    color: #eaeaea;
+}
+
+.icon-news02:before {
+    content: "\e90f";
+    font-size: 28px;
+    color: #eaeaea;
+}
+
+.icon-news03:before {
+    content: "\e910";
+    font-size: 28px;
+    color: #eaeaea;
+}
+
+.icon-news04:before {
+    content: "\e911";
+    font-size: 28px;
+    color: #eaeaea;
+}
+
+#news {
+    padding: 40px 0;
+}
+
+#news .news-title {
+    border-bottom: 1px dashed #c0c0c0;
+    padding: 10px 0;
+}
+
+#news .news-title::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid #c0c0c0;
+}
+
+#news .nav-tabs li> a {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+#news .nav-tabs li.active> a {
+    background-color: #e92322;
+}
+
+#news .tab-pane ul {
+    list-style: none;
+}
+
+#news .tab-pane ul >li {
+    padding: 10px 0;
+}
+
+
+/* 合作伙伴 */
+
+.icon-uniE931::before {
+    content: "\e931";
+}
+
+.icon-uniE932::before {
+    content: "\e932";
+}
+
+.icon-uniE933::before {
+    content: "\e933";
+}
+
+.icon-uniE934::before {
+    content: "\e934";
+}
+
+.icon-uniE935::before {
+    content: "\e935";
+}
+
+.icon-uniE936::before {
+    content: "\e936";
+}
+
+.icon-uniE937::before {
+    content: "\e937";
+}
+
+#partner > .container > ul {
+    font-size: 0;
+}
+
+#partner > .container > ul > li {
+    display: inline-block;
+    width: 11.111%;
+    text-align: center;
+}
+
+#partner > .container > ul > li > a {
+    color: #666;
+    text-decoration: none;
+}
+
+#partner > .container > ul > li > a:hover {
+    color: #e92322;
+}
+
+#partner > .container > ul > li > a >i {
+    font-size: 50px;
+}
+
+
+/* Bootstrap扩展样式 */
+
+
+/* 自定义按钮 */
+
+.btn-register {
+    color: #FFFFFF;
+    background-color: #E92322;
+    border-color: #E92322;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    color: #FFFFFF;
+    background-color: #e92322;
+    border-color: #E92322;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+    background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+    background-color: #E92322;
+    border-color: #E92322;
+}
+
+.btn-register .badge {
+    color: #E92322;
+    background-color: #FFFFFF;
+}
+
+
+/*自定义 导航条 */
+
+.navbar-itcast {
+    /* background-color: #f8f8f8; */
+    border-color: #e7e7e7;
+    border-top: 0;
+    margin-bottom: 0;
+    z-index: 1000;
+}
+
+.navbar-itcast .navbar-brand {
+    color: #777;
+    height: 80px;
+}
+
+.navbar-itcast .navbar-brand:hover,
+.navbar-itcast .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.navbar-itcast .navbar-text {
+    color: #777;
+}
+
+.navbar-itcast .navbar-nav > li > a {
+    color: #777;
+    line-height: 50px;
+}
+
+.navbar-itcast .navbar-nav > li > a:hover,
+.navbar-itcast .navbar-nav > li > a:focus {
+    color: #333;
+    background-color: transparent;
+    border-bottom: 2px solid #e92322;
+}
+
+.navbar-itcast .navbar-nav > .active > a,
+.navbar-itcast .navbar-nav > .active > a:hover,
+.navbar-itcast .navbar-nav > .active > a:focus {
+    color: #555;
+    /* background-color: #e7e7e7; */
+    /* line-height: 50px; */
+    border-bottom: 2px solid #e92322;
+}
+
+.navbar-itcast .navbar-nav > .disabled > a,
+.navbar-itcast .navbar-nav > .disabled > a:hover,
+.navbar-itcast .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.navbar-itcast .navbar-toggle {
+    border-color: #ddd;
+}
+
+.navbar-itcast .navbar-toggle:hover,
+.navbar-itcast .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.navbar-itcast .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-itcast .navbar-collapse,
+.navbar-itcast .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.navbar-itcast .navbar-nav > .open > a,
+.navbar-itcast .navbar-nav > .open > a:hover,
+.navbar-itcast .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+    .navbar-itcast .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+
+.navbar-itcast .navbar-link {
+    color: #777;
+}
+
+.navbar-itcast .navbar-link:hover {
+    color: #333;
+}
+
+.navbar-itcast .btn-link {
+    color: #777;
+}
+
+.navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link:focus {
+    color: #333;
+}
+
+.navbar-itcast .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-itcast .btn-link:focus {
+    color: #ccc;
+}
+
+.navbar-czbk {
+    /* background-color: #f8f8f8; */
+    border-color: #e7e7e7;
+    margin-bottom: 0px;
+   
+}
+
+.navbar-czbk .navbar-brand {
+    color: #777;
+   height: 80px;
+}
+
+.navbar-czbk .navbar-brand:hover,
+.navbar-czbk .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+.navbar-czbk .navbar-text {
+    color: #777;
+}
+
+.navbar-czbk .navbar-nav > li > a {
+    line-height: 50px;
+    color: #777;
+}
+
+.navbar-czbk .navbar-nav > li > a:hover,
+.navbar-czbk .navbar-nav > li > a:focus {
+    border-bottom: 2px solid #e92322;
+    color: #333;
+    background-color: transparent;
+}
+
+.navbar-czbk .navbar-nav > .active > a,
+.navbar-czbk .navbar-nav > .active > a:hover,
+.navbar-czbk .navbar-nav > .active > a:focus {
+    border-bottom: 2px solid #e92322;
+    color: #555;
+    /* background-color: #e7e7e7; */
+}
+
+.navbar-czbk .navbar-nav > .disabled > a,
+.navbar-czbk .navbar-nav > .disabled > a:hover,
+.navbar-czbk .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+
+.navbar-czbk .navbar-toggle {
+    border-color: #ddd;
+}
+
+.navbar-czbk .navbar-toggle:hover,
+.navbar-czbk .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.navbar-czbk .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+
+.navbar-czbk .navbar-collapse,
+.navbar-czbk .navbar-form {
+    border-color: #e7e7e7;
+}
+
+.navbar-czbk .navbar-nav > .open > a,
+.navbar-czbk .navbar-nav > .open > a:hover,
+.navbar-czbk .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+    .navbar-czbk .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-czbk .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-czbk .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-czbk .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-czbk .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-czbk .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-czbk .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-czbk .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-czbk .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+
+.navbar-czbk .navbar-link {
+    color: #777;
+}
+
+.navbar-czbk .navbar-link:hover {
+    color: #333;
+}
+
+.navbar-czbk .btn-link {
+    color: #777;
+}
+
+.navbar-czbk .btn-link:hover,
+.navbar-czbk .btn-link:focus {
+    color: #333;
+}
+
+.navbar-czbk .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-czbk .btn-link:hover,
+.navbar-czbk .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-czbk .btn-link:focus {
+    color: #ccc;
+}

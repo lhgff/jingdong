@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            font-family: "Helvetica", "Arial", serif;
+            color: #333333;
+            background-color: #cccccc;
+            margin: 1em 10%;
+        }
+        h1{
+            color: #333333;
+            background-color: transparent;
+        }
+        a{
+            color: #c60;
+            background-color: transparent;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        ul{
+            padding:0;
+        }
+        li{
+            float: left;
+            padding: 1em;
+            list-style:none;
+        }
+        #one{
+            list-style: none;
+        }
+        #one li {
+            margin: 0px 20px 20px 0;
+            padding:0px;
+            display: inline;
+        }
+        #one li a img{
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+     <h2>美女相册</h2>
+     <a href="#">呵呵</a>
+      <ul id="one">
+          <li>
+              <a href="images/1..jpg" title="美女1">
+              <img src="images/1-small.jpg" width="100" alt="美女1"/></a>
+          </li>
+          <li>
+              <a href="images/2.jpg" title="美女2">
+                  <img src="images/2-small.jpg" width="100" alt="美女2"/></a>
+          </li>
+          <li>
+              <a href="images/3.jpg" title="美女3">
+                  <img src="images/3-small.jpg" width="100" alt="美女3"/></a>
+          </li>
+          <li>
+              <a href="images/4.jpg" title="美女4">
+                  <img src="images/4-small.jpg" width="100" alt="美女4"/></a>
+          </li>
+      </ul>
+
+     <div style="clear:both"></div>
+     <img id="image" src="images/placeholder.png" alt="" width="450px"/>
+     <p id="two">选择一个图片</p>
+     <script>
+           var ul = document.getElementById("one");
+           var links = ul.getElementsByTagName("a");
+           var image = document.getElementById("image");
+           var two = document.getElementById("two");
+
+         for (var i = 0; i < links.length; i++) {
+            links[i].onclick = function(){
+                image.src = this.href;
+                two.innerHTML = this.title;
+                return false;
+            };
+         }
+     </script>
+</body>
+</html>
+
+
+<!--<body>-->
+<!--<h2>-->
+    <!--美女画廊-->
+<!--</h2>-->
+<!--<a href="#">注册</a>-->
+<!--<ul id="imagegallery">-->
+    <!--<li><a href="images/1.jpg" title="美女A">-->
+        <!--<img src="images/1-small.jpg" width="100" alt="美女1"/>-->
+    <!--</a></li>-->
+    <!--<li><a href="images/2.jpg" title="美女B">-->
+        <!--<img src="images/2-small.jpg" width="100" alt="美女2"/>-->
+    <!--</a></li>-->
+    <!--<li><a href="images/3.jpg" title="美女C">-->
+        <!--<img src="images/3-small.jpg" width="100" alt="美女3"/>-->
+    <!--</a></li>-->
+    <!--<li><a href="images/4.jpg" title="美女D">-->
+        <!--<img src="images/4-small.jpg" width="100" alt="美女4"/>-->
+    <!--</a></li>-->
+<!--</ul>-->
+<!--<div style="clear:both"></div>-->
+<!--&lt;!&ndash;用于显示大图&ndash;&gt;-->
+<!--<img id="image" src="images/placeholder.png" alt="" width="450px"/>-->
+<!--&lt;!&ndash;用于显示这个图片的名称&ndash;&gt;-->
+<!--<p id="des">选择一个图片</p>-->
+<!--<script>-->
+    <!--//1、第一步获取页面元素-->
+    <!--//由于页面中除了我们需要的a标签以外还有其他a，所以我们从imagegallery中获取a标签-->
+    <!--var ul = document.getElementById("imagegallery");-->
+    <!--var links = ul.getElementsByTagName("a");-->
+    <!--var image = document.getElementById("image");-->
+    <!--var des = document.getElementById("des");-->
+    <!--//2、给每一个a添加点击事件-->
+    <!--for (var i = 0; i < links.length; i++) {-->
+        <!--links[i].onclick = function () {-->
+            <!--//3、让下面区域的图片更换为a的href属性-->
+            <!--image.src = this.href;-->
+            <!--//4、让下面的des的文本更换为a的title属性-->
+            <!--des.innerHTML = this.title;-->
+            <!--//5、取消a的默认事件-->
+            <!--return false;-->
+        <!--};-->
+    <!--}-->
+<!--</script>-->
+<!--</body>-->

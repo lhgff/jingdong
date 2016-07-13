@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<p></p>
+<script type="text/javascript">
+// 实例化
+            var p=document.querySelector("p")
+	var xhr=new XMLHttpRequest;
+	// 设置请求行
+	xhr.open("get","02-get.php?name=itcast&age=10");
+	// xhr.setRequestHeader() get不用
+	xhr.send(null);
+	// 监听并处理响应
+	xhr.onreadystatechange=function(){
+		// statues 就是浏览器的响应状态码
+		if(xhr.readyState==4 && xhr.status==200){
+			p.innerHTML=xhr.responseText;
+		}
+	}
+
+</script>
+
+</body>
+</html>

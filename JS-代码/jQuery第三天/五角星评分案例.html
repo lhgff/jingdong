@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .comment{
+            font-size: 40px;
+            color: teal;
+        }
+        .comment li{
+            float: left;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+    <!--
+    prevAll()，表示当前元素，前面的兄弟元素。
+    end()，返回前一个对象。
+    nextAll（），拿到当前元素后面所有兄弟元素，
+    -->
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            var wjx_none = '☆', // 空心五角星
+                    wjx_sel = '★'; // 实心五角星
+            //1.给 li标签，绑定鼠标 移入事件
+            $(".comment li").mouseenter(function(){
+                //   给当前的星星，变实心，当前前面的星星 变实心，当前星星后面的星星变成 空心。
+                $(this).text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+            })
+            //2. 当鼠标点击 li标签，记住当前的一个状态，在鼠标离开的时候，去找 li标签上面，某个li
+            $(".comment li").click(function(){
+                // 给当前的 li标签，添加一个状态，然后让兄弟清空。
+                $(this).addClass("clicked").siblings().removeClass("clicked");
+            })
+//            标签，是否有 类样式，如果有，让当前的 li标签，变成 实心，
+//            它前面的星星变成 实心，当前星星后的星星，变成空心
+            $(".comment").mouseleave(function(){
+                $(this).find("li").text(wjx_none);
+                $(this).find("li[class=clicked]").text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+            })
+        });
+    </script>
+</head>
+<body>
+<ul class="comment">
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>边框图片</title>
+    <style type="text/css" media="screen">
+        .border-image{
+            width:400px;
+            height:200px;
+            margin:100px auto;
+            border-width:20px;
+            border-style:solid;
+            /* 任务1 如何给边框加图片 */
+            /* 给border引入图片 */
+            border-image-source:url('images/border.png');
+            /* 给原始的图片切割 */
+            border-image-slice:37   ;
+            /* 设置了边框图片的怕平铺方式 strech  repeat  round */
+            border-image-repeat:round;
+        }
+    </style>
+</head>
+<body>
+<a href="">
+    <img src="images/border.png" alt="">
+</a>
+<div class="border-image">
+
+</div>
+</body>
+</html>

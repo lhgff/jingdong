@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 注释和html完全一样 -->
+<!-- xml还有文档声明如上所示 -->
+<!-- 因为xml叫可扩展标记语言，因此标记是可以自己定义的 -->
+<root>
+	<name>itcast</name>
+	<age>10</age>
+	<book>&lt;&lt;斗破苍穹&gt;&gt;</book>
+	<!--  <book><<斗破苍穹>></book> -->
+</root>

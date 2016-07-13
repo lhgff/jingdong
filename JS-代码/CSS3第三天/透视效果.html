@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 200px auto;
+            border: 1px solid #75d6dd;
+            position: relative;
+               transform-style:preserve-3d;
+               perspective: 1000px;
+               perspective-origin: 0px 0px;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity:0.5;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position:absolute;
+            top: 0;
+            left: 0;
+            transform:rotatex(45deg) skewX(45deg);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="box1"></div>
+    <div class="box2"></div>
+</div>
+</body>
+</html>

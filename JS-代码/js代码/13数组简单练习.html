@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        //将1-100的所有数放到数组中
+        //声明一个数组
+        //var arr = [];
+
+        //先得到1-100所有数
+        //for (var i = 1; i <= 100; i++) {
+        //i代表了1-100的所有值
+        //arr[i - 1] = i;
+        //}
+        //console.log(arr);
+
+
+        //将1-100中所有奇数放到数组中
+        //声明一个数组
+//        var arr = [];
+//        //先找到1-100中所有的奇数
+//        for (var i = 1; i <= 100; i++) {
+//            //判断是不是奇数
+//            if (i % 2 == 0) {
+//                //得到的是偶数
+//                continue;
+//            }
+//            //能走到这的都是奇数
+//            //要将奇数放到数组中，放到数组中的新一项，这一项的索引是arr.length
+//            //arr[i - 1] = i; 错误的演示
+//            arr[arr.length] = i;
+//        }
+//        console.log(arr);
+
+
+        //1-100之间能被3整数的数字，存到数组中
+        //先得到1-100之间能被3整数的数字
+        var arr = [];
+        for (var i = 1; i <=100; i++) {
+            if(i%3==0){
+                //能被3整除的数
+                arr[arr.length] = i;
+            }
+        }
+        console.log(arr);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

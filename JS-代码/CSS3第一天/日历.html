@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body,ul,dl,dt,dd{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: transparent;
+        }
+        ul{
+            list-style: none;
+        }
+        .one{
+            width: 438px;
+            height: 360px;
+            padding: 48px 141px 10px 12px;
+            margin: 100px auto;
+            background: url("./images/bg.png") 0 0 no-repeat;
+        }
+        .one dt
+        .one dd{
+            overflow: hidden;
+        }
+        .one span{
+            display: block;
+            float: left;
+            width: 54px;
+            height: 47px;
+            text-align: center;
+            margin-right: 1px;
+            border: 3px solid transparent;
+        }
+        .one dt span{
+            height: 28px;
+            line-height: 34px;
+            font-size: 14px;
+        }
+        .one dd{
+            border-top: 1px solid #75c6ff;
+            cursor: pointer;
+        }
+        .one span>b{
+            display: block;
+            line-height: 1;
+            height: 18px;
+            line-height: 25px;
+            font-size: 18px;
+            font-family: Arial;
+            /*font-weight: normal;*/
+        }
+        .one span>i{
+            color: #999;
+            font-size: 10px;
+            font-style: normal;
+        }
+        /* 以下为自主完成部分 */
+        /*红色 #e02d2d 黄色 #ffbb00 灰色 #bfbfbf 粉色#fff0f0*/
+        /*1.当鼠标移上日期，出现黄色边框*/
+        .one dd span:hover{
+            border-color: #75c6ff;
+        }
+        /*2.日历中对应周六，周天的日期为红色，只有新历*/
+        .one dd span:nth-child(8){
+            color: green;
+        }
+        .one dd span:nth-child(6){
+            color: green;
+        }
+        /*3.日历中的日期如果为节日，那么对应的节日名字为红色*/
+        .one dd span[data-flag="festival"]i{
+            color: green;
+        }
+        /*4.日历中对应的当天要把背景色变成黄色,字体要变成白色*/
+        .today{
+            background-color: #75c6ff;
+            color: #fff;
+        }
+        .one .today>i{
+            color: #fff;
+        }
+        /*5.对应的国家法定假日，日期上带有"休"字样，背景色为  pink*/
+        .one dd span[data-rest="holiday"]{
+            position: relative;
+            background-color: pink;
+        }
+        .one dd span[data-rest="holiday"]::before{
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            content: '休';
+            color: #ff37f5;
+            display: block;
+            width: 15px;
+            height: 15px;
+            font-size: 10px;
+            background-color: red;
+        }
+        /*6.日期为上个月的颜色为灰色，包括农历和新历*/
+        .one dd span[data-range="prev-month"]b{
+            color: #bfbfbf;
+        }
+        .one dd span[data-range="prev-month"]i{
+            color: #bfbfbf;
+        }
+        .one dd span[data-range="prev"]i{
+            color: #bfbfbf;
+        }
+        /*7.日期为下个月的颜色为灰色，包括农历和新历*/
+        .one dd span[data-range="next-month"]b{
+            color: #bfbfbf;
+        }
+        .one dd span[data-range="next-mobth"]i{
+            color: #bfbfbf;
+        }
+    </style>
+    
+</head>
+<body>
+<!-- 日历 -->
+<div class="one">
+    <dl>
+        <dt>
+            <span>一</span>
+            <span>二</span>
+            <span>三</span>
+            <span>四</span>
+            <span>五</span>
+            <span>六</span>
+            <span>日</span>
+        </dt>
+        <dd>
+                <span data-range="prev-month">
+					<b>25</b>
+					<i>十九</i>
+				</span>
+                <span data-range="prev-month">
+					<b>26</b>
+					<i>二十</i>
+				</span>
+                <span data-range="prev-month">
+					<b>27</b>
+					<i>廿一</i>
+				</span>
+                <span data-range="prev-month">
+					<b>28</b>
+					<i>廿二</i>
+				</span>
+                <span data-range="prev-month">
+					<b>29</b>
+					<i>廿三</i>
+				</span>
+                <span data-range="prev-month" data-rest="holiday">
+					<b>30</b>
+					<i>廿四</i>
+				</span>
+                <span data-flag="festival" data-rest="holiday">
+					<b>1</b>
+					<i>劳动节</i>
+				</span>
+        </dd>
+        <dd>
+                <span data-rest="holiday">
+					<b>2</b>
+					<i>廿六</i>
+				</span>
+                <span>
+					<b>3</b>
+					<i>廿七</i>
+				</span>
+                <span data-flag="festival">
+					<b>4</b>
+					<i>五四青年节</i>
+				</span>
+                <span data-flag="festival">
+					<b>5</b>
+					<i>立夏</i>
+				</span>
+                <span>
+					<b>6</b>
+					<i>三十</i>
+				</span>
+                <span>
+					<b>7</b>
+					<i>初一</i>
+					</span>
+                <span data-flag="festival">
+					<b>8</b>
+					<i>母亲节</i>
+				</span>
+        </dd>
+        <dd>
+                <span>
+					<b>9</b>
+					<i>初三</i>
+				</span>
+                <span>
+					<b>10</b>
+					<i>初四</i>
+				</span>
+                <span>
+					<b>11</b>
+					<i>初五</i>
+				</span>
+                <span data-flag="festival">
+					<b>12</b>
+					<i>护士节</i>
+				</span>
+                <span>
+					<b>13</b>
+					<i>初七</i>
+				</span>
+                <span>
+					<b>14</b>
+					<i>初八</i>
+				</span>
+                <span>
+
+					<b>15</b>
+					<i>初九</i></span>
+        </dd>
+        <dd>
+                <span>
+					<b>16</b>
+					<i>初十</i>
+				</span>
+                <span>
+					<b>17</b>
+					<i>十一</i>
+				</span>
+                <span>
+					<b>18</b>
+					<i>十二</i>
+				</span>
+                <span class="today">
+					<b>19</b>
+					<i>十三</i>
+				</span>
+                <span data-flag="festival">
+					<b>20</b>
+					<i>小满</i>
+				</span>
+                <span>
+					<b>21</b>
+					<i>十五</i>
+				</span>
+                <span>
+					<b>22</b>
+					<i>十六</i>
+				</span>
+        </dd>
+        <dd>
+                <span>
+					<b>23</b>
+					<i>十七</i>
+				</span>
+                <span>
+					<b>24</b>
+					<i>十八</i>
+				</span>
+                <span>
+					<b>25</b>
+					<i>十九</i>
+				</span>
+                <span>
+					<b>26</b>
+					<i>二十</i>
+				</span>
+                <span>
+					<b>27</b>
+					<i>廿一</i>
+				</span>
+                <span>
+					<b>28</b>
+					<i>廿二</i>
+				</span>
+                <span>
+					<b>29</b>
+					<i>廿三</i>
+				</span>
+        </dd>
+        <dd>
+                <span>
+					<b>30</b>
+					<i>廿四</i>
+				</span>
+                <span>
+					<b>31</b>
+					<i>廿五</i>
+				</span>
+                <span data-flag="festival" data-range="next-month">
+					<b>1</b>
+					<i>儿童节</i>
+				</span>
+                <span data-range="next-month">
+					<b>2</b>
+					<i>廿七</i>
+				</span>
+                <span data-range="next-month">
+					<b>3</b>
+					<i>廿八</i>
+				</span>
+                <span data-range="next-month">
+					<b>4</b>
+					<i>廿九</i>
+				</span>
+                <span data-flag="festival" data-range="next-month">
+					<b>5</b>
+					<i>环境日</i>
+				</span>
+        </dd>
+    </dl>
+</div>
+</body>
+</html>

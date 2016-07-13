@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #75d6dd;
+        }
+        .one{
+            height: 20px;
+            position: absolute;
+            overflow: hidden;
+            top: 100px;
+            left: 400px;
+            margin: 100px auto;
+            animation: change 1s steps(5);   /*steps  步进*/
+            /*当动画执行完成时，保存完成时的状态*/
+            animation-fill-mode:backwards;
+            font-size: 20px;
+        }
+        /*让one，变宽在变高，在变颜色*/
+        @keyframes change {
+            from{
+                width: 0;
+            }
+            to{
+                width: 112px;
+            }
+        }
+    </style>
+</head>
+<body>
+<span class="one">前端工程师</span>
+</body>
+</html>

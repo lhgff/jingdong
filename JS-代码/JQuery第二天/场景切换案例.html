@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            background: #faffac;
+            color: #0099cc;
+        }
+        .divItem{
+            background: #29cc36;
+            color: #1c18f0;
+        }
+    </style>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            // 获取到按钮并绑定单击事件
+            $("#btnToggle").click(function() {
+//                  //判断div有没有divItem这个类
+//                if($("div").hasClass("divItem")){
+//                    //有这个类
+//                    $("div").removeClass("divItem");
+//                }else{
+//                    //没有这个类
+//                    $("div").addClass("divItem");
+//                }
+                //作用就是切换指定的类
+                $("div").toggleClass("divItem");
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="切换场景" id="btnToggle"/>
+<div>
+    文字。。。。。。。。。。。。
+</div>
+</body>
+</html>

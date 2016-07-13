@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script src="common.js"></script>
+</head>
+<body>
+  <div id = "box">原始文字</div>
+ <!--通过按钮改变box的样式-->
+<button id="one1">改宽</button>
+<button id="one2">改高</button>
+<button id="one3">改背景</button>
+<button id="one4">改文字</button>
+
+  <script>
+     var one1 = myId("one1");
+     var one2 = myId("one2");
+     var one3 = myId("one3");
+     var one4 = myId("one4");
+
+      var box = myId("box");
+
+      //给每个按钮添加点击事件。
+     // one1.onclick = function(){
+     //    box.style.width = "200px";
+     // };
+     // one2.onclick = function(){
+     //     box.style.height = "200px";
+     // }
+     // one3.onclick = function(){
+     //     box.style.backgroundColor = "blue";
+     // }
+     // one4.onclick = function(){
+     //     box.innerHTML = "我是新更改的文字"
+     // }
+
+       tJ("one1","width","200px");
+       tJ("one2","height","200px");
+       tJ("one3","backgroundColor","blue");
+       tJ("one4","innerHTML","呵呵");
+      function tJ(id,attr,value){
+          var one = document.getElementById(id);
+          one.onclick = function(){
+              if(attr == "innerHTML"){
+                  box[attr]=value;     /*attr    属性*/
+              }else{
+                  box.style[attr]= value;
+              }
+          };
+      }
+  </script>
+</body>
+</html>

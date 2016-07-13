@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <style type="text/css" media="screen">
+    .m-form {
+        line-height: 29px;
+        color: #555;
+        width: 260px;
+        margin-top: 115px;
+        margin-left: 500px;
+    }
+    
+    .m-form legend {
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 130px;
+    }
+    
+    .m-form .formitm {
+        padding: 20px 0 0;
+        line-height: 30px;
+    }
+    
+    .m-form .formitm-1 {
+        padding-left: 140px;
+    }
+    
+    .m-form .lab {
+        float: left;
+        width: 105px;
+        margin-right: -90px;
+        text-align: right;
+        font-weight: bold;
+    }
+    
+    .m-form .ipt {
+        margin-left: 127px;
+        width: 210px;
+    }
+    
+    .m-form .ipt * {
+        vertical-align: middle;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- enctype="multipart/form-data" -->
+    <form action="11_upload.php" method="post" enctype="multipart/form-data">
+        <div class="m-form">
+            <fieldset>
+                <legend>上传文件</legend>
+                <div class="formitm">
+                    <label class="lab">请选择文件：</label>
+                    <div class="ipt">
+                        <input type="file" class="u-ipt" name="photo" />
+                    </div>
+                </div>
+                <div class="formitm formitm-1">
+                    <input class="u-btn" type="submit" value="上传" />
+                </div>
+            </fieldset>
+        </div>
+    </form>
+</body>
+
+</html>

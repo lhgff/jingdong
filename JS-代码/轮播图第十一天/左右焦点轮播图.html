@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body, ul, ol, li, img {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 490px;
+            height: 270px;
+            padding: 5px;
+            position: relative;
+            border: 1px solid #ccc;
+            margin: 100px auto 0;
+        }
+
+        .one {
+            width: 490px;
+            height: 270px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #box img {
+            width: 490px;
+        }
+
+        .one ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .one ol li {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            background: #fff;
+            float: left;
+            margin-right: 10px;
+            cursor: pointer;
+            _display: inline;
+        }
+
+        .one ol li.current {
+            background: yellow;
+        }
+
+        .one ul li {
+            float: left;
+        }
+
+        .one ul {
+            position: absolute;
+            top: 0;
+            width: 2940px;
+        }
+
+        .one ul li.current {
+            display: block;
+        }
+
+        #array {
+            display: none;
+        }
+
+        #array span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #array #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="box" class="all">
+    <div class="one">
+        <ul id="imgs">
+            <li><img src="images/1.jpg"/></li>
+            <li><img src="images/2.jpg"/></li>
+            <li><img src="images/3.jpg"/></li>
+            <li><img src="images/4.jpg"/></li>
+            <li><img src="images/5.jpg"/></li>
+        </ul>
+    </div>
+
+    <div id="array"><span id="left">&lt;</span><span id="right">&gt;</span></div>
+</div>
+<script>
+    var box = myId("box");
+    var array = myId("array");
+    var left = array.children[0];
+    var right = array.children[1];
+    var one = box.children[0];
+    var ul = one.children[0];
+    var lis = ul.children;
+    var oneWidth = one.offsetWidth;
+
+
+    box.onmouseover = function () {
+        array.style.display = "block";
+    };
+    box.onmouseout = function () {
+        array.style.display = "none";
+    };
+
+    var pic = 0;
+    right.onclick = function () {
+        if (pic < lis.length - 1) {
+            pic++;
+            var target = -pic * oneWidth;
+            animate(ul, target);
+        }
+    };
+
+    left.onclick = function () {
+        if (pic > 0) {
+            pic--;
+            var target = -pic * oneWidth;
+            animate(ul,target);
+
+        }
+    };
+
+
+    function myId(id) {
+        return document.getElementById(id);
+    }
+    function animate(tag, target) {
+        clearInterval(tag.timer);
+        tag.timer = setInterval(function () {
+            var leader = tag.offsetLeft;
+            var step = 9;
+            step = leader > target ? -step : step;
+            leader = leader + step;
+            if (Math.abs(leader - target) < Math.abs(step)) {
+                tag.style.left = target + "px";
+                clearInterval(tag.timer);
+            } else {
+                tag.style.left = leader + "px";
+            }
+        }, 17);
+    }
+</script>
+</body>
+</html>
+
+
+
+<!--<body>-->
+<!--<div id="box" class="all">-->
+    <!--<div class="ad">-->
+        <!--<ul id="imgs">-->
+            <!--<li><img src="images/1.jpg"/></li>-->
+            <!--<li><img src="images/2.jpg"/></li>-->
+            <!--<li><img src="images/3.jpg"/></li>-->
+            <!--<li><img src="images/4.jpg"/></li>-->
+            <!--<li><img src="images/5.jpg"/></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+
+    <!--<div id="arr"><span id="left">&lt;</span><span id="right">&gt;</span></div>-->
+<!--</div>-->
+<!--<script>-->
+    <!--var box = myId("box");-->
+    <!--var arr = myId("arr");-->
+    <!--var left = arr.children[0];-->
+    <!--var right = arr.children[1];-->
+    <!--var ad = box.children[0];-->
+    <!--var ul = ad.children[0];-->
+    <!--var lis = ul.children;-->
+    <!--var adWidth = ad.offsetWidth;-->
+
+
+    <!--//鼠标移入移出显示和隐藏箭头-->
+    <!--box.onmouseover = function () {-->
+        <!--arr.style.display = "block";-->
+    <!--};-->
+    <!--box.onmouseout = function () {-->
+        <!--arr.style.display = "none";-->
+    <!--};-->
+
+    <!--//由于没有12345让你去操作，只有左右按钮，我们需要使用一个变量去进行计数、-->
+    <!--var pic = 0;-->
+    <!--//点击右侧按钮-->
+    <!--right.onclick = function () {-->
+        <!--//当我们点击右按钮时，最多滚过图片数量-1张(lis.length-1)-->
+        <!--if (pic < lis.length - 1) {-->
+            <!--//这个时候再去进行运动-->
+            <!--pic++;-->
+            <!--var target = -pic * adWidth;-->
+            <!--animate(ul, target);-->
+        <!--}-->
+    <!--};-->
+
+    <!--left.onclick = function () {-->
+        <!--//最小不能小过0-->
+        <!--if (pic > 0) {-->
+            <!--pic&#45;&#45;;-->
+            <!--var target = -pic*adWidth;-->
+            <!--animate(ul,target);-->
+
+        <!--}-->
+    <!--};-->
+
+
+    <!--function myId(id) {-->
+        <!--return document.getElementById(id);-->
+    <!--}-->
+    <!--function animate(tag, target) {-->
+        <!--clearInterval(tag.timer);-->
+        <!--tag.timer = setInterval(function () {-->
+            <!--//对象当前位置=对象当前位置+要移动的长度-->
+            <!--//leader = leader + step-->
+            <!--var leader = tag.offsetLeft;-->
+            <!--var step = 9;-->
+            <!--//对step的正负进行判断。如果leader小于target，就是正的，如果大于target，step为负值-->
+            <!--step = leader > target ? -step : step;-->
+            <!--leader = leader + step;-->
+            <!--//当leader和target的距离小于一步时，我们不能让他正常走，可以直接将tag的位置设置为target，然后清除定时器-->
+            <!--if (Math.abs(leader - target) < Math.abs(step)) {-->
+                <!--tag.style.left = target + "px";-->
+                <!--clearInterval(tag.timer);-->
+            <!--} else {-->
+                <!--//最好最后一步-->
+                <!--tag.style.left = leader + "px";-->
+            <!--}-->
+        <!--}, 17);-->
+    <!--}-->
+<!--</script>-->
+<!--</body>-->

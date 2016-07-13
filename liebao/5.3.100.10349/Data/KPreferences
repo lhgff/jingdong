@@ -1,0 +1,14 @@
+{
+"tab": {
+      "new_open": 1
+   },
+"session": {
+      "kduba_url_preset": true,
+      "restore_on_startup": 4,
+      "restore_on_startup_migrated": true,
+      "urls_to_restore_on_startup": [ "http://www.duba.com/?f=liebao" ]
+   },
+"profile": {
+      "viewmode_manager_enabled": false
+   }
+}

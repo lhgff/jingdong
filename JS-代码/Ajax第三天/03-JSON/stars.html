@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON</title>
+	<style>
+		table {
+			width: 800px;
+			border-collapse: collapse;
+		}
+		td {
+			height: 40px;
+			text-align: center;
+			border: 1px solid #CCC;
+		}
+		
+	</style>
+	<!--[if lte IE 6]>
+		
+	<![endif]-->
+</head>
+<body>
+	<table>
+		<!-- <tr>
+			<td>王力宏</td>
+			<td>39</td>
+			<td>男</td>
+		</tr>
+		<tr>
+			<td>周杰伦</td>
+			<td>39</td>
+			<td>男</td>
+		</tr> -->
+	</table>
+	<div class="btn"><input type="button" value="获取数据"></div>
+	<script type="text/javascript">
+		var btn=document.querySelector("input");
+		btn.onclick=function(){
+			var xhr=new XMLHttpRequest;
+			xhr.open("post","stars.php");
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+			xhr.send(null);
+			xhr.onreadystatechange=function(){
+				if(xhr.readyState==4&&xhr.status==200){
+					// console.log(xhr.responseText);
+					var result=xhr.responseText;
+					result=JSON.parse(result);
+					// console.log(result);
+	                                              for(var i in result){
+	                                              	console.log(result[i].name);
+	                                              }
+
+				}
+			}
+		}
+	</script>
+</body>
+</html>

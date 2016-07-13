@@ -1,0 +1,21 @@
+{
+   "background": {
+      "page": "background.html",
+      "persistent": true
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon.png"
+      },
+      "default_title": "wifi"
+   },
+   "default_locale": "en",
+   "icons": {
+      "128": "images/icon.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtr3MFjqLlY2S5ofIIhB1lm7mOubzIZLemJ6THozUIHZyegsrifn0GGg2D+qMwB8QBiwpFYiF8OpW8tpiD2lCXhUlD5rLZ4GD2mcOGgmj5PKpoJhujSHhw1/sjiwiQgghehVrt82C8z4QNIrKopiFdDoXWJszDRAgzuIOwjZxrGKARLKFX4LBQbB5zAFtu+iMkEQ7+TQTlSCzGVlqB6lRR5SlFSxkaEPrAsH25uP5wkZjO5vGKcsa+NUMUDTJ3Phq+uwGkF8UMnLzE79wdATR+1YjdVthjDEsFLwDuJaPG7od32JWPIYlqNyiDgs5l7YmoPJJn9zR/Bw7DpEZCwvsEQIDAQAB",
+   "manifest_version": 2,
+   "name": "wifi",
+   "permissions": [ "tabs", "notifications", "cookies", "http://*/*", "https://*/*" ],
+   "version": "1.1.1.2"
+}

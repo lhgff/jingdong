@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>五角星</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .comment{
+            font-size: 15px;
+            color: teal;
+        }
+        .comment li {
+            float: left;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+  <!--prevAll()，表示当前元素，前面的兄弟元素。-->
+  <!--end()，返回前一个对象。-->
+  <!--nextAll（），拿到当前元素后面所有兄弟元素，-->
+
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            var wjx_none = '☆',
+                wjx_sel = '★';
+            $(".comment").on("mouseenter","li",function(){
+                $(this).text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+                $(this).prevAll().end().nextAll()
+            })
+            $("ul").on("click","li",function(){
+                $(this).addClass("clicked").siblings().removeClass("clicked");
+                })
+            $("ul").on("mouseleave",function(){
+                $(this).children().text(wjx_none);
+                $(this).find("li[class='clicked']").text(wjx_sel).prevAll().text(wjx_sel).end().nextAll().text(wjx_none);
+            })
+        });
+    </script>
+</head>
+<body>
+<ul class="comment">
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #fenxiang{
+            position: fixed;
+            width: 100px;
+            height: 200px;
+            background-color: #597ce6;
+            left: -100px;
+            top: 100px;
+        }
+        #fenxiang span{
+            width: 20px;
+            height: 60px;
+            line-height: 20px;
+            text-align: center;
+            left: 100px;
+            top: 70px;
+            position:absolute;
+            background-color: #ff61f3;
+        }
+    </style>
+</head>
+<body>
+<div id="fenxiang">
+    <span>分享到</span>
+
+    <script>
+        var fenxiang = document.getElementById("fenxiang");
+        fenxiang.onmouseover = function () {
+            animate(fenxiang,{"left" : 0});
+        };
+        fenxiang.onmouseout = function(){
+            animate(fenxiang,{"left" : -100});
+        }
+
+        function animate(element,attrs) {     //json
+            clearInterval(element.timerId);
+            element.timerId = setInterval(function () {
+                var isStop = true;
+                for (var key in attrs) {
+
+                    var target = attrs[key];
+                    var num = parseInt(getStyle(element, key)) || 0;
+                    console.log(num);
+                    var step = (target - num) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    num = num + step;
+                    element.style[key] = num + "px";
+                    if(num !== target){
+                        isStop = false;
+                    }
+                }
+                if (isStop) {
+                    clearInterval(element.timerId);
+                }
+            }, 15);
+        }
+
+        //兼容浏览器
+        function getStyle(element, attr) {
+            if (element.currentStyle) {
+                return element.currentStyle[attr];
+            } else {
+                return window.getComputedStyle(element, null)[attr];
+            }
+        }
+    </script>
+</div>
+</body>
+</html>
+
+
+
+<!--<body>-->
+<!--<div id="share">-->
+    <!--<span>分享到</span>-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--var share = document.getElementById("share");-->
+    <!--share.onmouseover = function () {-->
+        <!--animate(share, {"left": 0});-->
+    <!--}-->
+    <!--share.onmouseout = function () {-->
+        <!--animate(share, {"left": -100});-->
+
+    <!--}-->
+    <!--//动画的方式改变对象的多个属性-->
+    <!--function animate(element, attrs) {-->
+        <!--clearInterval(element.timerId);-->
+        <!--element.timerId = setInterval(function () {-->
+            <!--//问题的原因：循环的时候定时器只有一个，有一个属性的值到了就停止定时器-->
+            <!--//问题的解决：假设所有的属性都到达要改变的值-->
+            <!--var isStop = true;-->
+            <!--//遍历-->
+            <!--for (var key in attrs) {-->
+                <!--var target = attrs[key];-->
+                <!--var num = parseInt(getStyle(element, key)) || 0;-->
+                <!--console.log(num);-->
+                <!--var step = (target - num) / 10;-->
+                <!--//把小数转换成整数-->
+                <!--step = step > 0 ? Math.ceil(step) : Math.floor(step);-->
+                <!--num = num + step;-->
+                <!--element.style[key] = num + "px";-->
+                <!--//检查每一个属性的值是否到达目标值-->
+                <!--if (num !== target) {-->
+                    <!--//如果没有到达目标值，动画不停止-->
+                    <!--isStop = false;-->
+                <!--}-->
+            <!--}-->
+            <!--//循环结束之后，如果isStop=true说明 动画结束-->
+            <!--if (isStop) {-->
+                <!--clearInterval(element.timerId);-->
+            <!--}-->
+        <!--}, 15);-->
+    <!--}-->
+    <!--//兼容浏览器-->
+    <!--function getStyle(element, attr) {-->
+        <!--if (element.currentStyle) {-->
+            <!--return element.currentStyle[attr];-->
+        <!--} else {-->
+            <!--return window.getComputedStyle(element, null)[attr];-->
+        <!--}-->
+    <!--}-->
+<!--</script>-->
+</body>

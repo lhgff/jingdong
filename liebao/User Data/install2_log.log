@@ -1,0 +1,841 @@
+2016-3-25 14:06:42 272  IsDefaultBrowser End
+
+2016-3-25 14:06:42 946  ExtraceFile begin...C:\Users\Administrator\AppData\Local\liebao\2016325140642241_1\
+2016-3-25 14:06:42 946  ExtractPacket...
+2016-3-25 14:06:42 946  GetPacketData 0
+2016-3-25 14:06:43 024  StartInstall LoadLibrary :1
+2016-3-25 14:06:43 024  bSyn=1,bSlient=1,bSetDefaultBrowser=1,bInstallAfterIsRun=1,bVerCheck=1
+
+2016-3-25 14:07:44 318  MoveNewVerToInstallDir KFunction::DeleteFolder C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\,recode=0
+2016-3-25 14:07:46 532  MoveNewVerToInstallDir src=C:\Users\Administrator\AppData\Local\liebao\2016325140642241_1\LBBrowser\,dst=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\ MoveFileEx bRet=1,error=2
+2016-3-25 14:07:47 705  PRODUCE_INSTALL_KEY bRet=1 code=0
+2016-3-25 14:07:51 425  CoCreateInstance failed: 0x800706d9/n
+2016-3-25 14:07:51 425  CWindowsFirewall fail error=0
+
+2016-3-25 14:07:51 425  OnEndProgress nType=1537,bRet=1,dwErrCode=0x0
+
+2016-3-25 14:07:51 425  IsCreateLink strPid:p
+2016-3-25 14:07:51 425  IsCreateLink bExist1:0 ,bExist2:0
+2016-3-25 14:07:51 549  IsCreateLink strDesktopPath:C:\Users\Public\Desktop\
+2016-3-25 14:07:51 565  IsInstalledChrome=1,IsInstalledFirefox=1,IsInstalledOpera=0
+
+2016-3-25 14:07:51 565  PM_Req_RunSkinupdater Begin
+
+2016-3-25 14:08:08 852  WriteFile C:\Users\Administrator\AppData\Local\liebao\User Data\install_info.json,errcode=3
+
+2016-3-25 14:08:08 852  InstallCompleteNofityLiebao Begin
+
+2016-3-25 14:03:27 214  WinMain cmline=-slient_install:1
+2016-3-25 14:03:27 454  GetDebugPrivilege bRet=1,code=0
+
+2016-3-25 14:03:27 454  Init localpath = C:\KDubaSoftDownloads\disapp\KSbrowser_dbxxl.exe
+
+2016-3-25 14:03:30 941  GetDebugPrivilege bRet=1,code=0
+
+2016-3-25 14:03:32 158  Init InstallPath=C:\Users\Administrator\AppData\Local\liebao\,m_bInstalled=0
+
+2016-3-25 14:03:37 257  WriteFile testfile fail errcode=5 
+
+2016-3-25 14:06:42 241  GetNewInstallDir = C:\Users\Administrator\AppData\Local\liebao\2016325140642241_1\
+
+2016-3-25 14:06:42 272  LoadOldInfo ver=0.0.0.0
+
+2016-3-25 14:06:42 272  IsDefaultBrowser Begin
+
+2016-3-25 14:06:42 272  IsDefaultBrowser bRet=0
+
+2016-3-25 14:06:42 272  ReadFileToString fail errcode=3
+
+2016-3-25 14:06:42 334  bSilentInstall Init=1
+
+2016-3-25 14:06:42 946  C:\Users\Administrator\AppData\Local\liebao\2016325140642241_1\ DiskSapce:20971520064
+
+2016-3-25 14:06:42 946  ExtractFile begin
+
+2016-3-25 14:06:42 946  OnBeginProgress nType=256
+
+2016-3-25 14:06:43 039  BeginInstall
+
+2016-3-25 14:06:43 039  
+^_^beginreport=&reportver=2.0.0.0&installstep=begin&oldver=0.0.0.0&newver=5.3.108.10480&reportflag=def&slient=1&force=0&innver=2013_11_22_1849&installed=0
+
+2016-3-25 14:06:43 180  GetPacketData return:36923467
+2016-3-25 14:06:43 180  Extract...
+2016-3-25 14:06:45 098  CusReport Report end
+
+2016-3-25 14:06:45 098  PM_Requirement_InstallBefor Begin
+
+2016-3-25 14:06:45 098  LoadOldInfo ver=0.0.0.0
+
+2016-3-25 14:06:45 098  IsDefaultBrowser Begin
+
+2016-3-25 14:06:45 098  IsDefaultBrowser bRet=0
+
+2016-3-25 14:06:45 098  ReadFileToString fail errcode=3
+
+2016-3-25 14:06:45 098  IsDefaultBrowser End
+
+2016-3-25 14:06:45 098  IsDefaultBrowser Begin
+
+2016-3-25 14:06:45 114  IsDefaultBrowser bRet=0
+
+2016-3-25 14:06:45 114  ReadFileToString fail errcode=3
+
+2016-3-25 14:06:45 114  IsDefaultBrowser End
+
+2016-3-25 14:06:45 114  OldDefaultBrowser="C:\Program Files\Internet Explorer\iexplore.exe" "%1"
+2016-3-25 14:06:45 114  PM_Requirement_InstallBefor End
+
+2016-3-25 14:07:35 872  Extract return:1
+2016-3-25 14:07:35 872  ExtractPacket return:1
+2016-3-25 14:07:35 872  OnEndProgress nType=256,bRet=1,dwErrCode=0x12
+
+2016-3-25 14:07:35 872  ExtractFile end bRet = 1
+
+2016-3-25 14:07:42 771  OnBeginProgress nType=1024
+
+2016-3-25 14:07:46 641  MoveNewVerToInstallDir xmlfile Move bRet=1,error=0
+2016-3-25 14:07:47 517  CopyFile C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\liebao.exe to C:\Users\Administrator\AppData\Local\liebao\liebao.exe error=0
+
+2016-3-25 14:07:47 517  OnEndProgress nType=1024,bRet=1,dwErrCode=0x0
+
+2016-3-25 14:07:47 517  OnBeginProgress nType=1280
+
+2016-3-25 14:07:47 611  WriteReg Spid=
+
+2016-3-25 14:07:47 642  Write WriteUninstallPath bRet=1 code=0
+2016-3-25 14:07:47 705  PRODUCE_INSTALL_COOP bRet=1 code=0
+2016-3-25 14:07:47 705  write Exit0 errcode=0
+2016-3-25 14:07:50 723  OnEndProgress nType=1280,bRet=1,dwErrCode=0x0
+
+2016-3-25 14:07:50 723  OnBeginProgress nType=1537
+
+2016-3-25 14:07:51 425  PM_Requirement_InstallAfter Begin
+
+2016-3-25 14:07:51 425  PM_Requirement_InstallAfter Pid=p_dbxxl
+
+2016-3-25 14:07:51 425  PM_Req_LockDefaultViaDuba2 Begin
+2016-3-25 14:07:51 425  LockDefaultViaDuba Begin
+
+2016-3-25 14:07:51 425  LockDefaultViaDuba KDubaDetectLockLiebao no IsModuleSupport
+
+2016-3-25 14:07:51 425  PM_Req_LockDefaultViaDuba2 End
+2016-3-25 14:07:51 425  IsCreateLink Start
+2016-3-25 14:07:51 549  IsCreateLink strDesktopPath:C:\Users\Public\Desktop\
+2016-3-25 14:07:51 549  IsCreateLink End
+2016-3-25 14:07:51 565  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\ManualUpgrade.exe,szCmd=--skin_updater,dwWaitTime=10000,bShow=0,bWaitTimeTermination=1
+
+2016-3-25 14:08:08 617  PM_Req_RunSkinupdater End bRet=1
+
+2016-3-25 14:08:08 617  OnBeginProgress nType=1797
+
+2016-3-25 14:08:08 617  UpRegVer Begin
+
+2016-3-25 14:08:08 617  UpRegVer  ver=5.3.108.10480  hr=0x0
+
+2016-3-25 14:08:08 617  OnEndProgress nType=1797,bRet=1,dwErrCode=0x0
+
+2016-3-25 14:08:08 617  WriteInstallInfoToFile begin
+
+2016-3-25 14:08:08 852  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmd=--install-complete,dwWaitTime=-1,bShow=0,bWaitTimeTermination=0
+
+2016-3-25 14:08:45 852  InstallCompleteNofityLiebao admin --install-complete bRet = 1,errcode=18
+
+2016-3-25 14:08:45 852  InstallCompleteNofityLiebao End, bRet = 1
+
+2016-3-25 14:08:45 852  WriteInstallInfoToFile end
+
+2016-3-25 14:08:45 852  PM_Requirement_InstallAfter End
+
+2016-3-25 14:08:45 852  Leader_Magic_Logic Begin!!
+
+2016-3-25 14:08:45 852  m_bInstalled true
+
+2016-3-25 14:08:45 852  Magic_Shortcut Begin
+
+2016-3-25 14:08:45 852  OnBeginProgress nType=1792
+
+2016-3-25 14:08:45 852  Magic_DesktopShortcut Begin
+
+2016-3-25 14:08:45 883  Magic_DesktopShortcutClear Begin
+
+2016-3-25 14:08:45 883  Magic_DesktopShortcutClear End
+
+2016-3-25 14:08:45 883  CreateShellLink start...
+2016-3-25 14:08:46 882  SetPath hr:0x0
+2016-3-25 14:08:46 882  SetIconLocation hr:0x0
+2016-3-25 14:08:46 882  setArguments hr:0x0
+2016-3-25 14:08:46 882  SetDescription hr:0x0
+2016-3-25 14:08:46 882  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--lbwx --ico7,szLinkPath=C:\Users\Administrator\Desktop\
+2016-3-25 14:08:54 397  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--lbwx --ico7, link:C:\Users\Administrator\Desktop\
+2016-3-25 14:08:54 402  CreateShellLink start...
+2016-3-25 14:08:54 417  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico1,szLinkPath=C:\Users\Administrator\Desktop\
+2016-3-25 14:08:56 367  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico1, link:C:\Users\Administrator\Desktop\
+2016-3-25 14:08:56 367  Magic_DesktopShortcut End bRet = 1
+
+2016-3-25 14:08:56 367  Magic_DesktopShortcut bRet = 1 m_dwLastErrorCode= 0
+2016-3-25 14:08:56 367  Magic_QuickLaunchShortcut Begin
+
+2016-3-25 14:08:56 367  Magic_QuickLaunchShortcutClear Begin
+
+2016-3-25 14:08:56 711  Magic_QuickLaunchShortcutClear End
+
+2016-3-25 14:08:56 711  CreateShellLink start...
+2016-3-25 14:08:56 711  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico2,szLinkPath=C:\Users\Administrator\AppData\Local\liebao\
+2016-3-25 14:08:57 693  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico2, link:C:\Users\Administrator\AppData\Local\liebao\
+2016-3-25 14:09:26 410  ShellExecute ret=0x2a
+
+2016-3-25 14:09:26 987  Magic_QuickLaunchShortcut End bRet = 1
+
+2016-3-25 14:09:26 987  Magic_QuickLaunchShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-3-25 14:09:26 987  Magic_StartMenuShortcut Begin
+
+2016-3-25 14:09:28 111  Magic_StartMenuShortcutClear Begin
+
+2016-3-25 14:09:28 111  Magic_StartMenuShortcutClear End
+
+2016-3-25 14:09:28 282  CreateShellLink start...
+2016-3-25 14:09:28 329  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico3,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-3-25 14:09:28 563  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico3, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-3-25 14:09:28 579  CreateShellLink start...
+2016-3-25 14:09:28 594  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\FixBrowser.exe,szCmdLine=,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-3-25 14:09:29 062  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\FixBrowser.exe, cmd:, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-3-25 14:09:29 062  CreateShellLink start...
+2016-3-25 14:09:29 093  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\uninst.exe,szCmdLine=,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-3-25 14:09:29 437  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\uninst.exe, cmd:, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-3-25 14:09:29 452  Magic_StartMenuShortcut End bRet = 1
+
+2016-3-25 14:09:29 452  Magic_StartMenuShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-3-25 14:09:29 452  Magic_StartMenuQuickLaunchShortcut Begin
+
+2016-3-25 14:09:29 452  Magic_StartMenuQuickLaunchShortcutClear Begin
+
+2016-3-25 14:09:29 483  Magic_StartMenuQuickLaunchShortcutClear End
+
+2016-3-25 14:09:29 483  CreateShellLink start...
+2016-3-25 14:09:29 483  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico4,szLinkPath=C:\Users\Administrator\AppData\Local\liebao\
+2016-3-25 14:09:29 717  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico4, link:C:\Users\Administrator\AppData\Local\liebao\
+2016-3-25 14:09:36 844  ShellExecute ret=0x2a
+
+2016-3-25 14:09:36 864  Magic_StartMenuQuickLaunchShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-3-25 14:09:36 864  OnEndProgress nType=1792,bRet=1,dwErrCode=0x0
+
+2016-3-25 14:09:36 864  Leader_Magic_Logic End!!
+
+2016-3-25 14:09:36 864  CopyDatFileForLego Begin
+
+2016-3-25 14:09:36 867  Create Directory C  bRet=1,error=0 
+
+2016-3-25 14:09:37 116  Copy lego.dat src=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\Data\lego.dat,dst=C:\Users\Administrator\AppData\Local\liebao\User Data\LegoIcon\lego.dat CopyFile bRet=1,error=0
+2016-3-25 14:09:37 117  CopyDatFileForLego End
+
+2016-3-25 14:09:37 117  OnBeginProgress nType=2048
+
+2016-3-25 14:09:44 745  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\knbcenter.exe,szCmd=/start,dwWaitTime=0,bShow=0,bWaitTimeTermination=0
+
+2016-3-25 14:09:50 575  OnEndProgress nType=2048,bRet=1,dwErrCode=0x0
+
+2016-3-25 14:09:50 575  SetDefaultBrowser Begin
+
+2016-3-25 14:09:50 575  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmd=--make-default-browser,dwWaitTime=-1,bShow=0,bWaitTimeTermination=0
+
+2016-3-25 14:10:57 412  admin SetDefaultBrowser bRet = 1,errcode=0
+
+2016-3-25 14:10:57 412  SetDefaultBrowser End
+
+2016-3-25 14:10:57 412  EndInstall bRet
+
+2016-3-25 14:10:57 412  PM_Requirement_InstallEnd Begin
+
+2016-3-25 14:10:57 412  PM_Requirement_InstallEnd_Slient Begin
+
+2016-3-25 14:10:57 412  PM_Req_XPQuickLanuchIconFirst Begin
+
+2016-3-25 14:10:57 412  PM_Req_XPQuickLanuchIconFirst End
+
+2016-3-25 14:10:57 412  PM_Req_SlientInstallRestoreLastSession Begin
+
+2016-3-25 14:10:57 412  PM_Req_SlientInstallRestoreLastSession Begin m_pmFeatures.m_bRestoreLastSession=0,m_InstallParm.m_bInstallAfterIsRun=1
+
+2016-3-25 14:10:57 412  PM_Req_SlientInstallRestoreLastSession End
+
+2016-3-25 14:10:57 412  PM_Requirement_InstallEnd_Slient End
+
+2016-3-25 14:10:57 412  PM_Requirement_InstallEnd End
+
+2016-3-25 14:10:57 511  Report start
+
+2016-3-25 14:10:57 569  IsDefaultBrowser Begin
+
+2016-3-25 14:10:57 573  IsDefaultBrowser bRet=0
+
+2016-3-25 14:10:57 575  dict_formentry->Get safe.browserprotect no exists
+
+2016-3-25 14:10:57 575  ReadFileToString fail errcode=0
+
+2016-3-25 14:10:57 575  IsDefaultBrowser End
+
+2016-3-25 14:10:57 578  
+^_^endreport=&reportver=2.0.0.0&installstep=end&oldver=0.0.0.0&newver=5.3.108.10480&oldpid=&newpid=p_dbxxl&total=252&result=1&errstep=2048&errcode=0&installed=0&reportflag=def&slient=1&force=0&dubaicon=1&installbefordefbrowser=0&installafterfdefbrowser=0&errmsg=&errmsg1=&coexist=5&install=C:\Users\Administrator\AppData\Local\liebao\&admin=1&trycheckselfprotectcount=0&getdebugprivilege=1&7zinstall=0&wxinstall=0&filecheck=1&innver=2013_11_22_1849
+
+2016-3-25 14:10:59 873  Report end
+
+2016-3-25 14:11:00 013  Clean Temp
+
+2016-3-25 14:11:00 017  Clean Temp new=C:\Users\Administrator\AppData\Local\liebao\2016325140642241_1\,old=,cur=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10480\,result=1
+
+2016-3-25 14:11:00 021  beging clear new
+
+2016-3-25 14:11:00 030  end clear new bRet = 1,error = 18
+
+2016-4-24 07:12:16 456  WinMain cmline=-default_browser:"0" -slient_install:"1" -join_UE_program:"1"
+2016-4-24 07:12:16 456  GetDebugPrivilege bRet=1,code=0
+
+2016-4-24 07:12:16 456  Init localpath = C:\Windows\TEMP\KSBrowser_duba_info_201601191.exe
+
+2016-4-24 07:12:16 456  GetDebugPrivilege bRet=1,code=0
+
+2016-4-24 07:12:16 737  Init InstallPath=C:\Users\Administrator\AppData\Local\liebao\,m_bInstalled=0
+
+2016-4-24 07:12:16 908  GetNewInstallDir = C:\Users\Administrator\AppData\Local\liebao\2016424071216908_1\
+
+2016-4-24 07:12:16 924  LoadOldInfo ver=0.0.0.0
+
+2016-4-24 07:12:16 924  IsDefaultBrowser Begin
+
+2016-4-24 07:12:16 924  IsDefaultBrowser bRet=0
+
+2016-4-24 07:12:17 033  IsDefaultBrowser bRet2=1
+
+2016-4-24 07:12:17 033  ReadFileToString fail errcode=0
+
+2016-4-24 07:12:17 033  IsDefaultBrowser End
+
+2016-4-24 07:12:17 080  bSilentInstall Init=1
+
+2016-4-24 07:12:17 111  StartInstall LoadLibrary :1
+2016-4-24 07:12:17 111  bSyn=1,bSlient=1,bSetDefaultBrowser=0,bInstallAfterIsRun=1,bVerCheck=1
+
+2016-4-24 07:12:17 111  C:\Users\Administrator\AppData\Local\liebao\2016424071216908_1\ DiskSapce:20971520064
+
+2016-4-24 07:12:17 111  ExtractFile begin
+
+2016-4-24 07:12:17 111  OnBeginProgress nType=256
+
+2016-4-24 07:12:17 111  ExtraceFile begin...C:\Users\Administrator\AppData\Local\liebao\2016424071216908_1\
+2016-4-24 07:12:17 111  ExtractPacket...
+2016-4-24 07:12:17 111  GetPacketData 0
+2016-4-24 07:12:17 127  PM_Requirement_InstallBefor Begin
+
+2016-4-24 07:12:17 127  LoadOldInfo ver=0.0.0.0
+
+2016-4-24 07:12:17 127  IsDefaultBrowser Begin
+
+2016-4-24 07:12:17 142  IsDefaultBrowser bRet=0
+
+2016-4-24 07:12:17 142  IsDefaultBrowser bRet2=1
+
+2016-4-24 07:12:17 142  ReadFileToString fail errcode=0
+
+2016-4-24 07:12:17 142  IsDefaultBrowser End
+
+2016-4-24 07:12:17 142  IsDefaultBrowser Begin
+
+2016-4-24 07:12:17 173  IsDefaultBrowser bRet=0
+
+2016-4-24 07:12:17 173  IsDefaultBrowser bRet2=1
+
+2016-4-24 07:12:17 173  ReadFileToString fail errcode=0
+
+2016-4-24 07:12:17 173  IsDefaultBrowser End
+
+2016-4-24 07:12:17 173  PM_Requirement_InstallBefor End
+
+2016-4-24 07:12:17 517  GetPacketData return:40399947
+2016-4-24 07:12:17 517  Extract...
+2016-4-24 07:12:45 692  Extract return:1
+2016-4-24 07:12:45 692  ExtractPacket return:1
+2016-4-24 07:12:45 692  OnEndProgress nType=256,bRet=1,dwErrCode=0x12
+
+2016-4-24 07:12:45 692  ExtractFile end bRet = 1
+
+2016-4-24 07:12:47 486  BeginInstall
+
+2016-4-24 07:12:47 486  
+^_^beginreport=&reportver=2.0.0.0&installstep=begin&oldver=0.0.0.0&newver=5.3.108.10912&reportflag=def&slient=1&force=0&innver=2013_11_22_1849&installed=0
+
+2016-4-24 07:12:47 969  CusReport Report end
+
+2016-4-24 07:12:47 969  OnBeginProgress nType=1024
+
+2016-4-24 07:12:52 712  MoveNewVerToInstallDir KFunction::DeleteFolder C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\,recode=0
+2016-4-24 07:12:53 195  MoveNewVerToInstallDir src=C:\Users\Administrator\AppData\Local\liebao\2016424071216908_1\LBBrowser\,dst=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\ MoveFileEx bRet=1,error=2
+2016-4-24 07:12:53 710  MoveNewVerToInstallDir xmlfile Move bRet=1,error=0
+2016-4-24 07:12:53 726  CopyFile C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\liebao.exe to C:\Users\Administrator\AppData\Local\liebao\liebao.exe error=0
+
+2016-4-24 07:12:53 741  OnEndProgress nType=1024,bRet=1,dwErrCode=0x0
+
+2016-4-24 07:12:53 741  OnBeginProgress nType=1280
+
+2016-4-24 07:12:53 741  WriteReg Spid=
+
+2016-4-24 07:12:53 772  Write WriteUninstallPath bRet=1 code=0
+2016-4-24 07:12:53 804  PRODUCE_INSTALL_KEY bRet=1 code=0
+2016-4-24 07:12:53 819  PRODUCE_INSTALL_COOP bRet=1 code=0
+2016-4-24 07:12:53 819  write Exit0 errcode=0
+2016-4-24 07:12:54 350  OnEndProgress nType=1280,bRet=1,dwErrCode=0x0
+
+2016-4-24 07:12:54 350  OnBeginProgress nType=1537
+
+2016-4-24 07:12:54 584  CoCreateInstance failed: 0x800706d9/n
+2016-4-24 07:12:54 584  CWindowsFirewall fail error=0
+
+2016-4-24 07:12:54 584  OnEndProgress nType=1537,bRet=1,dwErrCode=0x0
+
+2016-4-24 07:12:54 584  PM_Requirement_InstallAfter Begin
+
+2016-4-24 07:12:54 584  PM_Requirement_InstallAfter Pid=p_duba_info
+
+2016-4-24 07:12:54 584  PM_Req_LockDefaultViaDuba2 Begin
+2016-4-24 07:12:54 584  LockDefaultViaDuba Begin
+
+2016-4-24 07:12:54 584  LockDefaultViaDuba KDubaDetectLockLiebao no IsModuleSupport
+
+2016-4-24 07:12:54 584  PM_Req_LockDefaultViaDuba2 End
+2016-4-24 07:12:54 584  IsCreateLink Start
+2016-4-24 07:12:54 584  IsCreateLink strPid:p
+2016-4-24 07:12:54 584  IsCreateLink bExist1:0 ,bExist2:0
+2016-4-24 07:12:54 599  IsCreateLink strDesktopPath:C:\Users\Public\Desktop\
+2016-4-24 07:12:54 615  IsCreateLink strDesktopPath:C:\Users\Public\Desktop\
+2016-4-24 07:12:54 615  IsCreateLink End
+2016-4-24 07:12:54 615  IsInstalledChrome=1,IsInstalledFirefox=1,IsInstalledOpera=0
+
+2016-4-24 07:12:54 615  PM_Req_RunSkinupdater Begin
+
+2016-4-24 07:12:54 615  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\ManualUpgrade.exe,szCmd=--skin_updater,dwWaitTime=10000,bShow=0,bWaitTimeTermination=1
+
+2016-4-24 07:12:57 766  PM_Req_RunSkinupdater End bRet=1
+
+2016-4-24 07:12:57 766  OnBeginProgress nType=1797
+
+2016-4-24 07:12:57 766  UpRegVer Begin
+
+2016-4-24 07:12:57 766  UpRegVer  ver=5.3.108.10912  hr=0x0
+
+2016-4-24 07:12:57 766  OnEndProgress nType=1797,bRet=1,dwErrCode=0x0
+
+2016-4-24 07:12:57 766  WriteInstallInfoToFile begin
+
+2016-4-24 07:12:57 766  InstallCompleteNofityLiebao Begin
+
+2016-4-24 07:12:57 766  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmd=--install-complete,dwWaitTime=-1,bShow=0,bWaitTimeTermination=0
+
+2016-4-24 07:13:11 510  InstallCompleteNofityLiebao admin --install-complete bRet = 1,errcode=18
+
+2016-4-24 07:13:11 510  InstallCompleteNofityLiebao End, bRet = 1
+
+2016-4-24 07:13:11 525  WriteInstallInfoToFile end
+
+2016-4-24 07:13:11 525  PM_Requirement_InstallAfter End
+
+2016-4-24 07:13:11 525  Leader_Magic_Logic Begin!!
+
+2016-4-24 07:13:11 525  m_bInstalled true
+
+2016-4-24 07:13:11 525  Magic_Shortcut Begin
+
+2016-4-24 07:13:11 525  OnBeginProgress nType=1792
+
+2016-4-24 07:13:11 525  Magic_DesktopShortcut Begin
+
+2016-4-24 07:13:11 556  Magic_DesktopShortcutClear Begin
+
+2016-4-24 07:13:11 556  Magic_DesktopShortcutClear End
+
+2016-4-24 07:13:11 556  CreateShellLink start...
+2016-4-24 07:13:12 180  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico1,szLinkPath=C:\Users\Administrator\Desktop\
+2016-4-24 07:13:12 695  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico1, link:C:\Users\Administrator\Desktop\
+2016-4-24 07:13:12 726  Magic_DesktopShortcut End bRet = 1
+
+2016-4-24 07:13:12 726  Magic_DesktopShortcut bRet = 1 m_dwLastErrorCode= 0
+2016-4-24 07:13:12 726  Magic_QuickLaunchShortcut Begin
+
+2016-4-24 07:13:12 726  Magic_QuickLaunchShortcutClear Begin
+
+2016-4-24 07:13:12 773  Magic_QuickLaunchShortcutClear End
+
+2016-4-24 07:13:12 773  CreateShellLink start...
+2016-4-24 07:13:12 836  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico2,szLinkPath=C:\Users\Administrator\AppData\Local\liebao\
+2016-4-24 07:13:12 914  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico2, link:C:\Users\Administrator\AppData\Local\liebao\
+2016-4-24 07:13:27 999  ShellExecute ret=0x2a
+
+2016-4-24 07:13:27 999  Magic_QuickLaunchShortcut End bRet = 1
+
+2016-4-24 07:13:27 999  Magic_QuickLaunchShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-4-24 07:13:27 999  Magic_StartMenuShortcut Begin
+
+2016-4-24 07:13:28 015  Magic_StartMenuShortcutClear Begin
+
+2016-4-24 07:13:28 015  Magic_StartMenuShortcutClear End
+
+2016-4-24 07:13:28 030  CreateShellLink start...
+2016-4-24 07:13:28 046  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico3,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-4-24 07:13:28 046  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico3, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-4-24 07:13:28 046  CreateShellLink start...
+2016-4-24 07:13:28 061  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\FixBrowser.exe,szCmdLine=,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-4-24 07:13:28 077  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\FixBrowser.exe, cmd:, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-4-24 07:13:28 077  CreateShellLink start...
+2016-4-24 07:13:28 093  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\uninst.exe,szCmdLine=,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-4-24 07:13:28 124  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\uninst.exe, cmd:, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-4-24 07:13:28 124  Magic_StartMenuShortcut End bRet = 1
+
+2016-4-24 07:13:28 124  Magic_StartMenuShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-4-24 07:13:28 124  Magic_StartMenuQuickLaunchShortcut Begin
+
+2016-4-24 07:13:28 124  Magic_StartMenuQuickLaunchShortcutClear Begin
+
+2016-4-24 07:13:28 155  Magic_StartMenuQuickLaunchShortcutClear End
+
+2016-4-24 07:13:28 155  CreateShellLink start...
+2016-4-24 07:13:28 155  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico4,szLinkPath=C:\Users\Administrator\AppData\Local\liebao\
+2016-4-24 07:13:28 171  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico4, link:C:\Users\Administrator\AppData\Local\liebao\
+2016-4-24 07:13:29 309  ShellExecute ret=0x2a
+
+2016-4-24 07:13:29 309  Magic_StartMenuQuickLaunchShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-4-24 07:13:29 309  OnEndProgress nType=1792,bRet=1,dwErrCode=0x0
+
+2016-4-24 07:13:29 309  Leader_Magic_Logic End!!
+
+2016-4-24 07:13:29 309  CopyDatFileForLego Begin
+
+2016-4-24 07:13:29 309  C File Exists 
+
+2016-4-24 07:13:29 309  CopyDatFileForLego End
+
+2016-4-24 07:13:29 309  OnBeginProgress nType=2048
+
+2016-4-24 07:13:32 414  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\knbcenter.exe,szCmd=/start,dwWaitTime=0,bShow=0,bWaitTimeTermination=0
+
+2016-4-24 07:13:33 833  OnEndProgress nType=2048,bRet=1,dwErrCode=0x0
+
+2016-4-24 07:13:33 833  EndInstall bRet
+
+2016-4-24 07:13:33 833  PM_Requirement_InstallEnd Begin
+
+2016-4-24 07:13:33 833  PM_Requirement_InstallEnd_Slient Begin
+
+2016-4-24 07:13:33 833  PM_Req_XPQuickLanuchIconFirst Begin
+
+2016-4-24 07:13:33 833  PM_Req_XPQuickLanuchIconFirst End
+
+2016-4-24 07:13:33 833  PM_Req_SlientInstallRestoreLastSession Begin
+
+2016-4-24 07:13:33 833  PM_Req_SlientInstallRestoreLastSession Begin m_pmFeatures.m_bRestoreLastSession=0,m_InstallParm.m_bInstallAfterIsRun=1
+
+2016-4-24 07:13:33 833  PM_Req_SlientInstallRestoreLastSession End
+
+2016-4-24 07:13:33 833  PM_Requirement_InstallEnd_Slient End
+
+2016-4-24 07:13:33 833  PM_Requirement_InstallEnd End
+
+2016-4-24 07:13:33 833  Report start
+
+2016-4-24 07:13:33 833  IsDefaultBrowser Begin
+
+2016-4-24 07:13:33 833  IsDefaultBrowser bRet=0
+
+2016-4-24 07:13:33 833  IsDefaultBrowser bRet2=1
+
+2016-4-24 07:13:33 833  ReadFileToString fail errcode=0
+
+2016-4-24 07:13:33 833  IsDefaultBrowser End
+
+2016-4-24 07:13:33 833  
+^_^endreport=&reportver=2.0.0.0&installstep=end&oldver=0.0.0.0&newver=5.3.108.10912&oldpid=&newpid=p_duba_info&total=76&result=1&errstep=2048&errcode=0&installed=0&reportflag=def&slient=1&force=0&dubaicon=1&installbefordefbrowser=1&installafterfdefbrowser=1&errmsg=&errmsg1=&coexist=5&install=C:\Users\Administrator\AppData\Local\liebao\&admin=1&trycheckselfprotectcount=0&getdebugprivilege=1&7zinstall=0&filecheck=1&innver=2013_11_22_1849
+
+2016-4-24 07:13:35 362  Report end
+
+2016-4-24 07:13:35 378  Clean Temp
+
+2016-4-24 07:13:35 393  Clean Temp new=C:\Users\Administrator\AppData\Local\liebao\2016424071216908_1\,old=,cur=C:\Users\Administrator\AppData\Local\liebao\5.3.108.10912\,result=1
+
+2016-4-24 07:13:35 393  beging clear new
+
+2016-4-24 07:13:35 393  end clear new bRet = 1,error = 18
+
+2016-5-10 01:02:20 599  WinMain cmline=-default_browser:"0" -slient_install:"1" -join_UE_program:"1"
+2016-5-10 01:02:20 601  GetDebugPrivilege bRet=1,code=0
+
+2016-5-10 01:02:20 601  Init localpath = C:\Windows\temp\KSBrowser_duba_ktne.exe
+
+2016-5-10 01:02:20 639  GetDebugPrivilege bRet=1,code=0
+
+2016-5-10 01:02:20 888  Init InstallPath=C:\Users\Administrator\AppData\Local\liebao\,m_bInstalled=0
+
+2016-5-10 01:02:20 978  GetNewInstallDir = C:\Users\Administrator\AppData\Local\liebao\2016510010220978_1\
+
+2016-5-10 01:02:21 050  LoadOldInfo ver=0.0.0.0
+
+2016-5-10 01:02:21 055  IsDefaultBrowser Begin
+
+2016-5-10 01:02:21 062  IsDefaultBrowser bRet=0
+
+2016-5-10 01:02:21 093  IsDefaultBrowser bRet2=0
+
+2016-5-10 01:02:21 093  ReadFileToString fail errcode=0
+
+2016-5-10 01:02:21 093  IsDefaultBrowser End
+
+2016-5-10 01:02:21 122  bSilentInstall Init=1
+
+2016-5-10 01:02:21 123  C:\Users\Administrator\AppData\Local\liebao\2016510010220978_1\ DiskSapce:20971520064
+
+2016-5-10 01:02:21 123  ExtractFile begin
+
+2016-5-10 01:02:21 123  OnBeginProgress nType=256
+
+2016-5-10 01:02:21 124  ExtraceFile begin...C:\Users\Administrator\AppData\Local\liebao\2016510010220978_1\
+2016-5-10 01:02:21 124  ExtractPacket...
+2016-5-10 01:02:21 124  GetPacketData 0
+2016-5-10 01:02:21 358  GetPacketData return:35873867
+2016-5-10 01:02:21 361  Extract...
+2016-5-10 01:02:21 689  StartInstall LoadLibrary :1
+2016-5-10 01:02:21 689  bSyn=1,bSlient=1,bSetDefaultBrowser=0,bInstallAfterIsRun=1,bVerCheck=1
+
+2016-5-10 01:02:21 689  BeginInstall
+
+2016-5-10 01:02:21 689  
+^_^beginreport=&reportver=2.0.0.0&installstep=begin&oldver=0.0.0.0&newver=5.3.100.10349&reportflag=def&slient=1&force=0&innver=2013_11_22_1849&installed=0
+
+2016-5-10 01:02:26 432  CusReport Report end
+
+2016-5-10 01:02:26 444  PM_Requirement_InstallBefor Begin
+
+2016-5-10 01:02:26 447  LoadOldInfo ver=0.0.0.0
+
+2016-5-10 01:02:26 448  IsDefaultBrowser Begin
+
+2016-5-10 01:02:26 451  IsDefaultBrowser bRet=0
+
+2016-5-10 01:02:26 452  IsDefaultBrowser bRet2=0
+
+2016-5-10 01:02:26 452  ReadFileToString fail errcode=0
+
+2016-5-10 01:02:26 452  IsDefaultBrowser End
+
+2016-5-10 01:02:26 452  IsDefaultBrowser Begin
+
+2016-5-10 01:02:26 455  IsDefaultBrowser bRet=0
+
+2016-5-10 01:02:26 455  IsDefaultBrowser bRet2=0
+
+2016-5-10 01:02:26 455  ReadFileToString fail errcode=0
+
+2016-5-10 01:02:26 455  IsDefaultBrowser End
+
+2016-5-10 01:02:26 458  OldDefaultBrowser="C:\Program Files\Google\Chrome\Application\chrome.exe" -- "%1"
+2016-5-10 01:02:26 460  PM_Requirement_InstallBefor End
+
+2016-5-10 01:02:44 152  Extract return:1
+2016-5-10 01:02:44 152  ExtractPacket return:1
+2016-5-10 01:02:44 152  OnEndProgress nType=256,bRet=1,dwErrCode=0x12
+
+2016-5-10 01:02:44 152  ExtractFile end bRet = 1
+
+2016-5-10 01:02:44 334  OnBeginProgress nType=1024
+
+2016-5-10 01:02:44 341  MoveNewVerToInstallDir KFunction::DeleteFolder C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\,recode=18
+2016-5-10 01:02:44 360  MoveNewVerToInstallDir src=C:\Users\Administrator\AppData\Local\liebao\2016510010220978_1\LBBrowser\,dst=C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\ MoveFileEx bRet=1,error=2
+2016-5-10 01:02:44 380  MoveNewVerToInstallDir xmlfile Move bRet=1,error=0
+2016-5-10 01:02:44 396  CopyFile C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\liebao.exe to C:\Users\Administrator\AppData\Local\liebao\liebao.exe error=0
+
+2016-5-10 01:02:44 396  OnEndProgress nType=1024,bRet=1,dwErrCode=0x0
+
+2016-5-10 01:02:44 396  OnBeginProgress nType=1280
+
+2016-5-10 01:02:44 398  WriteReg Spid=
+
+2016-5-10 01:02:44 520  Write WriteUninstallPath bRet=1 code=0
+2016-5-10 01:02:44 526  PRODUCE_INSTALL_KEY bRet=1 code=0
+2016-5-10 01:02:44 529  PRODUCE_INSTALL_COOP bRet=1 code=0
+2016-5-10 01:02:44 529  write Exit0 errcode=0
+2016-5-10 01:02:48 323  OnEndProgress nType=1280,bRet=1,dwErrCode=0x0
+
+2016-5-10 01:02:48 323  OnBeginProgress nType=1537
+
+2016-5-10 01:02:48 462  CoCreateInstance failed: 0x800706d9/n
+2016-5-10 01:02:48 464  CWindowsFirewall fail error=0
+
+2016-5-10 01:02:48 464  OnEndProgress nType=1537,bRet=1,dwErrCode=0x0
+
+2016-5-10 01:02:48 464  PM_Requirement_InstallAfter Begin
+
+2016-5-10 01:02:48 464  PM_Requirement_InstallAfter Pid=p_duba_info
+
+2016-5-10 01:02:48 464  PM_Req_LockDefaultViaDuba2 Begin
+2016-5-10 01:02:48 464  LockDefaultViaDuba Begin
+
+2016-5-10 01:02:48 465  LockDefaultViaDuba KDubaDetectLockLiebao no IsModuleSupport
+
+2016-5-10 01:02:48 465  PM_Req_LockDefaultViaDuba2 End
+2016-5-10 01:02:48 465  IsCreateLink Start
+2016-5-10 01:02:48 467  IsCreateLink strPid:p
+2016-5-10 01:02:48 468  IsCreateLink bExist1:0 ,bExist2:0
+2016-5-10 01:02:48 500  IsCreateLink strDesktopPath:C:\Users\Public\Desktop\
+2016-5-10 01:02:48 523  IsCreateLink strDesktopPath:C:\Users\Public\Desktop\
+2016-5-10 01:02:48 523  IsCreateLink End
+2016-5-10 01:02:48 536  IsInstalledChrome=1,IsInstalledFirefox=1,IsInstalledOpera=0
+
+2016-5-10 01:02:48 538  PM_Req_RunSkinupdater Begin
+
+2016-5-10 01:02:48 540  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\ManualUpgrade.exe,szCmd=--skin_updater,dwWaitTime=10000,bShow=0,bWaitTimeTermination=1
+
+2016-5-10 01:02:50 391  PM_Req_RunSkinupdater End bRet=1
+
+2016-5-10 01:02:50 394  OnBeginProgress nType=1797
+
+2016-5-10 01:02:50 397  UpRegVer Begin
+
+2016-5-10 01:02:50 401  UpRegVer  ver=5.3.100.10349  hr=0x0
+
+2016-5-10 01:02:50 403  OnEndProgress nType=1797,bRet=1,dwErrCode=0x0
+
+2016-5-10 01:02:50 405  WriteInstallInfoToFile begin
+
+2016-5-10 01:02:50 440  InstallCompleteNofityLiebao Begin
+
+2016-5-10 01:02:50 440  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmd=--install-complete,dwWaitTime=-1,bShow=0,bWaitTimeTermination=0
+
+2016-5-10 01:02:57 815  InstallCompleteNofityLiebao admin --install-complete bRet = 1,errcode=18
+
+2016-5-10 01:02:57 818  InstallCompleteNofityLiebao End, bRet = 1
+
+2016-5-10 01:02:57 820  WriteInstallInfoToFile end
+
+2016-5-10 01:02:57 821  PM_Requirement_InstallAfter End
+
+2016-5-10 01:02:57 821  Leader_Magic_Logic Begin!!
+
+2016-5-10 01:02:57 821  m_bInstalled true
+
+2016-5-10 01:02:57 822  Magic_Shortcut Begin
+
+2016-5-10 01:02:57 822  OnBeginProgress nType=1792
+
+2016-5-10 01:02:57 822  Magic_DesktopShortcut Begin
+
+2016-5-10 01:02:57 853  Magic_DesktopShortcutClear Begin
+
+2016-5-10 01:02:57 853  Magic_DesktopShortcutClear End
+
+2016-5-10 01:02:57 854  CreateShellLink start...
+2016-5-10 01:03:00 245  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico1,szLinkPath=C:\Users\Administrator\Desktop\
+2016-5-10 01:03:00 362  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico1, link:C:\Users\Administrator\Desktop\
+2016-5-10 01:03:00 362  Magic_DesktopShortcut End bRet = 1
+
+2016-5-10 01:03:00 362  Magic_DesktopShortcut bRet = 1 m_dwLastErrorCode= 0
+2016-5-10 01:03:00 362  Magic_QuickLaunchShortcut Begin
+
+2016-5-10 01:03:00 362  Magic_QuickLaunchShortcutClear Begin
+
+2016-5-10 01:03:00 375  Magic_QuickLaunchShortcutClear End
+
+2016-5-10 01:03:00 375  CreateShellLink start...
+2016-5-10 01:03:00 393  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico2,szLinkPath=C:\Users\Administrator\AppData\Local\liebao\
+2016-5-10 01:03:00 497  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico2, link:C:\Users\Administrator\AppData\Local\liebao\
+2016-5-10 01:03:11 973  ShellExecute ret=0x2a
+
+2016-5-10 01:03:11 978  Magic_QuickLaunchShortcut End bRet = 1
+
+2016-5-10 01:03:11 983  Magic_QuickLaunchShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-5-10 01:03:11 985  Magic_StartMenuShortcut Begin
+
+2016-5-10 01:03:12 002  Magic_StartMenuShortcutClear Begin
+
+2016-5-10 01:03:12 005  Magic_StartMenuShortcutClear End
+
+2016-5-10 01:03:12 014  CreateShellLink start...
+2016-5-10 01:03:12 026  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico3,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-5-10 01:03:12 064  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico3, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-5-10 01:03:12 067  CreateShellLink start...
+2016-5-10 01:03:12 084  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\FixBrowser.exe,szCmdLine=,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-5-10 01:03:12 114  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\FixBrowser.exe, cmd:, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-5-10 01:03:12 118  CreateShellLink start...
+2016-5-10 01:03:12 135  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\uninst.exe,szCmdLine=,szLinkPath=C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-5-10 01:03:12 153  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\uninst.exe, cmd:, link:C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\
+2016-5-10 01:03:12 155  Magic_StartMenuShortcut End bRet = 1
+
+2016-5-10 01:03:12 158  Magic_StartMenuShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-5-10 01:03:12 158  Magic_StartMenuQuickLaunchShortcut Begin
+
+2016-5-10 01:03:12 158  Magic_StartMenuQuickLaunchShortcutClear Begin
+
+2016-5-10 01:03:12 179  Magic_StartMenuQuickLaunchShortcutClear End
+
+2016-5-10 01:03:12 198  CreateShellLink start...
+2016-5-10 01:03:12 237  Save szFilePath=C:\Users\Administrator\AppData\Local\liebao\liebao.exe,szCmdLine=--ico4,szLinkPath=C:\Users\Administrator\AppData\Local\liebao\
+2016-5-10 01:03:12 260  CreateShellLink return:1, file:C:\Users\Administrator\AppData\Local\liebao\liebao.exe, cmd:--ico4, link:C:\Users\Administrator\AppData\Local\liebao\
+2016-5-10 01:03:12 848  ShellExecute ret=0x2a
+
+2016-5-10 01:03:12 852  Magic_StartMenuQuickLaunchShortcut bRet1 = 1 m_dwLastErrorCode= 0
+2016-5-10 01:03:12 855  OnEndProgress nType=1792,bRet=1,dwErrCode=0x0
+
+2016-5-10 01:03:12 855  Leader_Magic_Logic End!!
+
+2016-5-10 01:03:12 855  CopyDatFileForLego Begin
+
+2016-5-10 01:03:12 940  C File Exists 
+
+2016-5-10 01:03:12 940  CopyDatFileForLego End
+
+2016-5-10 01:03:12 940  OnBeginProgress nType=2048
+
+2016-5-10 01:03:14 473  RunApp szPath=C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\knbcenter.exe,szCmd=/start,dwWaitTime=0,bShow=0,bWaitTimeTermination=0
+
+2016-5-10 01:03:14 598  OnEndProgress nType=2048,bRet=1,dwErrCode=0x0
+
+2016-5-10 01:03:14 598  EndInstall bRet
+
+2016-5-10 01:03:14 598  PM_Requirement_InstallEnd Begin
+
+2016-5-10 01:03:14 598  PM_Requirement_InstallEnd_Slient Begin
+
+2016-5-10 01:03:14 598  PM_Req_XPQuickLanuchIconFirst Begin
+
+2016-5-10 01:03:14 598  PM_Req_XPQuickLanuchIconFirst End
+
+2016-5-10 01:03:14 598  PM_Req_SlientInstallRestoreLastSession Begin
+
+2016-5-10 01:03:14 598  PM_Req_SlientInstallRestoreLastSession Begin m_pmFeatures.m_bRestoreLastSession=0,m_InstallParm.m_bInstallAfterIsRun=1
+
+2016-5-10 01:03:14 598  PM_Req_SlientInstallRestoreLastSession End
+
+2016-5-10 01:03:14 598  PM_Requirement_InstallEnd_Slient End
+
+2016-5-10 01:03:14 598  PM_Requirement_InstallEnd End
+
+2016-5-10 01:03:14 602  Report start
+
+2016-5-10 01:03:14 604  IsDefaultBrowser Begin
+
+2016-5-10 01:03:14 615  IsDefaultBrowser bRet=0
+
+2016-5-10 01:03:14 616  IsDefaultBrowser bRet2=0
+
+2016-5-10 01:03:14 616  ReadFileToString fail errcode=0
+
+2016-5-10 01:03:14 616  IsDefaultBrowser End
+
+2016-5-10 01:03:14 617  
+^_^endreport=&reportver=2.0.0.0&installstep=end&oldver=0.0.0.0&newver=5.3.100.10349&oldpid=p_duba_info&newpid=p_duba_ktne&total=48&result=1&errstep=2048&errcode=0&installed=0&reportflag=def&slient=1&force=0&dubaicon=1&installbefordefbrowser=0&installafterfdefbrowser=0&errmsg=&errmsg1=&coexist=0&install=C:\Users\Administrator\AppData\Local\liebao\&admin=1&trycheckselfprotectcount=0&getdebugprivilege=1&7zinstall=0&filecheck=1&innver=2013_11_22_1849
+
+2016-5-10 01:03:15 283  Report end
+
+2016-5-10 01:03:15 405  Clean Temp
+
+2016-5-10 01:03:15 407  Clean Temp new=C:\Users\Administrator\AppData\Local\liebao\2016510010220978_1\,old=,cur=C:\Users\Administrator\AppData\Local\liebao\5.3.100.10349\,result=1
+
+2016-5-10 01:03:15 410  beging clear new
+
+2016-5-10 01:03:15 417  end clear new bRet = 1,error = 18
+

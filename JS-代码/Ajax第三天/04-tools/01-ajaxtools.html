@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	$={
+		params:function(args){
+			var o="";
+			for(var i in args){
+				o+=i+"="+args[i]+"&";
+			}
+			o=o.slice(0,-1);
+			return o;
+		},
+		// options是一个对象
+		ajax:function(options){
+ // 初始化参数、
+ 		var type=options.type||"get";
+ 		var url=options.url||location.pathname;
+ 		var data=this.params(options.data)||{};
+ 		var success=options.success;
+                             // 01.实例化XMLHttpRequest
+                             var xhr=new XMLHttpRequest;
+
+                             // 02.设置请求行
+                             xhr.open(type,url);
+                             if(type=="get"){
+                             	url=url+"?"+data;
+                                   data=null;
+                             }
+                           if(type=="post"){
+                           	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                           }
+                           console.log(data);
+                           // 03.设置请求头 在post的时候需要设置，在get的不需要设置
+                           xhr.send(data);
+                           xhr.onreadystatechange=function(){
+                           	if(xhr.readyState==4&&xhr.status==200){
+                           		var result=xhr.responseText;
+                           		result=JSON.
+                           		// console.log(result);
+                           		// result=JSON.parse(result);
+                           		success(result);
+                           	}
+                           }
+		}
+	}
+	$.ajax({
+		type:"post",
+		url:"01-ajaxtools.php",
+		data:{"name":"itcast","age":18},
+		success:function(data){
+			console.log(data);
+		}
+
+	})
+	// console.log(window.location);
+	name=itcast  age=18
+	name=itcasts&age=18
+</script>
+</body>
+</html>

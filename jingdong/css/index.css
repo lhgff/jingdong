@@ -1,0 +1,166 @@
+/*.banner450{*/
+
+/*}*/
+.banner450 a{
+    position: absolute;     /*加绝对定位之后，如果不写trpl，是以原位位置显示了*/
+    height: 450px;
+    width: 100%;    /*绝对定位了的元素，如果不写宽度的话，是与内容的宽度一致的,这里的宽度不能省略，这样才能与浏览器的宽度一致*/
+    background:url(../images/ls.jpg) no-repeat center top;
+}
+.main{
+    position: relative;      /*相对定位是占位置的，但是也有层级,后面的层级要高于前面的，因为会覆盖掉banner405*/
+}
+.main-left{
+    width: 730px;
+    height: 454px;
+    background-color: palevioletred;
+    float: left;
+    margin: 12px 0 0 220px;
+    position: relative;
+}
+.main-left:hover .mait-left-arrow{
+    display: block;      /*让元素显示出来*/
+ }
+.main-left-circle{
+    position: absolute;  
+    bottom: 8px;
+    left: 50%;
+    margin-left: -66px;
+}
+
+.main-left-circle ul li {          /*home键是定位到一行的开头，end键是定位到结尾*/
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #3E3E3E;
+    float:left;
+    margin: 0 2px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.main-left-circle li.current{
+    background-color: #B61B1F;
+}
+.mait-left-arrow{
+    display:none;   /*鼠标没有进入之前隐藏胡状态*/
+}
+.arrow-zuo,.arrow-you,.tr-arrow-zuo,.tr-arrow-you{
+    width: 28px;
+    height: 62px;
+    /*line-height: 62px;*/
+    text-align: center;
+    /*background-color: red;*/
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    /*left: 0;*/
+    font:400 20px/62px "宋体";
+    color:#fff;
+    background: rgba(0,0,0,.2);   /*如果是零点几的话，零时可以省略的*/
+}
+.arrow-zuo,.tr-arrow-zuo{
+    left: 0;
+}
+.arrow-you,.tr-arrow-you{
+    right: 0;
+}
+.arrow-zuo:hover,.arrow-you:hover,
+{
+    background: rgba(0,0,0,.7 );
+}
+
+
+.main-right{     /*main部分中的左侧部分*/
+    width: 250px;
+    height: 454px;
+    /*background-color: darkred;*/
+    float: right;
+    margin-top: 12px;
+}
+.main-right-top{    /*右侧上部分*/
+    width: 248px;
+    height: 371px;
+    border: 1px solid #E9E9E9;
+    overflow: hidden;
+}
+.mrt-news{          /*右侧上面部分新闻版块*/
+    height: 163px;
+    border-bottom:2px dotted #E9E9E9;    /*设置点线*/
+}
+.mrtn-title{             /*右侧上面的新闻版块中的标题部分*/
+    height: 31px;
+    line-height: 31px;
+    padding: 0 15px;
+    border-bottom: 1px dashed #E9E9E9;      /*dashed  设置虚线*/
+}
+.mrtn-title h3{         /*右侧上面部分新闻版块中的标题部分中的h3*/
+    float: left;
+    font:400 16px/31px "microsoft yahei";
+}
+.mrtn-title a{
+    float: right;
+}
+.mrtn-content{         /*左侧上面部分新闻版块中的内容部分*/
+    padding: 12px 0 0 15px;
+}
+.mrtn-content li{           /*左侧上面部分新闻版块中的li*/
+    height: 24px;
+}
+.mrtn-content span{         /*左侧上面部分新闻版块中的li中的span*/
+    font-weight: 700;    /*建议用数值   约等于一个bold*/
+    margin-right: 6px;   /*行内元素的padding，margin的左右是有效的，上下无效*/
+}
+.mrt-live ul {        /*将ul的宽度设置为252px，是为了让4个li在一行上显示*/
+    width: 252px;
+}
+.mrt-live ul li {     /*生活服务里面的li*/
+    width: 61px;
+    height: 70px;
+    border: 1px solid #E4E4E4;
+    float: left;
+    margin-left: -1px;       /*全部向上移动1像素，将浮动起来后重和的边框去掉*/
+    border-top: none;
+    position: relative;
+    text-align: center;
+}
+.mrt-live ul li a {       /*生活服务里面的li下面的a*/
+    display: block;     /*将行内元素转换成块级元素，这样行内元素才可以拥有宽高*/
+    height: 26px;
+    padding-top: 44px;
+}
+.mrt-live li i{       /*生活服务里面的li下面的a下面的i*/
+    width: 25px;
+    height: 25px;
+    position: absolute;      /*给元素添加绝对定位*/
+    top: 15px;
+    left: 17px;
+    background:url(../images/live.png) no-repeat;
+}
+.hot{      /*热词小标签*/
+    background:url(../images/quan.png) no-repeat right top;
+}
+.main-right-bottom{
+    margin-top: 6px;
+}
+.today{      /*最外层的盒子*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;     /**设置溢出隐藏，让超出盒子的部分隐藏起来*/
+}
+.today-left{
+    float: left;
+}
+.today-right{
+    float: right;
+    width: 1000px;     /*宽度*/
+    position: relative;
+}
+.today-right ul{
+    width: 500%;      /*让他的宽度是父盒子的5倍*/
+}
+.today-right ul li{
+    float: left;
+    margin-right: 1px;
+}

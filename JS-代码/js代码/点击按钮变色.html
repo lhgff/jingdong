@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .current{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<button>按钮</button>
+<!--<button id = "two">按钮</button>-->
+
+<!--<script>-->
+    <!--var two = document.getElementById("two");-->
+    <!--two.onclick = function(){-->
+        <!--alert(1);-->
+    <!--}-->
+<!--</script>-->
+<script>
+    var one = document.getElementsByTagName("button");
+     for (var i = 0; i < one.length; i++) {
+        one[i].onclick = function(){
+            //
+            for (var j = 0; j < one.length; j++) {
+                // 5 给每个人清除类名
+               one[j].className = "";
+            }
+            // 6  给自己添加类名
+            this.className = "current";
+        };
+     }
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+  <button id="one1">按钮1</button>
+  <button id="one2">按钮2</button>
+<div id="box1"></div>
+<div id="box2"></div>
+
+  <script>
+      var one1 = document.getElementById("one1");
+      var one2 = document.getElementById("one2");
+      var box1 = document.getElementById("box1");
+      var box2 = document.getElementById("box2");
+      var timer = null;
+
+      one1.onclick = function () {
+          animate(box1, 200);
+      };
+
+      one2.onclick = function () {
+          animate(box2, 400);
+      };
+      function animate(tag, target) {
+          clearInterval(tag.timer);
+          tag.timer = setInterval(function () {
+              var leader = tag.offsetLeft;
+              var step = 9;
+              step = leader > target ? -step : step;
+              leader = leader + step;
+              if (Math.abs(leader - target) < Math.abs(step)) {
+                  tag.style.left = target + "px";
+                  clearInterval(tag.timer);
+              } else {
+                  tag.style.left = leader + "px";
+              }
+          }, 30);
+      }
+  </script>
+
+  </body>
+</html>
+
+
+
+<!--<body>-->
+<!--<button id="btn1">按钮1</button>-->
+<!--<button id="btn2">按钮2</button>-->
+<!--<div id="box1"></div>-->
+<!--<div id="box2"></div>-->
+
+<!--<script>-->
+    <!--//获取页面元素-->
+    <!--var btn1 = document.getElementById("btn1");-->
+    <!--var btn2 = document.getElementById("btn2");-->
+    <!--var box1 = document.getElementById("box1");-->
+    <!--var box2 = document.getElementById("box2");-->
+    <!--var timer = null;-->
+
+    <!--btn1.onclick = function () {-->
+        <!--animate(box1, 200);-->
+    <!--};-->
+
+    <!--btn2.onclick = function () {-->
+        <!--animate(box2, 400);-->
+    <!--};-->
+
+    <!--//这个函数的作用就是让一个元素去运动到一个位置，不要把事件写在里面-->
+    <!--function animate(tag, target) {-->
+        <!--clearInterval(tag.timer);-->
+        <!--tag.timer = setInterval(function () {-->
+            <!--//对象当前位置=对象当前位置+要移动的长度-->
+            <!--//leader = leader + step-->
+            <!--var leader = tag.offsetLeft;-->
+            <!--var step = 9;-->
+            <!--//对step的正负进行判断。如果leader小于target，就是正的，如果大于target，step为负值-->
+            <!--step = leader > target ? -step : step;-->
+            <!--leader = leader + step;-->
+            <!--//当leader和target的距离小于一步时，我们不能让他正常走，可以直接将tag的位置设置为target，然后清除定时器-->
+            <!--if (Math.abs(leader - target) < Math.abs(step)) {-->
+                <!--tag.style.left = target + "px";-->
+                <!--clearInterval(tag.timer);-->
+            <!--} else {-->
+                <!--//最好最后一步-->
+                <!--tag.style.left = leader + "px";-->
+            <!--}-->
+        <!--}, 30);-->
+    <!--}-->
+
+<!--</script>-->
+<!--</body>-->

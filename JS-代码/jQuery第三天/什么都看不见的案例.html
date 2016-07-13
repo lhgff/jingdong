@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: pink;
+            text-align: center;
+            line-height: 200px;
+            margin: 0 20px 20px 0;
+        }
+    </style>
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            $("#ulList li").each(function(index,element){
+                $(this).css("opacity",(index+1)/10);
+            })
+        });
+    </script>
+</head>
+<body>
+<ul id="ulList">
+    <li>看不见</li>
+    <li>看不见</li>
+    <li>看不见</li>
+    <li>看不见</li>
+    <li>看不见</li>
+    <li>看不见</li>
+    <li>看不见</li>
+    <li>看不见</li>
+    <li>看不见</li>
+    <li>看不见</li>
+</ul>
+</body>
+</html>

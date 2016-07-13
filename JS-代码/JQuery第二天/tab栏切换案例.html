@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        .wrapper {
+            width: 1000px;
+            height: 475px;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+        .tab {
+            border: 1px solid #9bb3dd;
+            border-bottom: 0;
+            height: 36px;
+            width: 320px;
+        }
+        .tab li {
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 34px;
+            line-height: 34px;
+            text-align: center;
+            cursor: pointer;
+            border-top: 4px solid #ffa5fe;
+        }
+        .tab span {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            background: #75d6dd;
+            width: 1px;
+            height: 14px;
+            overflow: hidden;
+        }
+        .products {
+            width: 1002px;
+            border: 1px solid #5182dd;
+            height: 476px;
+        }
+        .products .main {
+            float: left;
+            display: none;
+        }
+        .products .main.selected {
+            display: block;
+        }
+        .tab li.active {
+            border-color: #a554ff;
+            border-bottom: 0;
+        }
+    </style>
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            // 获取到所有的li元素
+            $(".wrapper > ul > li").mouseenter(function () {
+                // 给当前li 添加类，给所有的兄弟元素移除类
+                $(this).addClass("active").siblings().removeClass("active");
+
+                // 让当前菜单对应的内容展示出来，并让内容的所有兄弟元素隐藏起来
+                var index = $(this).index(); // 获取到当前元素的索引号
+
+                $(".main").eq(index).show().siblings("div").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <ul class="tab">
+        <li class="tab-item active">国际大牌<span>◆</span></li>
+        <li class="tab-item">国妆名牌<span>◆</span></li>
+        <li class="tab-item">清洁用品<span>◆</span></li>
+        <li class="tab-item">男士精品</li>
+    </ul>
+    <div class="products">
+        <div class="main selected">
+            <a href="###"><img src="imgs/guojidapai.jpg" alt=""/></a>
+        </div>
+        <div class="main">
+            <a href="###"><img src="imgs/guozhuangmingpin.jpg" alt=""/></a>
+        </div>
+        <div class="main">
+            <a href="###"><img src="imgs/qingjieyongpin.jpg" alt=""/></a>
+        </div>
+        <div class="main">
+            <a href="###"><img src="imgs/nanshijingpin.jpg" alt=""/></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

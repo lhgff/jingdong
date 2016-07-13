@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!--需求: 1.通过点击 “设置标题” 按钮，修改图片的 title属性。-->
+    <!--2.通过点击 “设置标题” 按钮，获取图片的 title属性。-->
+
+    <!--3.通过点击 “设置选中” 按钮，设置checkbox的选中。-->
+    <!--4.通过点击 “获取选中” 按钮，获取checkbox的选中。-->
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+        //点击按钮 修改 title 属性 设置操作
+        $("#btnSet").click(function(){
+            $("img").attr("title","搞笑图片")
+        })
+        //获取
+          $("#btnGetAttr").click(function(){
+              $("input").attr("checked",true);
+          })
+        //获取选中
+        $("#btnCheck").click(function(){
+            $("#myCheck").prop("checked",true);
+        })
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="设置标题" id="btnSet"/>
+<input type="button" value="获取标题" id="btnGetAttr"/>
+<p></p>
+<input type="button" value="设置选中" id="btnCheck"/>
+<input type="button" value="获取选中" id="btnGheck"/>
+<img src="搞笑.gif" title="搞笑短片" alt=""/>
+<input type="checkbox" id="myCheck"/>
+</body>
+</html>
+
+
+
+<!--
+   attr() 是用来操作元素的 属性
+     attr("参数1","参数2")
+     参数1：属性的名称。
+     参数2：属性的值
+     作用：设置属性
+
+     attr("参数1")
+     参数1：属性的名称
+     作用：获取属性的值。
+     但是：不能获取到元素的动态状态。checked、selected、disabled要使用.prop()方法。
+     prop() 方法使用与 attr() 一样。
+   -->

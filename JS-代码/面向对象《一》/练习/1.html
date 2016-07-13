@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    // 练习1：写一个函数，该函数接收一个参数，如果未传参或者为参数null，
+    // 则打印提示，如果传参则打印这个参数。
+    function fn(val){
+        if(val == undefined){
+            throw val + "传入的参数不合格";
+        }
+    }
+    fn();
+    fn(null);
+    fn(undefined);
+
+
+</script>
+</body>
+</html>

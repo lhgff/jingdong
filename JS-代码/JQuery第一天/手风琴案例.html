@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .parentWrap{
+            width: 200px;
+            text-align: center;
+        }
+        .menuGroup {
+            border:1px solid #db10ff;
+            background-color:#e0ecff;
+        }
+        .groupTitle{
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            font-size: 16px;
+            border-bottom: 1px solid #0099cc;
+            cursor: pointer;
+        }
+        .menuGroup > div{
+            height: 200px;
+            background-color: #fff;
+            display: none;
+        }
+    </style>
+    <script src="jquery-1.12.3.js"></script>
+    <script>
+        // 入口函数
+        jQuery(function(){
+            $(".groupTitle").click(function(){
+                //1.找当前的标题的父元素，找到到父元素之后，
+                $(this).parent().siblings().children("div").hide();
+                $(this).next().show();
+                // 在找兄弟元素，接着让兄弟元素里面 div，隐藏
+            })
+        })
+    </script>
+
+
+</head>
+<body>
+<ul class="parentWrap">
+    <li class="menuGroup">
+        <sapn class="groupTitle">标题1</sapn>
+        <div>弹出来的div1</div>
+    </li>
+    <li class="menuGroup">
+        <sapn class="groupTitle">标题2</sapn>
+        <div>弹出来的div2</div>
+    </li>
+    <li class="menuGroup">
+        <sapn class="groupTitle">标题3</sapn>
+        <div>弹出来的div3</div>
+    </li>
+    <li class="menuGroup">
+        <sapn class="groupTitle">标题4</sapn>
+        <div>弹出来的div4</div>
+    </li>
+    <li class="menuGroup">
+        <sapn class="groupTitle">标题5</sapn>
+        <div>弹出来的div5</div>
+    </li>
+</ul>
+</body>
+</html>
+<!--
+  在点击  标题的时候，让所有的 div隐藏，再让当前标题下面的div显示。
+  parent（）
+  找当前元素的 亲父亲
+  siblings()
+  找兄弟元素，但是不包括自己。
+  children()
+  找当前元素下面的 亲儿子
+
+  next（）
+  当前元素的下面（兄弟）一个元素
+-->

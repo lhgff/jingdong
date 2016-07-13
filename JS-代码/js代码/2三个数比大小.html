@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var n1 = 5;
+        var n2 = 3;
+        var n3 = 8;
+
+        //三个数比大小 先找出最大值
+        //假设n1最大
+        if (n1 > n2 && n1 > n3) {
+            if(n2>n3){
+                alert(n1+">"+n2+">"+n3);
+            }else{
+                alert(n1+">"+n3+">"+n2);
+            }
+        }else if(n2>n1&&n2>n3){
+            //假设n2最大
+            if(n1>n3){
+                alert(n2+">"+n1+">"+n3);
+            }else{
+                alert(n2+">"+n3+">"+n1);
+            }
+        }else if(n3>n1&&n3>n2){
+            //假设n3最大
+            if(n1>n2){
+                alert(n3+">"+n1+">"+n2);
+            }else{
+                alert(n3+">"+n2+">"+n1);
+            }
+        }else{
+            alert("相等");
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

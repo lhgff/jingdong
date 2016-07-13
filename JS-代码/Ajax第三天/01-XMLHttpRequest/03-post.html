@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var xhr=new XMLHttpRequest;
+		xhr.open("post","03-post.php");
+		xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+		xhr.send("name=itcast&age=10");
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4&&xhr.status==200){
+				console.log(xhr.responseText);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style type="text/css" media="screen">
+        html {
+            background: #333;
+            overflow: hidden;
+        }
+
+        .outer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -260px;
+        }
+
+        .inner {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            float: left;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            transition: all 0.2s;
+
+        }
+
+
+        .inner:nth-child(1) {
+            background: #33ffbb;
+            -webkit-animation: r0 2s 0s ease-out infinite;
+            -moz-animation: r0 2s 0s ease-out infinite;
+            animation: r0 2s 0s ease-out infinite;
+        }
+
+
+        @keyframes r0 {
+            0% {
+                box-shadow: 0 0 8px 6px rgba(26, 255, 179, 0),
+                0 0 0px 0px #333,
+                0 0 0px 0px rgba(26, 255, 179, 0);
+            }
+            10% {
+                box-shadow: 0 0 8px 6px #1affb3,
+                0 0 12px 10px #333,
+                0 0 12px 14px #1affb3;
+            }
+            100% {
+                box-shadow: 0 0 8px 6px rgba(26, 255, 179, 0),
+                0 0 0px 40px #333,
+                0 0 0px 40px rgba(26, 255, 179, 0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+<div  class="outer">
+    <div class="inner"></div>
+</div>
+</body>
+
+</html>

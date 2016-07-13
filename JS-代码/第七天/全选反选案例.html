@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .wrap {
+            width: 300px;
+            margin: 100px auto 0;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 1px solid #d061f0;
+            width: 300px;
+        }
+        th,
+        td {
+            border: 1px solid #faffac;
+            color: #79daff;
+            padding: 10px;
+        }
+        th {
+            background-color: #09c;
+            font: bold 16px "微软雅黑";
+            color: #75c6ff;
+        }
+        td {
+            font: 14px "微软雅黑";
+        }
+        tbody tr {
+            background-color: #f09bdc;
+        }
+        tbody tr:hover {
+            cursor: pointer;
+            background-color: #3c52fa;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <table>
+        <!--全选反选按钮所在行-->
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="selectAll"/>
+            </th>
+            <th>菜名</th>
+            <th>饭店</th>
+        </tr>
+        </thead>
+
+        <!--每一个菜的选项-->
+        <tbody id="cai">
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>红烧肉</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>西红柿鸡蛋</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>红烧狮子头</td>
+            <td>田老师</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox"/>
+            </td>
+            <td>日式肥牛</td>
+            <td>田老师</td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+
+  <script>
+      var selectAll = document.getElementById("selectAll");
+      var cai = document.getElementById("cai");
+      var chb = cai.getElementsByTagName("input");
+      selectAll.onclick = function () {
+          for (var i = 0; i < chb.length; i++) {
+              chb[i].checked = selectAll.checked;
+          }
+      };
+      //----------------第二部分
+      for (var i = 0; i < chb.length; i++) {
+          chb[i].onclick = function () {
+              for (var j = 0; j < chb.length; j++) {
+                  if(chb[j].checked == false){
+                      selectAll.checked = false;
+                      break;
+                  }
+                  selectAll.checked = true;
+              }
+          };
+      }
+  </script>
+</body>
+</html>
+
+<!--<div class="wrap">-->
+    <!--<table>-->
+        <!--&lt;!&ndash;全选反选按钮所在行&ndash;&gt;-->
+        <!--<thead>-->
+        <!--<tr>-->
+            <!--<th>-->
+                <!--<input type="checkbox" id="selectAll"/>-->
+            <!--</th>-->
+            <!--<th>菜名</th>-->
+            <!--<th>饭店</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--&lt;!&ndash;每一个菜的选项&ndash;&gt;-->
+        <!--<tbody id="cai">-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<input type="checkbox"/>-->
+            <!--</td>-->
+            <!--<td>红烧肉</td>-->
+            <!--<td>田老师</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<input type="checkbox"/>-->
+            <!--</td>-->
+            <!--<td>西红柿鸡蛋</td>-->
+            <!--<td>田老师</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<input type="checkbox"/>-->
+            <!--</td>-->
+            <!--<td>红烧狮子头</td>-->
+            <!--<td>田老师</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>-->
+                <!--<input type="checkbox"/>-->
+            <!--</td>-->
+            <!--<td>日式肥牛</td>-->
+            <!--<td>田老师</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+    <!--</table>-->
+<!--</div>-->
+<!--<script>-->
+    <!--//获取全选反选按钮-->
+    <!--var selectAll = document.getElementById("selectAll");-->
+    <!--//先获取cai，找获取cai中的input-->
+    <!--var cai = document.getElementById("cai");-->
+    <!--var chb = cai.getElementsByTagName("input");-->
+
+    <!--//给selectAll添加点击事件-->
+    <!--selectAll.onclick = function () {-->
+        <!--//操作每一个小cb，我们要遍历chb-->
+        <!--for (var i = 0; i < chb.length; i++) {-->
+            <!--//让每一个小的cb跟全选反选按钮的checked属性一致-->
+            <!--chb[i].checked = selectAll.checked;-->
+        <!--}-->
+    <!--};-->
+    <!--//&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;第二部分-->
+    <!--//给小的cb添加点击事件，控制大的selectAll-->
+    <!--for (var i = 0; i < chb.length; i++) {-->
+        <!--chb[i].onclick = function () {-->
+            <!--//判断所有人的checked属性，如果都为true，让selectAll为true-->
+            <!--//有任何一个人为false，就让selectAll为false-->
+            <!--//再次遍历-->
+            <!--for (var j = 0; j < chb.length; j++) {-->
+                <!--if(chb[j].checked == false){-->
+                    <!--//能进入if的都是没选中的-->
+                    <!--selectAll.checked = false;-->
+                    <!--//有任何一个复选框为false，就不满足selectAll为true的条件，所以直接跳出-->
+                    <!--break;-->
+                <!--}-->
+                <!--selectAll.checked = true;-->
+            <!--}-->
+        <!--};-->
+    <!--}-->
+<!--</script>-->
+<!--</body>-->
